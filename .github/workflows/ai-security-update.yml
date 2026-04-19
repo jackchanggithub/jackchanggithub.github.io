@@ -2,7 +2,7 @@ name: AI Powered Weekly Security Update
 
 on:
   schedule:
-    - cron: '0 12 * * 0' # UTC 12:00 = 台北時間 20:00
+    - cron: '0 12 * * 0'
   workflow_dispatch:
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install google-generativeai requests
+        run: pip install google-generativeai requests beautifulsoup4 lxml
 
       - name: Run AI Security Agent
         env:
@@ -25,90 +25,264 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
           python - <<'EOF'
-          import google.generativeai as genai
-          import requests
-          import base64
-          import json
           import os
           import re
-          from datetime import datetime
+          import json
+          import base64
+          import requests
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+          from datetime import datetime, timedelta
+          import google.generativeai as genai
 
-          # 1. 啟動 Gemini AI 並偵測可用模型
-          genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-          available_models = [
-              m.name for m in genai.list_models()
-              if "generateContent" in m.supported_generation_methods
+          # ----------------------------
+          # 基本設定
+          # ----------------------------
+          TODAY = datetime.now()
+          today_str = TODAY.strftime("%Y-%m-%d")
+          id_date = TODAY.strftime("%y%m%d")
+          expire_str = (TODAY + timedelta(days=7)).strftime("%Y-%m-%d")
+
+          headers = {
+              "User-Agent": "Mozilla/5.0"
+          }
+
+          SOURCES = [
+              {
+                  "name": "資通安全署新聞稿",
+                  "list_url": "https://moda.gov.tw/ACS/press/news/press/820",
+                  "domain_hint": ["moda.gov.tw"]
+              },
+              {
+                  "name": "數位發展部新聞發布",
+                  "list_url": "https://moda.gov.tw/press/press-releases/372",
+                  "domain_hint": ["moda.gov.tw"]
+              },
+              {
+                  "name": "國家資安研究院漏洞警訊公告",
+                  "list_url": "https://www.nics.nat.gov.tw/core_business/information_security_information_sharing/Vulnerability_Alert_Announcements/",
+                  "domain_hint": ["nics.nat.gov.tw"]
+              },
+              {
+                  "name": "國家資安研究院資安週報",
+                  "list_url": "https://www.nics.nat.gov.tw/core_business/information_security_information_sharing/cybersecuritynews/",
+                  "domain_hint": ["nics.nat.gov.tw"]
+              }
           ]
-          target_model = next((m for m in available_models if "1.5-flash" in m), available_models[0])
-          model = genai.GenerativeModel(target_model)
 
-          # 2. 日期變數
-          today_str = datetime.now().strftime("%Y-%m-%d")
-          id_date = datetime.now().strftime("%y%m%d")
+          KEYWORDS = [
+              "資安", "個資", "詐騙", "漏洞", "AI", "勒索", "惡意", "攻擊",
+              "零信任", "法規", "入侵", "外洩", "修補", "警訊", "通報"
+          ]
+
+          # ----------------------------
+          # 工具函式
+          # ----------------------------
+          def fetch_html(url):
+              r = requests.get(url, headers=headers, timeout=20)
+              r.raise_for_status()
+              return r.text
+
+          def is_valid_url(url):
+              try:
+                  r = requests.get(url, headers=headers, timeout=15, allow_redirects=True)
+                  return r.status_code < 400
+              except Exception:
+                  return False
+
+          def extract_candidates(list_url):
+              html = fetch_html(list_url)
+              soup = BeautifulSoup(html, "lxml")
+              candidates = []
+
+              for a in soup.find_all("a", href=True):
+                  text = " ".join(a.get_text(" ", strip=True).split())
+                  href = a["href"].strip()
+                  full_url = urljoin(list_url, href)
+
+                  if not text or len(text) < 8:
+                      continue
+                  if full_url.startswith("javascript:") or full_url.startswith("mailto:"):
+                      continue
+
+                  if any(k.lower() in text.lower() for k in KEYWORDS):
+                      candidates.append({
+                          "title": text,
+                          "url": full_url
+                      })
+
+              # 去重
+              seen = set()
+              result = []
+              for item in candidates:
+                  key = (item["title"], item["url"])
+                  if key not in seen:
+                      seen.add(key)
+                      result.append(item)
+              return result
+
+          def guess_level(title):
+              t = title.lower()
+              if any(x in t for x in ["重大", "高風險", "漏洞", "外洩", "入侵", "勒索"]):
+                  return "high"
+              if any(x in t for x in ["警訊", "詐騙", "資安", "修補", "ai"]):
+                  return "medium"
+              return "info"
+
+          def guess_tags(title):
+              tags = []
+              mapping = {
+                  "AI": ["AI資安", "生成式AI"],
+                  "詐騙": ["詐騙"],
+                  "個資": ["個資外洩", "隱私"],
+                  "漏洞": ["漏洞", "修補"],
+                  "勒索": ["勒索軟體"],
+                  "法": ["法規", "治理"],
+                  "資安": ["資安"]
+              }
+              for k, vals in mapping.items():
+                  if k in title:
+                      tags.extend(vals)
+              if not tags:
+                  tags = ["資安"]
+              return list(dict.fromkeys(tags))[:3]
+
+          # ----------------------------
+          # 1. 從官方來源抓真實連結
+          # ----------------------------
+          raw_items = []
+          for src in SOURCES:
+              try:
+                  items = extract_candidates(src["list_url"])
+                  for item in items[:15]:
+                      item["source"] = src["name"]
+                      item["matchDomains"] = src["domain_hint"]
+                      raw_items.append(item)
+              except Exception as e:
+                  print(f"來源抓取失敗: {src['name']} / {e}")
+
+          # 去重
+          unique = []
+          seen_urls = set()
+          for item in raw_items:
+              if item["url"] not in seen_urls and is_valid_url(item["url"]):
+                  seen_urls.add(item["url"])
+                  unique.append(item)
+
+          # 只取前 12 筆送 Gemini 篩選摘要
+          unique = unique[:12]
+
+          if not unique:
+              raise Exception("沒有抓到任何可用的真實新聞連結")
+
+          # ----------------------------
+          # 2. 只讓 Gemini 做摘要與挑選，不生成網址
+          # ----------------------------
+          genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+          model = genai.GenerativeModel("gemini-1.5-flash")
+
+          source_text = json.dumps(unique, ensure_ascii=False, indent=2)
 
           prompt = f"""
-          你是一位專業的資訊安全長 (CISO)。請搜尋最近一週台灣最新 5 則資安動態。
-          重點：最新法令、資安法、企業被入侵資訊、個資外洩事件、詐騙事件、AI資安相關事件。
-          【真實性規範】嚴禁使用 example.com 或虛假連結。若不確定網址，必須導向該機構官網公告頁(如 https://www.moda.gov.tw/press/press-releases/ )。
-          【專業術語】離職人員請一律使用 'Separated Employees'。標題與描述請用繁體中文。
-          【格式規範】(必須精確對齊以下 JSON 欄位):
+          你是一位專業的資訊安全長（CISO）。
+
+          以下是「已由程式抓到、且網址存在」的台灣資安相關候選資料。
+          你只能根據這些資料進行挑選與整理，禁止新增任何不存在的網址、標題、事件或來源。
+
+          請從中挑選最值得企業關注的 5 則，並輸出為純 JSON 陣列。
+          欄位格式必須如下：
           [
             {{
               "id": "news-{id_date}-01",
-              "title": "【風險等級】新聞標題",
-              "desc": "描述對企業或 EMS 產業的影響，字數約 50-100 字",
-              "url": "真實的官方網址",
+              "title": "【高/中/低/資訊】標題",
+              "desc": "以繁體中文撰寫 50~100 字，說明對企業或 EMS 產業的影響",
+              "url": "只能使用我提供的原始 url",
               "tags": ["標籤1", "標籤2"],
               "level": "high/medium/low/info",
-              "matchDomains": ["相關網域.gov.tw", "nics.nat.gov.tw"],
+              "matchDomains": ["網域1"],
               "updatedAt": "{today_str}",
-              "expireAt": "2026-07-19",
+              "expireAt": "{expire_str}",
               "pin": false
             }}
           ]
-          說明：重大法規或高風險威脅 pin 設為 true。請直接回傳純 JSON 陣列，不要有 Markdown 標記或文字說明。
+
+          規則：
+          1. url 必須逐字使用候選資料中的 url，不可改寫
+          2. title、desc 用繁體中文
+          3. 重大法規、高風險漏洞、已發生外洩或大規模詐騙事件可 pin=true
+          4. level 只能是 high/medium/low/info
+          5. 不要輸出 Markdown，不要補充說明，只輸出 JSON
+
+          候選資料如下：
+          {source_text}
           """
 
-          # 3. 執行 AI 生成並進行內容清洗
-          try:
-              response = model.generate_content(prompt)
-              clean_text = re.sub(r"```json\s*|```", "", response.text).strip()
-              json.loads(clean_text)
-          except Exception as e:
-              print(f"AI 生成或 JSON 解析失敗: {e}")
-              raise
+          response = model.generate_content(prompt)
+          clean_text = re.sub(r"```json\s*|```", "", response.text).strip()
+          news = json.loads(clean_text)
 
+          # ----------------------------
+          # 3. 二次驗證：URL 必須在原始候選清單中
+          # ----------------------------
+          allowed_urls = {item["url"] for item in unique}
+          final_news = []
+
+          for i, item in enumerate(news, start=1):
+              url = item.get("url", "").strip()
+              if url not in allowed_urls:
+                  print(f"跳過不合法 URL: {url}")
+                  continue
+
+              title = item.get("title", "").strip()
+              desc = item.get("desc", "").strip()
+
+              fixed = {
+                  "id": f"news-{id_date}-{i:02d}",
+                  "title": title,
+                  "desc": desc,
+                  "url": url,
+                  "tags": item.get("tags", ["資安"])[:3],
+                  "level": item.get("level", guess_level(title)),
+                  "matchDomains": item.get("matchDomains", []),
+                  "updatedAt": today_str,
+                  "expireAt": expire_str,
+                  "pin": bool(item.get("pin", False))
+              }
+              final_news.append(fixed)
+
+          if len(final_news) < 3:
+              raise Exception("有效新聞太少，可能是模型輸出不符合限制")
+
+          output_text = json.dumps(final_news[:5], ensure_ascii=False, indent=2)
+
+          # ----------------------------
           # 4. 推送到 GitHub
+          # ----------------------------
           REPO = "jackchanggithub/jackchanggithub.github.io"
           FILE = "security-news.json"
           api_url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
 
           token = os.environ["GITHUB_TOKEN"]
-          headers = {
+          gh_headers = {
               "Authorization": f"Bearer {token}",
               "Accept": "application/vnd.github.v3+json"
           }
 
-          # 先取得舊檔 SHA
-          res_get = requests.get(api_url, headers=headers)
+          res_get = requests.get(api_url, headers=gh_headers, timeout=20)
           sha = res_get.json().get("sha") if res_get.status_code == 200 else None
 
-          content_b64 = base64.b64encode(clean_text.encode("utf-8")).decode("utf-8")
-          commit_msg = f"🤖 AI Weekly Update: 真實連結與精確格式同步 ({today_str})"
-
           payload = {
-              "message": commit_msg,
-              "content": content_b64,
+              "message": f"🤖 AI Weekly Security Update ({today_str})",
+              "content": base64.b64encode(output_text.encode("utf-8")).decode("utf-8"),
               "branch": "main"
           }
           if sha:
               payload["sha"] = sha
 
-          res_put = requests.put(api_url, headers=headers, json=payload)
-
+          res_put = requests.put(api_url, headers=gh_headers, json=payload, timeout=20)
           if res_put.status_code in [200, 201]:
-              print("✅ 更新成功！格式已精確同步。")
+              print("✅ 更新成功")
           else:
-              print("❌ 失敗: " + res_put.text)
+              print(res_put.text)
               raise Exception("GitHub API 更新失敗")
           EOF
