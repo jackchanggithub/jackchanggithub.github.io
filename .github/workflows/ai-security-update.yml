@@ -32,13 +32,20 @@ jobs:
           import os
           import re
 
-          # 設定 Gemini (修正模型名稱)
+          # 設定 Gemini
           genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-          model = genai.GenerativeModel('gemini-1.5-flash-latest')
+          
+          # 備援機制：如果 flash 找不到，就嘗試 pro
+          try:
+              model = genai.GenerativeModel('gemini-1.5-flash')
+              print("使用模型: gemini-1.5-flash")
+          except:
+              model = genai.GenerativeModel('gemini-pro')
+              print("使用模型: gemini-pro")
 
           # 讓 AI 搜尋並產生專業內容
           prompt = """
-          你是一位資深的資訊安全長 (CISO)。請根據你現有的知識庫搜尋 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
+          你是一位資深的資訊安全長 (CISO)。請根據你的知識庫，列出 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
           內容應包含：數發部 (MODA) 法規、台灣資安事件、或對電子製造業有影響的威脅。
           
           特別規範：
@@ -48,20 +55,22 @@ jobs:
           [{"id": "...", "title": "...", "desc": "...", "url": "...", "tags": [], "level": "high/medium/low/info", "matchDomains": [], "updatedAt": "2026-04-19", "expireAt": "2026-07-19", "pin": false}]
           """
           
-          response = model.generate_content(prompt)
-          
-          # 強化後的 JSON 提取邏輯
-          match = re.search(r'\[.*\]', response.text, re.DOTALL)
-          if not match:
-              print("無法從 AI 回傳內容中提取 JSON")
+          try:
+              response = model.generate_content(prompt)
+              # 強化後的 JSON 提取邏輯
+              match = re.search(r'\[.*\]', response.text, re.DOTALL)
+              if not match:
+                  print("無法提取 JSON，回傳內容為:", response.text)
+                  exit(1)
+              news_json = match.group(0)
+          except Exception as e:
+              print(f"AI 生成失敗: {e}")
               exit(1)
-          
-          news_json = match.group(0)
 
           # GitHub API 設定
           REPO = "jackchanggithub/jackchanggithub.github.io"
           FILE = "security-news.json"
-          url = f"[https://api.github.com/repos/](https://api.github.com/repos/){REPO}/contents/{FILE}"
+          url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
           headers = {"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Accept": "application/vnd.github.v3+json"}
           
           # 取得檔案 SHA 值
