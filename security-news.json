@@ -1,62 +1,92 @@
 [
   {
-    "id": "news-20240509-01",
-    "title": "【high】數位發展部發布「生成式AI應用服務暨資安治理指引」",
-    "desc": "此指引為企業使用生成式AI服務提供資安風險管理框架，涵蓋AI資料治理、模型安全與防護，對EMS產業導入AI應用至關重要，需確保合規性並強化系統韌性。",
-    "url": "https://www.moda.gov.tw/press/press-releases/1529",
-    "tags": ["AI資安", "資安法規", "政府指引", "生成式AI", "資料治理"],
+    "id": "news-260419-01",
+    "title": "【高】資安署發布中小企業基本資安防護指引 三大面向16項檢核協助產業防駭",
+    "desc": "資安署發布的中小企業基本資安防護指引，為企業提供明確的16項檢核重點，涵蓋三大面向。這對於所有企業，特別是EMS供應鏈中的中小企業至關重要，可作為基礎資安建置與評估的依據，有效提升整體防護力，降低成為供應鏈攻擊目標的風險。",
+    "url": "https://moda.gov.tw/ACS/press/news/press/19496.html",
+    "tags": [
+      "資安指引",
+      "中小企業",
+      "供應鏈安全"
+    ],
     "level": "high",
-    "matchDomains": ["moda.gov.tw", "nics.nat.gov.tw"],
-    "updatedAt": "2024-05-09",
-    "expireAt": "2024-08-09",
+    "matchDomains": [
+      "moda.gov.tw"
+    ],
+    "updatedAt": "2026-04-19",
+    "expireAt": "2026-04-26",
     "pin": true
   },
   {
-    "id": "news-20240508-02",
-    "title": "【medium】金管會強化運用智慧新技術防制詐騙、保護投資人權益",
-    "desc": "金管會推動金融機構導入AI等智慧技術，強化詐騙預警與攔阻機制，減少企業與客戶財損。EMS產業需留意其上下游金融業務夥伴的資安聯防措施。",
-    "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&aplistdnid=309&dataserno=202405080005&mcustomize=news_view.jsp",
-    "tags": ["詐騙防制", "金融資安", "FSC", "AI防詐"],
-    "level": "medium",
-    "matchDomains": ["fsc.gov.tw", "npa.gov.tw"],
-    "updatedAt": "2024-05-08",
-    "expireAt": "2024-08-08",
-    "pin": false
+    "id": "news-260419-02",
+    "title": "【高】資通安全責任等級分級辦法應辦事項-資安專職人力及證照",
+    "desc": "此為資通安全管理法規下的重要應辦事項，明確規範企業所需配置的資安專職人力與其證照要求。EMS產業中，若企業屬特定資安責任等級，需嚴格遵循此規定，以確保合規性並有效建立內部資安職能，避免因人力不足或不符資格而面臨法規懲處。",
+    "url": "https://moda.gov.tw/ACS/laws/faq/03/636.html",
+    "tags": [
+      "法規遵循",
+      "資安人力",
+      "資安證照"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "moda.gov.tw"
+    ],
+    "updatedAt": "2026-04-19",
+    "expireAt": "2026-04-26",
+    "pin": true
   },
   {
-    "id": "news-20240508-03",
-    "title": "【medium】警政署呼籲民眾注意假投資詐騙猖獗",
-    "desc": "刑事警察局持續偵辦假投資詐騙案件，提醒企業員工及社會大眾提高警覺。企業應加強內部員工資安意識訓練，防範社交工程釣魚，避免成為詐騙集團目標。",
-    "url": "https://www.cib.gov.tw/News/Bulletin/Detail/1360",
-    "tags": ["詐騙", "假投資", "社會安全", "警政署", "社交工程"],
-    "level": "medium",
-    "matchDomains": ["cib.gov.tw", "npa.gov.tw"],
-    "updatedAt": "2024-05-08",
-    "expireAt": "2024-08-08",
-    "pin": false
+    "id": "news-260419-03",
+    "title": "【高】資通安全事件通報及應變",
+    "desc": "明確指出企業在資安事件發生時的通報流程與應變準則。EMS產業的供應鏈環環相扣，任何資安事件都可能造成巨大影響。企業必須建立完善的通報與應變機制，不僅符合法規要求，更能有效控制損害範圍、加速復原，並維護客戶與合作夥伴的信任。",
+    "url": "https://moda.gov.tw/ACS/laws/faq/07/644.html",
+    "tags": [
+      "事件應變",
+      "通報機制",
+      "供應鏈安全"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "moda.gov.tw"
+    ],
+    "updatedAt": "2026-04-19",
+    "expireAt": "2026-04-26",
+    "pin": true
   },
   {
-    "id": "news-20240509-04",
-    "title": "【info】數位發展部報告「亞洲·矽谷3.0」計畫 強化資安韌性",
-    "desc": "「亞洲·矽谷3.0」計畫涵蓋數位轉型與資安韌性建構，旨在提升國家整體資安防護能力。企業應關注政府資安策略，尋求合作機會並提升自身防禦體系。",
-    "url": "https://www.moda.gov.tw/press/press-releases/1528",
-    "tags": ["資安政策", "數位轉型", "政府規劃", "產業發展"],
-    "level": "info",
-    "matchDomains": ["moda.gov.tw", "nics.nat.gov.tw"],
-    "updatedAt": "2024-05-09",
-    "expireAt": "2024-08-09",
-    "pin": false
+    "id": "news-260419-04",
+    "title": "【高】小心AI代理變資安破口 資安署提醒導入OpenClaw應落實五項資安防護",
+    "desc": "隨著人工智慧技術在企業營運中日益普及，AI代理可能成為新的資安風險點。資安署的提醒對於EMS企業尤為重要，因為AI可能應用於生產自動化、設計或供應鏈管理。企業應審慎評估並遵循指引，落實AI導入的資安防護措施，避免潛在的資料外洩或系統入侵。",
+    "url": "https://moda.gov.tw/ACS/press/news/press/19294.html",
+    "tags": [
+      "AI資安",
+      "新興威脅",
+      "資料外洩"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "moda.gov.tw"
+    ],
+    "updatedAt": "2026-04-19",
+    "expireAt": "2026-04-26",
+    "pin": true
   },
   {
-    "id": "news-20240507-05",
-    "title": "【medium】假檢警詐騙手法再升級，警政署提醒民眾注意",
-    "desc": "近期假冒檢警詐騙手法頻繁，甚至結合假綁架。企業應加強員工識別詐騙電話、簡訊能力，特別是財務人員，避免遭騙導致公司財產損失。",
-    "url": "https://www.cib.gov.tw/News/Bulletin/Detail/1359",
-    "tags": ["詐騙", "假檢警", "社會安全", "警政署", "資安教育"],
+    "id": "news-260419-05",
+    "title": "【中】資安防護，政府相挺：資安署力挺中小企業資安升級 三大策略強化數位防護力",
+    "desc": "此新聞稿揭示了政府為協助中小企業提升資安防護力的三大策略，提供政策支持與資源。對於EMS產業中的中小企業而言，了解這些政府的扶植計畫至關重要，可作為爭取資源、規劃資安投資的參考依據，有助於 leveraging 外部支持來強化自身的數位韌性。",
+    "url": "https://moda.gov.tw/ACS/press/news/press/19324.html",
+    "tags": [
+      "政府補助",
+      "中小企業",
+      "資安策略"
+    ],
     "level": "medium",
-    "matchDomains": ["cib.gov.tw", "npa.gov.tw"],
-    "updatedAt": "2024-05-07",
-    "expireAt": "2024-08-07",
+    "matchDomains": [
+      "moda.gov.tw"
+    ],
+    "updatedAt": "2026-04-19",
+    "expireAt": "2026-04-26",
     "pin": false
   }
 ]
