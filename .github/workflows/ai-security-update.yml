@@ -17,7 +17,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install google-generativeai requests beautifulsoup4 lxml
+        run: pip install -U google-genai requests beautifulsoup4 lxml
 
       - name: Run AI Security Agent
         env:
@@ -33,11 +33,8 @@ jobs:
           from bs4 import BeautifulSoup
           from urllib.parse import urljoin
           from datetime import datetime, timedelta
-          import google.generativeai as genai
+          from google import genai
 
-          # ----------------------------
-          # 基本設定
-          # ----------------------------
           TODAY = datetime.now()
           today_str = TODAY.strftime("%Y-%m-%d")
           id_date = TODAY.strftime("%y%m%d")
@@ -75,9 +72,6 @@ jobs:
               "零信任", "法規", "入侵", "外洩", "修補", "警訊", "通報"
           ]
 
-          # ----------------------------
-          # 工具函式
-          # ----------------------------
           def fetch_html(url):
               r = requests.get(url, headers=headers, timeout=20)
               r.raise_for_status()
@@ -111,7 +105,6 @@ jobs:
                           "url": full_url
                       })
 
-              # 去重
               seen = set()
               result = []
               for item in candidates:
@@ -129,27 +122,6 @@ jobs:
                   return "medium"
               return "info"
 
-          def guess_tags(title):
-              tags = []
-              mapping = {
-                  "AI": ["AI資安", "生成式AI"],
-                  "詐騙": ["詐騙"],
-                  "個資": ["個資外洩", "隱私"],
-                  "漏洞": ["漏洞", "修補"],
-                  "勒索": ["勒索軟體"],
-                  "法": ["法規", "治理"],
-                  "資安": ["資安"]
-              }
-              for k, vals in mapping.items():
-                  if k in title:
-                      tags.extend(vals)
-              if not tags:
-                  tags = ["資安"]
-              return list(dict.fromkeys(tags))[:3]
-
-          # ----------------------------
-          # 1. 從官方來源抓真實連結
-          # ----------------------------
           raw_items = []
           for src in SOURCES:
               try:
@@ -161,7 +133,6 @@ jobs:
               except Exception as e:
                   print(f"來源抓取失敗: {src['name']} / {e}")
 
-          # 去重
           unique = []
           seen_urls = set()
           for item in raw_items:
@@ -169,27 +140,23 @@ jobs:
                   seen_urls.add(item["url"])
                   unique.append(item)
 
-          # 只取前 12 筆送 Gemini 篩選摘要
           unique = unique[:12]
 
           if not unique:
               raise Exception("沒有抓到任何可用的真實新聞連結")
 
-          # ----------------------------
-          # 2. 只讓 Gemini 做摘要與挑選，不生成網址
-          # ----------------------------
-          genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-          model = genai.GenerativeModel("gemini-1.5-flash")
+          client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
           source_text = json.dumps(unique, ensure_ascii=False, indent=2)
 
           prompt = f"""
           你是一位專業的資訊安全長（CISO）。
 
-          以下是「已由程式抓到、且網址存在」的台灣資安相關候選資料。
+          以下是已由程式抓到、且網址存在的台灣資安相關候選資料。
           你只能根據這些資料進行挑選與整理，禁止新增任何不存在的網址、標題、事件或來源。
 
           請從中挑選最值得企業關注的 5 則，並輸出為純 JSON 陣列。
+
           欄位格式必須如下：
           [
             {{
@@ -211,32 +178,45 @@ jobs:
           2. title、desc 用繁體中文
           3. 重大法規、高風險漏洞、已發生外洩或大規模詐騙事件可 pin=true
           4. level 只能是 high/medium/low/info
-          5. 不要輸出 Markdown，不要補充說明，只輸出 JSON
+          5. 只輸出 JSON，不要 Markdown，不要說明文字
 
-          候選資料如下：
+          候選資料：
           {source_text}
           """
 
-          response = model.generate_content(prompt)
-          clean_text = re.sub(r"```json\s*|```", "", response.text).strip()
-          news = json.loads(clean_text)
+          try:
+              response = client.models.generate_content(
+                  model="gemini-2.5-flash",
+                  contents=prompt,
+              )
+          except Exception as e:
+              print("Gemini API 呼叫失敗：")
+              print(repr(e))
+              raise
 
-          # ----------------------------
-          # 3. 二次驗證：URL 必須在原始候選清單中
-          # ----------------------------
+          text = response.text.strip()
+          text = re.sub(r"^```json\s*|```$", "", text, flags=re.MULTILINE).strip()
+
+          try:
+              news = json.loads(text)
+          except Exception as e:
+              print("JSON 解析失敗，模型原始輸出如下：")
+              print(text)
+              raise
+
           allowed_urls = {item["url"] for item in unique}
           final_news = []
 
           for i, item in enumerate(news, start=1):
-              url = item.get("url", "").strip()
+              url = str(item.get("url", "")).strip()
               if url not in allowed_urls:
                   print(f"跳過不合法 URL: {url}")
                   continue
 
-              title = item.get("title", "").strip()
-              desc = item.get("desc", "").strip()
+              title = str(item.get("title", "")).strip()
+              desc = str(item.get("desc", "")).strip()
 
-              fixed = {
+              final_news.append({
                   "id": f"news-{id_date}-{i:02d}",
                   "title": title,
                   "desc": desc,
@@ -247,17 +227,13 @@ jobs:
                   "updatedAt": today_str,
                   "expireAt": expire_str,
                   "pin": bool(item.get("pin", False))
-              }
-              final_news.append(fixed)
+              })
 
           if len(final_news) < 3:
               raise Exception("有效新聞太少，可能是模型輸出不符合限制")
 
           output_text = json.dumps(final_news[:5], ensure_ascii=False, indent=2)
 
-          # ----------------------------
-          # 4. 推送到 GitHub
-          # ----------------------------
           REPO = "jackchanggithub/jackchanggithub.github.io"
           FILE = "security-news.json"
           api_url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
@@ -283,6 +259,7 @@ jobs:
           if res_put.status_code in [200, 201]:
               print("✅ 更新成功")
           else:
+              print("GitHub API 回應：")
               print(res_put.text)
               raise Exception("GitHub API 更新失敗")
           EOF
