@@ -2,8 +2,8 @@ name: AI Powered Weekly Security Update
 
 on:
   schedule:
-    - cron: '0 12 * * 0' 
-  workflow_dispatch: 
+    - cron: '0 12 * * 0' # 台北時間每週日晚上 20:00 自動執行
+  workflow_dispatch: # 允許手動點擊按鈕測試
 
 jobs:
   update-news:
@@ -32,53 +32,81 @@ jobs:
           import os
           import re
 
-          # 設定 Gemini
+          # 1. 設定 Gemini 模型
           genai.configure(api_key=os.environ['GEMINI_API_KEY'])
           
-          # 1. 偵測可用模型 (解決 404 問題)
+          # 自動偵測可用模型，優先選取 1.5 系列
           available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
-          print(f"系統偵測到可用模型: {available_models}")
-          
-          # 優先嘗試 1.5 系列，失敗則由列表自動選取第一個
-          target_model = 'models/gemini-1.5-pro'
-          if target_model not in available_models:
-              target_model = available_models[0]
-          
-          print(f"最終決定使用模型: {target_model}")
+          target_model = next((m for m in available_models if '1.5-flash' in m), available_models[0])
+          print(f"使用模型: {target_model}")
           model = genai.GenerativeModel(target_model)
 
-          # 2. 產製內容
+          # 2. 定義符合使用者格式的 Prompt
           prompt = """
-          你是一位資深的資訊安全長 (CISO)。請搜尋 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
-          內容應包含：數發部 (MODA) 法規、台灣資安事件、或對電子製造業有影響的威脅。
-          專業術語：離職人員請一律使用 'Separated Employees'。
-          輸出格式：嚴格 JSON [{},...]，不要廢話。
+          你是一位專業的資訊安全長 (CISO)。請根據你的知識庫列出 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
+          內容須包含：數發部 (MODA) 最新規範、台灣本地資安事件、或影響電子製造服務業 (EMS) 的威脅。
+
+          【嚴格規範】
+          1. 標題與描述使用繁體中文。
+          2. 對於離職人員，專業術語請一律使用 'Separated Employees'。
+          3. 輸出的 JSON 格式必須與下列範例欄位完全一致：
+          [
+            {
+              "id": "news-XXX",
+              "title": "【風險等級】新聞標題",
+              "desc": "簡短內容描述，字數約 50-100 字",
+              "url": "正確的新聞連結",
+              "tags": ["標籤1", "標籤2"],
+              "level": "high/medium/low/info",
+              "matchDomains": ["相關網域1", "相關網域2"],
+              "updatedAt": "2026-04-19",
+              "expireAt": "2026-07-19",
+              "pin": false
+            }
+          ]
+          請直接回傳 JSON 陣列，不要有任何 Markdown 標記或解釋文字。
           """
           
           try:
               response = model.generate_content(prompt)
+              # 強化 JSON 提取，確保只抓取 [ ] 之間的內容
               match = re.search(r'\[.*\]', response.text, re.DOTALL)
-              news_json = match.group(0) if match else "[]"
+              if not match:
+                  print("錯誤：AI 未回傳有效的 JSON 格式")
+                  exit(1)
+              news_content = match.group(0)
+              # 驗證 JSON 格式是否正確
+              json.loads(news_content) 
           except Exception as e:
-              print(f"AI 生成失敗: {e}")
+              print(f"AI 生成或解析失敗: {e}")
               exit(1)
 
-          # 3. GitHub 推送
+          # 3. 推送更新至 GitHub
           REPO = "jackchanggithub/jackchanggithub.github.io"
           FILE = "security-news.json"
           url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
-          headers = {"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Accept": "application/vnd.github.v3+json"}
+          headers = {
+              "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
+              "Accept": "application/vnd.github.v3+json"
+          }
           
-          get_res = requests.get(url, headers=headers)
-          sha = get_res.json().get('sha') if get_res.status_code == 200 else None
+          # 取得現有檔案的 SHA
+          res_get = requests.get(url, headers=headers)
+          sha = res_get.json().get('sha') if res_get.status_code == 200 else None
 
-          content_b64 = base64.b64encode(news_json.encode('utf-8')).decode('utf-8')
-          payload = {"message": "🤖 AI Update via Gemini", "content": content_b64, "branch": "main"}
-          if sha: payload["sha"] = sha
+          # 推送新檔案
+          content_b64 = base64.b64encode(news_content.encode('utf-8')).decode('utf-8')
+          payload = {
+              "message": "🤖 AI 自動更新：週報資料格式同步",
+              "content": content_b64,
+              "branch": "main"
+          }
+          if sha:
+              payload["sha"] = sha
           
-          res = requests.put(url, headers=headers, json=payload)
-          if res.status_code in [200, 201]:
-              print("✅ 更新成功！")
+          res_put = requests.put(url, headers=headers, json=payload)
+          if res_put.status_code in [200, 201]:
+              print("✅ JSON 格式同步更新完成！")
           else:
-              print(f"❌ 更新失敗: {res.text}")
+              print(f"❌ 更新失敗: {res_put.text}")
           EOF
