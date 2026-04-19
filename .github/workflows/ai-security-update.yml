@@ -2,8 +2,8 @@ name: AI Powered Weekly Security Update
 
 on:
   schedule:
-    - cron: '0 12 * * 0' # 台北時間每週日晚上 20:00 自動執行
-  workflow_dispatch: # 允許手動點擊按鈕測試
+    - cron: '0 12 * * 0' # 台北時間每週日晚上 20:00 執行
+  workflow_dispatch: 
 
 jobs:
   update-news:
@@ -31,82 +31,71 @@ jobs:
           import json
           import os
           import re
+          from datetime import datetime
 
-          # 1. 設定 Gemini 模型
+          # 1. 初始化與模型偵測
           genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-          
-          # 自動偵測可用模型，優先選取 1.5 系列
           available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
           target_model = next((m for m in available_models if '1.5-flash' in m), available_models[0])
-          print(f"使用模型: {target_model}")
           model = genai.GenerativeModel(target_model)
 
-          # 2. 定義符合使用者格式的 Prompt
-          prompt = """
-          你是一位專業的資訊安全長 (CISO)。請根據你的知識庫列出 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
-          內容須包含：數發部 (MODA) 最新規範、台灣本地資安事件、或影響電子製造服務業 (EMS) 的威脅。
+          # 2. 定義嚴格格式的 Prompt (完全對應使用者範例)
+          today_str = datetime.now().strftime("%Y-%m-%d")
+          prompt = f"""
+          你是一位專業的資訊安全長 (CISO)。請搜尋 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
+          必須包含：數發部 (MODA) 4/16 發布的指引、資安法 1000 萬罰則、以及行政院 4/2 拍板的虛擬資產法。
+          
+          專業術語要求：離職人員請一律使用 'Separated Employees'。
 
-          【嚴格規範】
-          1. 標題與描述使用繁體中文。
-          2. 對於離職人員，專業術語請一律使用 'Separated Employees'。
-          3. 輸出的 JSON 格式必須與下列範例欄位完全一致：
+          【嚴格 JSON 格式規範】(必須與下方欄位完全一致):
           [
-            {
-              "id": "news-XXX",
+            {{
+              "id": "news-{datetime.now().strftime('%y%m%d')}-01",
               "title": "【風險等級】新聞標題",
-              "desc": "簡短內容描述，字數約 50-100 字",
-              "url": "正確的新聞連結",
+              "desc": "簡短內容描述，須提及對企業或 EMS 產業的影響",
+              "url": "正確的新聞來源網址",
               "tags": ["標籤1", "標籤2"],
               "level": "high/medium/low/info",
-              "matchDomains": ["相關網域1", "相關網域2"],
-              "updatedAt": "2026-04-19",
+              "matchDomains": ["相關網域.com", "gov.tw"],
+              "updatedAt": "{today_str}",
               "expireAt": "2026-07-19",
               "pin": false
-            }
+            }}
           ]
-          請直接回傳 JSON 陣列，不要有任何 Markdown 標記或解釋文字。
+          說明：若是重大法規更新或高風險攻擊，pin 設為 true。
+          請直接回傳 JSON 陣列，不准包含 Markdown 代碼塊標記 (```json) 或任何解釋文字。
           """
           
+          # 3. 產製與清洗數據
+          response = model.generate_content(prompt)
+          raw_text = response.text.strip()
+          # 去除可能的 Markdown 標記
+          clean_text = re.sub(r'```json\s*|```', '', raw_text).strip()
+          
           try:
-              response = model.generate_content(prompt)
-              # 強化 JSON 提取，確保只抓取 [ ] 之間的內容
-              match = re.search(r'\[.*\]', response.text, re.DOTALL)
-              if not match:
-                  print("錯誤：AI 未回傳有效的 JSON 格式")
-                  exit(1)
-              news_content = match.group(0)
-              # 驗證 JSON 格式是否正確
-              json.loads(news_content) 
+              # 驗證 JSON 格式
+              json_data = json.loads(clean_text)
+              final_news_json = json.dumps(json_data, ensure_ascii=False, indent=2)
           except Exception as e:
-              print(f"AI 生成或解析失敗: {e}")
+              print(f"JSON 解析失敗: {e}\n原文: {raw_text}")
               exit(1)
 
-          # 3. 推送更新至 GitHub
+          # 4. 推送到 GitHub
           REPO = "jackchanggithub/jackchanggithub.github.io"
           FILE = "security-news.json"
-          url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
-          headers = {
-              "Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
-              "Accept": "application/vnd.github.v3+json"
-          }
+          url = f"[https://api.github.com/repos/](https://api.github.com/repos/){REPO}/contents/{{FILE}}"
+          headers = {{"Authorization": f"Bearer {{os.environ['GITHUB_TOKEN']}}", "Accept": "application/vnd.github.v3+json"}}
           
-          # 取得現有檔案的 SHA
-          res_get = requests.get(url, headers=headers)
-          sha = res_get.json().get('sha') if res_get.status_code == 200 else None
+          get_res = requests.get(url, headers=headers)
+          sha = get_res.json().get('sha') if get_res.status_code == 200 else None
 
-          # 推送新檔案
-          content_b64 = base64.b64encode(news_content.encode('utf-8')).decode('utf-8')
-          payload = {
-              "message": "🤖 AI 自動更新：週報資料格式同步",
-              "content": content_b64,
-              "branch": "main"
-          }
-          if sha:
-              payload["sha"] = sha
+          content_b64 = base64.b64encode(final_news_json.encode('utf-8')).decode('utf-8')
+          payload = {{"message": "🤖 AI Update: 格式精確同步 ({today_str})", "content": content_b64, "branch": "main"}}
+          if sha: payload["sha"] = sha
           
-          res_put = requests.put(url, headers=headers, json=payload)
-          if res_put.status_code in [200, 201]:
-              print("✅ JSON 格式同步更新完成！")
+          res = requests.put(url, headers=headers, json=payload)
+          if res.status_code in [200, 201]:
+              print("✅ 格式同步更新成功！")
           else:
-              print(f"❌ 更新失敗: {res_put.text}")
+              print(f"❌ 推送失敗: {{res.text}}")
           EOF
