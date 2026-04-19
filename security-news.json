@@ -1,0 +1,50 @@
+[
+  {
+    "id": "news-001",
+    "title": "【高風險】近期偽裝 Microsoft 登入頁面釣魚攻擊",
+    "desc": "有攻擊者透過偽造 Microsoft 登入頁面竊取帳號密碼，請勿點擊不明郵件連結。",
+    "url": "https://www.microsoft.com/security/blog/",
+    "tags": ["釣魚攻擊", "帳號安全"],
+    "level": "high",
+    "matchDomains": ["microsoft.com", "office.com", "login.live.com"],
+    "updatedAt": "2026-04-01",
+    "expireAt": "2026-06-01",
+    "pin": true
+  },
+  {
+    "id": "news-002",
+    "title": "【中風險】Chrome 瀏覽器安全漏洞更新提醒",
+    "desc": "Google 已發布最新安全更新，建議所有同仁立即更新瀏覽器版本。",
+    "url": "https://chromereleases.googleblog.com/",
+    "tags": ["漏洞", "更新"],
+    "level": "medium",
+    "matchDomains": ["chrome.com", "google.com"],
+    "updatedAt": "2026-04-05",
+    "expireAt": "2026-05-30",
+    "pin": false
+  },
+  {
+    "id": "news-003",
+    "title": "【一般】VPN 維護公告",
+    "desc": "本週五晚上 22:00–24:00 VPN 將進行例行維護，期間可能無法連線。",
+    "url": "https://example.com/vpn-maintenance",
+    "tags": ["VPN", "IT公告"],
+    "level": "low",
+    "matchDomains": ["vpn.company.com"],
+    "updatedAt": "2026-04-10",
+    "expireAt": "2026-04-20",
+    "pin": false
+  },
+  {
+    "id": "news-004",
+    "title": "【提醒】避免重複使用密碼",
+    "desc": "請同仁避免在多個系統使用相同密碼，並啟用多重驗證（MFA）。",
+    "url": "https://www.cisa.gov/",
+    "tags": ["密碼安全", "最佳實務"],
+    "level": "info",
+    "matchDomains": [],
+    "updatedAt": "2026-04-01",
+    "expireAt": "2026-12-31",
+    "pin": false
+  }
+]
