@@ -2,19 +2,19 @@ name: AI Powered Weekly Security Update
 
 on:
   schedule:
-    - cron: '0 12 * * 0' # 台北時間每週日晚上 20:00 自動執行
-  workflow_dispatch: # 允許手動點擊按鈕測試
+    - cron: '0 12 * * 0' # UTC 12:00 = 台北時間 20:00
+  workflow_dispatch:
 
 jobs:
   update-news:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: pip install google-generativeai requests
@@ -24,7 +24,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         run: |
-          python - <<EOF
+          python - <<'EOF'
           import google.generativeai as genai
           import requests
           import base64
@@ -34,23 +34,23 @@ jobs:
           from datetime import datetime
 
           # 1. 啟動 Gemini AI 並偵測可用模型
-          genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-          available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
-          target_model = next((m for m in available_models if '1.5-flash' in m), available_models[0])
+          genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+          available_models = [
+              m.name for m in genai.list_models()
+              if "generateContent" in m.supported_generation_methods
+          ]
+          target_model = next((m for m in available_models if "1.5-flash" in m), available_models[0])
           model = genai.GenerativeModel(target_model)
 
-          # 2. 定義符合使用者需求的 Prompt 與日期變數
+          # 2. 日期變數
           today_str = datetime.now().strftime("%Y-%m-%d")
           id_date = datetime.now().strftime("%y%m%d")
-          
-          # 這裡完整定義了你要求的格式規範
+
           prompt = f"""
           你是一位專業的資訊安全長 (CISO)。請搜尋最近一週台灣最新 5 則資安動態。
           重點：最新法令、資安法、企業被入侵資訊、個資外洩事件、詐騙事件、AI資安相關事件。
-
           【真實性規範】嚴禁使用 example.com 或虛假連結。若不確定網址，必須導向該機構官網公告頁(如 https://www.moda.gov.tw/press/press-releases/ )。
           【專業術語】離職人員請一律使用 'Separated Employees'。標題與描述請用繁體中文。
-
           【格式規範】(必須精確對齊以下 JSON 欄位):
           [
             {{
@@ -68,37 +68,34 @@ jobs:
           ]
           說明：重大法規或高風險威脅 pin 設為 true。請直接回傳純 JSON 陣列，不要有 Markdown 標記或文字說明。
           """
-          
+
           # 3. 執行 AI 生成並進行內容清洗
           try:
               response = model.generate_content(prompt)
-              # 去除可能的 Markdown 標籤以防 JSON 解析失敗
-              clean_text = re.sub(r'```json\s*|```', '', response.text).strip()
-              # 驗證 JSON 格式
-              json.loads(clean_text) 
+              clean_text = re.sub(r"```json\s*|```", "", response.text).strip()
+              json.loads(clean_text)
           except Exception as e:
-              print(f"AI 生成或 JSON 解析失敗: {{e}}")
-              exit(1)
+              print(f"AI 生成或 JSON 解析失敗: {e}")
+              raise
 
-          # 4. 推送至 GitHub (使用字串拼接避開 YAML 大括號衝突)
+          # 4. 推送到 GitHub
           REPO = "jackchanggithub/jackchanggithub.github.io"
           FILE = "security-news.json"
-          api_url = "https://api.github.com/repos/" + REPO + "/contents/" + FILE
-          
-          token = os.environ['GITHUB_TOKEN']
+          api_url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
+
+          token = os.environ["GITHUB_TOKEN"]
           headers = {
-              "Authorization": "Bearer " + token,
+              "Authorization": f"Bearer {token}",
               "Accept": "application/vnd.github.v3+json"
           }
-          
-          # 取得目前檔案的 SHA
-          res_get = requests.get(api_url, headers=headers)
-          sha = res_get.json().get('sha') if res_get.status_code == 200 else None
 
-          # 推送更新內容
-          content_b64 = base64.b64encode(clean_text.encode('utf-8')).decode('utf-8')
-          commit_msg = "🤖 AI Weekly Update: 真實連結與精確格式同步 (" + today_str + ")"
-          
+          # 先取得舊檔 SHA
+          res_get = requests.get(api_url, headers=headers)
+          sha = res_get.json().get("sha") if res_get.status_code == 200 else None
+
+          content_b64 = base64.b64encode(clean_text.encode("utf-8")).decode("utf-8")
+          commit_msg = f"🤖 AI Weekly Update: 真實連結與精確格式同步 ({today_str})"
+
           payload = {
               "message": commit_msg,
               "content": content_b64,
@@ -106,10 +103,12 @@ jobs:
           }
           if sha:
               payload["sha"] = sha
-          
+
           res_put = requests.put(api_url, headers=headers, json=payload)
+
           if res_put.status_code in [200, 201]:
               print("✅ 更新成功！格式已精確同步。")
           else:
               print("❌ 失敗: " + res_put.text)
+              raise Exception("GitHub API 更新失敗")
           EOF
