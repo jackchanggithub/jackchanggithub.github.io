@@ -1,0 +1,76 @@
+name: AI Powered Weekly Security Update
+
+on:
+  schedule:
+    - cron: '0 12 * * 0' # 台北時間每週日晚上 20:00 自動執行
+  workflow_dispatch: # 允許你手動按按鈕執行
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install google-generativeai requests
+
+      - name: Run AI Security Agent
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        run: |
+          python - <<EOF
+          import google.generativeai as genai
+          import requests
+          import base64
+          import json
+          import os
+
+          # 設定 Gemini
+          genai.configure(api_key=os.environ['GEMINI_API_KEY'])
+          model = genai.GenerativeModel('gemini-1.5-flash')
+
+          # 讓 AI 搜尋並產生專業內容
+          prompt = """
+          你是一位資深的資訊安全長 (CISO)。請搜尋 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
+          內容應包含：數發部 (MODA) 法規、台灣資安事件、或對 EMS 電子製造業有影響的威脅。
+          
+          特別規範：
+          1. 標題與描述請用繁體中文。
+          2. 對於離職人員，專業術語請一律使用 'Separated Employees'。
+          3. 嚴格依照以下 JSON 格式輸出，不要有任何多餘的解釋文字：
+          [{"id": "...", "title": "...", "desc": "...", "url": "...", "tags": [], "level": "high/medium/low/info", "matchDomains": [], "updatedAt": "2026-04-19", "expireAt": "2026-07-19", "pin": false}]
+          """
+          
+          response = model.generate_content(prompt)
+          # 清洗資料，確保只有 JSON
+          raw_text = response.text.strip()
+          clean_json = raw_text.split('[')[1].split(']')[0]
+          news_json = '[' + clean_json + ']'
+
+          # GitHub API 設定
+          REPO = "jackchanggithub/jackchanggithub.github.io"
+          FILE = "security-news.json"
+          url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
+          headers = {"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}", "Accept": "application/vnd.github.v3+json"}
+          
+          # 取得檔案 SHA 值
+          current = requests.get(url, headers=headers).json()
+          sha = current.get('sha')
+
+          # 執行更新推送
+          content_b64 = base64.b64encode(news_json.encode('utf-8')).decode('utf-8')
+          payload = {"message": "🤖 AI Weekly Update: 台灣資安動態", "content": content_b64, "branch": "main"}
+          if sha: payload["sha"] = sha
+          
+          res = requests.put(url, headers=headers, json=payload)
+          if res.status_code in [200, 201]:
+              print("✅ AI 更新成功！")
+          else:
+              print(f"❌ 更新失敗: {res.text}")
+          EOF
