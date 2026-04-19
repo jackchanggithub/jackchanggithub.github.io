@@ -2,7 +2,7 @@ name: AI Powered Weekly Security Update
 
 on:
   schedule:
-    - cron: '0 12 * * 0' # 台北時間每週日晚上 20:00 執行
+    - cron: '0 12 * * 0' # 台北時間每週日晚上 20:00
   workflow_dispatch: 
 
 jobs:
@@ -23,6 +23,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          TODAY: ${{ github.event.repository.updated_at }} # 取得時間參考
         run: |
           python - <<EOF
           import google.generativeai as genai
@@ -33,69 +34,66 @@ jobs:
           import re
           from datetime import datetime
 
-          # 1. 初始化與模型偵測
+          # 1. 初始化
           genai.configure(api_key=os.environ['GEMINI_API_KEY'])
           available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
           target_model = next((m for m in available_models if '1.5-flash' in m), available_models[0])
           model = genai.GenerativeModel(target_model)
 
-          # 2. 定義嚴格格式的 Prompt (完全對應使用者範例)
+          # 2. 設定 Prompt (嚴格格式)
           today_str = datetime.now().strftime("%Y-%m-%d")
           prompt = f"""
-          你是一位專業的資訊安全長 (CISO)。請搜尋 2026 年 4 月 12 日至 19 日台灣最新的 5 則資安動態。
-          必須包含：數發部 (MODA) 4/16 發布的指引、資安法 1000 萬罰則、以及行政院 4/2 拍板的虛擬資產法。
+          你是一位專業的 CISO。請搜尋 2026 年 4 月 12 日至 19 日台灣最新 5 則資安動態。
+          包含：數發部 (MODA) 最新規範、台灣資安事件、或 EMS 產業威脅。
           
-          專業術語要求：離職人員請一律使用 'Separated Employees'。
+          專業術語：離職人員請一律使用 'Separated Employees'。
 
-          【嚴格 JSON 格式規範】(必須與下方欄位完全一致):
+          格式規範 (必須完全一致):
           [
             {{
               "id": "news-{datetime.now().strftime('%y%m%d')}-01",
               "title": "【風險等級】新聞標題",
-              "desc": "簡短內容描述，須提及對企業或 EMS 產業的影響",
-              "url": "正確的新聞來源網址",
-              "tags": ["標籤1", "標籤2"],
+              "desc": "描述對企業影響",
+              "url": "網址",
+              "tags": ["標籤"],
               "level": "high/medium/low/info",
-              "matchDomains": ["相關網域.com", "gov.tw"],
+              "matchDomains": ["domain.com"],
               "updatedAt": "{today_str}",
               "expireAt": "2026-07-19",
               "pin": false
             }}
           ]
-          說明：若是重大法規更新或高風險攻擊，pin 設為 true。
-          請直接回傳 JSON 陣列，不准包含 Markdown 代碼塊標記 (```json) 或任何解釋文字。
+          直接回傳 JSON，不要 markdown 標記。
           """
           
-          # 3. 產製與清洗數據
           response = model.generate_content(prompt)
-          raw_text = response.text.strip()
-          # 去除可能的 Markdown 標記
-          clean_text = re.sub(r'```json\s*|```', '', raw_text).strip()
+          clean_text = re.sub(r'```json\s*|```', '', response.text).strip()
           
-          try:
-              # 驗證 JSON 格式
-              json_data = json.loads(clean_text)
-              final_news_json = json.dumps(json_data, ensure_ascii=False, indent=2)
-          except Exception as e:
-              print(f"JSON 解析失敗: {e}\n原文: {raw_text}")
-              exit(1)
-
-          # 4. 推送到 GitHub
+          # 3. 推送到 GitHub (修復大括號衝突)
           REPO = "jackchanggithub/jackchanggithub.github.io"
           FILE = "security-news.json"
-          url = f"[https://api.github.com/repos/](https://api.github.com/repos/){REPO}/contents/{{FILE}}"
-          headers = {{"Authorization": f"Bearer {{os.environ['GITHUB_TOKEN']}}", "Accept": "application/vnd.github.v3+json"}}
+          url = f"https://api.github.com/repos/{REPO}/contents/{FILE}"
+          token = os.environ['GITHUB_TOKEN']
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github.v3+json"
+          }
           
           get_res = requests.get(url, headers=headers)
           sha = get_res.json().get('sha') if get_res.status_code == 200 else None
 
-          content_b64 = base64.b64encode(final_news_json.encode('utf-8')).decode('utf-8')
-          payload = {{"message": "🤖 AI Update: 格式精確同步 ({today_str})", "content": content_b64, "branch": "main"}}
-          if sha: payload["sha"] = sha
+          content_b64 = base64.b64encode(clean_text.encode('utf-8')).decode('utf-8')
+          payload = {
+              "message": f"🤖 AI Update: 格式精確同步 ({today_str})",
+              "content": content_b64,
+              "branch": "main"
+          }
+          if sha:
+              payload["sha"] = sha
           
           res = requests.put(url, headers=headers, json=payload)
           if res.status_code in [200, 201]:
               print("✅ 格式同步更新成功！")
           else:
-              print(f"❌ 推送失敗: {{res.text}}")
+              print(f"❌ 失敗: {res.text}")
           EOF
