@@ -64,6 +64,11 @@ jobs:
                   "name": "國家資安研究院資安週報",
                   "list_url": "https://www.nics.nat.gov.tw/core_business/information_security_information_sharing/cybersecuritynews/",
                   "domain_hint": ["nics.nat.gov.tw"]
+              },
+              {
+                  "name": "資安人",
+                  "list_url": "https://www.informationsecurity.com.tw/main/index.aspx",
+                  "domain_hint": ["www.informationsecurity.com.tw"]
               }
           ]
 
