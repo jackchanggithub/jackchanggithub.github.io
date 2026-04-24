@@ -30,6 +30,7 @@ jobs:
           import json
           import base64
           import requests
+          import time
           from bs4 import BeautifulSoup
           from urllib.parse import urljoin
           from datetime import datetime, timedelta
@@ -189,15 +190,41 @@ jobs:
           {source_text}
           """
 
-          try:
-              response = client.models.generate_content(
-                  model="gemini-2.5-flash",
-                  contents=prompt,
-              )
-          except Exception as e:
-              print("Gemini API 呼叫失敗：")
-              print(repr(e))
-              raise
+          def call_gemini_with_retry(model_name, prompt, max_retries=5):
+              for i in range(max_retries):
+                  try:
+                      print(f"使用模型: {model_name}")
+                      return client.models.generate_content(
+                          model=model_name,
+                          contents=prompt,
+                      )
+                  except Exception as e:
+                      wait_time = min(10 * (2 ** i), 120)
+                      print(f"模型 {model_name} 呼叫失敗：")
+                      print(repr(e))
+
+                      if i == max_retries - 1:
+                          raise
+
+                      print(f"等待 {wait_time} 秒後重試...")
+                      time.sleep(wait_time)
+
+          def call_with_fallback(prompt):
+              models = [
+                  "gemini-2.5-flash",
+                  "gemini-1.5-flash",
+                  "gemini-1.5-pro"
+              ]
+
+              for model in models:
+                  try:
+                      return call_gemini_with_retry(model, prompt)
+                  except Exception:
+                      print(f"{model} 失敗，嘗試下一個模型...")
+
+              raise Exception("所有 Gemini 模型都呼叫失敗")
+
+          response = call_with_fallback(prompt)
 
           text = response.text.strip()
           text = re.sub(r"^```json\s*|```$", "", text, flags=re.MULTILINE).strip()
