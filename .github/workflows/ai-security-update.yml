@@ -48,7 +48,7 @@ jobs:
               {
                   "name": "資安人",
                   "list_url": "https://www.informationsecurity.com.tw/main/index.aspx",
-                  "domain_hint": ["www.informationsecurity.com.tw"]
+                  "domain_hint": ["informationsecurity.com.tw"]
               },
               {
                   "name": "資通安全署新聞稿",
