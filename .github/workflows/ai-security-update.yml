@@ -46,6 +46,11 @@ jobs:
 
           SOURCES = [
               {
+                  "name": "資安人",
+                  "list_url": "https://www.informationsecurity.com.tw/main/index.aspx",
+                  "domain_hint": ["www.informationsecurity.com.tw"]
+              },
+              {
                   "name": "資通安全署新聞稿",
                   "list_url": "https://moda.gov.tw/ACS/press/news/press/820",
                   "domain_hint": ["moda.gov.tw"]
@@ -64,11 +69,6 @@ jobs:
                   "name": "國家資安研究院資安週報",
                   "list_url": "https://www.nics.nat.gov.tw/core_business/information_security_information_sharing/cybersecuritynews/",
                   "domain_hint": ["nics.nat.gov.tw"]
-              },
-              {
-                  "name": "資安人",
-                  "list_url": "https://www.informationsecurity.com.tw/main/index.aspx",
-                  "domain_hint": ["www.informationsecurity.com.tw"]
               }
           ]
 
@@ -160,7 +160,7 @@ jobs:
           以下是已由程式抓到、且網址存在的台灣資安相關候選資料。
           你只能根據這些資料進行挑選與整理，禁止新增任何不存在的網址、標題、事件或來源。
 
-          請從中挑選最值得企業關注的 5 則，並輸出為純 JSON 陣列。
+          請從中挑選最值得企業關注的 7 則，並輸出為純 JSON 陣列。
 
           欄位格式必須如下：
           [
