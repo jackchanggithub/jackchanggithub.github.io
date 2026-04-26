@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260424-01",
-    "title": "【高】nginx-ui 漏洞敲出 MCP 系統性盲點：AI 整合繼承權限、卻不繼承防護",
-    "desc": "此Nginx-UI嚴重認證繞過漏洞(CVE-2026-33032)允許攻擊者無需憑證即完全接管Nginx伺服器，對企業營運構成極高風險，特別是許多EMS企業廣泛使用Nginx作為網路服務器。更重要的是，此事件揭示了AI整合應用在繼承高權限時，若缺乏同步的安全防護機制，將創造系統性的盲點與新的攻擊面。企業須立即修補相關漏洞，並重新評估所有AI整合應用的權限模型與安全控制措施，以防範未來的複合式威脅。",
+    "id": "news-260426-01",
+    "title": "【高】nginx-ui 爆發嚴重認證繞過漏洞，恐導致伺服器完全接管",
+    "desc": "企業應立即檢視其Nginx伺服器是否受到CVE-2026-33032漏洞影響，該漏洞允許攻擊者無需憑證即可完全接管伺服器，對營運造成嚴重中斷及資料外洩風險。特別是EMS產業，若關鍵生產或管理系統使用Nginx，務必儘速修補以防範潛在的供應鏈攻擊或生產線停擺，確保業務連續性與資訊安全。",
     "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12859",
     "tags": [
-      "Nginx",
       "漏洞",
-      "認證繞過"
+      "Nginx",
+      "RCE"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-04-24",
-    "expireAt": "2026-05-01",
+    "updatedAt": "2026-04-26",
+    "expireAt": "2026-05-03",
     "pin": true
   },
   {
-    "id": "news-260424-02",
-    "title": "【高】微軟4月Patch Tuesday修補169個漏洞，兩個零日漏洞遭公開並實際利用",
-    "desc": "微軟4月修補日揭露的169個漏洞中，有兩個零日漏洞(CVE-2026-32201、CVE-2026-33825)已被攻擊者公開利用，其中一個影響廣泛使用的SharePoint伺服器。這對企業資安構成立即且嚴峻的威脅。EMS企業應將這些漏洞的修補作業列為最高優先級，立即部署更新，並檢查系統是否有被入侵的跡象。未能及時修補可能導致資料洩露、服務中斷或進一步的系統損害，對企業營運和供應鏈安全造成不可逆的影響。",
+    "id": "news-260426-02",
+    "title": "【高】微軟四月修補日：兩個SharePoint零日漏洞遭利用，企業面臨即時威脅",
+    "desc": "微軟四月修補日修復的169個漏洞中，包含兩個已遭公開並實際利用的零日漏洞，其中CVE-2026-32201影響SharePoint伺服器，對依賴此平台的企業構成極高風險。EMS企業應緊急優先更新所有微軟產品，特別是SharePoint，以防關鍵文件管理系統被入侵，導致資料洩露或業務中斷，保護智慧財產。",
     "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12857",
     "tags": [
-      "Microsoft",
-      "零日漏洞",
-      "CVE"
+      "漏洞",
+      "零日攻擊",
+      "Microsoft"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-04-24",
-    "expireAt": "2026-05-01",
+    "updatedAt": "2026-04-26",
+    "expireAt": "2026-05-03",
     "pin": true
   },
   {
-    "id": "news-260424-03",
-    "title": "【高】AI 瀏覽器擴充套件成企業新盲點：報告示警更易出現漏洞與高權限風險",
-    "desc": "隨著AI應用普及，AI瀏覽器擴充套件正成為企業資安的新盲點。這些套件可能未觸發傳統資料外洩防護(DLP)告警，也未記錄在SaaS使用中，卻能讀取使用者敏感資料，構成高權限風險與潛在資料外洩途徑。EMS企業應立即評估員工使用AI瀏覽器擴充套件的風險，制定嚴格的使用政策，並考慮部署更先進的端點偵測與回應(EDR)或雲端存取安全代理(CASB)方案，以監控和限制未經授權的資料流動，避免敏感智財或客戶資料外洩。",
+    "id": "news-260426-03",
+    "title": "【高】AI瀏覽器擴充套件成資安新盲點，恐繞過DLP引發資料外洩風險",
+    "desc": "員工使用AI瀏覽器擴充套件可能成為企業的資安盲區。這些擴充套件常具備高權限，卻無法被現有資料外洩防護（DLP）工具偵測，容易造成機敏資料無意中外洩。EMS企業應立即評估員工使用AI工具的風險，制定嚴格的使用規範，並考慮部署更進階的端點監控解決方案，防止關鍵設計圖、客戶資料等智慧財產透過此途徑流出。",
     "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12853",
     "tags": [
       "AI資安",
-      "瀏覽器擴充",
+      "瀏覽器安全",
       "資料外洩"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-04-24",
-    "expireAt": "2026-05-01",
+    "updatedAt": "2026-04-26",
+    "expireAt": "2026-05-03",
     "pin": false
   },
   {
-    "id": "news-260424-04",
-    "title": "【高】AI代理人時代來臨 企業架構準備好了嗎？",
-    "desc": "本觀點文章警示，AI代理人的崛起可能在企業環境中製造未受監控的「後門」，因為這些代理人擁有高權限卻缺乏相應的資安監控機制。這對EMS企業尤其重要，特別是當AI代理人被應用於自動化生產、供應鏈管理或研發設計等關鍵流程時。若無適當的安全設計與治理，這些AI代理人可能成為數據外洩、系統濫用或供應鏈攻擊的新入口。企業需重新檢視其資安架構，納入AI治理與監控，確保AI應用在安全可控的環境下運作。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12854",
+    "id": "news-260426-04",
+    "title": "【高】警報！四月資安修補潮襲來，逾50家廠商同步更新考驗企業應變能力",
+    "desc": "本月迎來大規模軟硬體修補潮，逾50家廠商同步釋出更新，涵蓋SAP、Adobe、Fortinet等關鍵系統，對企業資安團隊構成巨大挑戰。EMS企業需高度關注，排定優先順序，確保所有關鍵系統及生產設備的韌體與軟體及時更新，避免因延遲修補而暴露於大規模攻擊面，影響生產連續性與營運安全，保障供應鏈韌性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12858",
     "tags": [
-      "AI資安",
-      "AI代理人",
-      "企業架構"
+      "修補管理",
+      "漏洞",
+      "更新"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-04-24",
-    "expireAt": "2026-05-01",
+    "updatedAt": "2026-04-26",
+    "expireAt": "2026-05-03",
     "pin": false
   },
   {
-    "id": "news-260424-05",
-    "title": "【中】四月大規模修補潮：逾50家廠商同步釋出更新，資安團隊迎來最繁忙修補週",
-    "desc": "2026年四月迎來大規模修補潮，逾50家軟硬體廠商（包括SAP、Adobe、Fortinet等）同步釋出更新，使得資安團隊面臨前所未有的修補壓力。這對企業的資安維運帶來巨大挑戰，需要投入大量資源進行測試與部署，以確保關鍵系統的安全與穩定。EMS企業務必制定周密的修補計畫，優先處理高風險漏洞，並確保所有系統（包括OT/ICS環境若相關）都能及時更新，以避免因延遲修補而產生新的攻擊面，影響生產與交期。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12858",
+    "id": "news-260426-05",
+    "title": "【中】AI代理人恐成企業「未受監控後門」，威脅內部資安架構",
+    "desc": "隨著AI代理人與程式碼代理的普及，企業面臨新的資安盲點。這些AI工具可能在企業內部建立「未受監控的後門」，不易被傳統DLP或監控系統察覺，形成嚴重的內部威脅。EMS企業在導入AI技術時，必須重新審視資安架構，確保AI工具的行為受到嚴格監控與權限管理，以防範敏感設計圖、智慧財產等關鍵資料被未授權存取或外洩。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12854",
     "tags": [
-      "Patch Tuesday",
-      "漏洞修補",
-      "資安營運"
+      "AI資安",
+      "企業架構",
+      "影子IT"
     ],
     "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-04-24",
-    "expireAt": "2026-05-01",
+    "updatedAt": "2026-04-26",
+    "expireAt": "2026-05-03",
     "pin": false
   }
 ]
