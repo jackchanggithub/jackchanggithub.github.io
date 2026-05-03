@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260426-01",
-    "title": "【高】nginx-ui 爆發嚴重認證繞過漏洞，恐導致伺服器完全接管",
-    "desc": "企業應立即檢視其Nginx伺服器是否受到CVE-2026-33032漏洞影響，該漏洞允許攻擊者無需憑證即可完全接管伺服器，對營運造成嚴重中斷及資料外洩風險。特別是EMS產業，若關鍵生產或管理系統使用Nginx，務必儘速修補以防範潛在的供應鏈攻擊或生產線停擺，確保業務連續性與資訊安全。",
+    "id": "news-260503-01",
+    "title": "【高】微軟4月Patch Tuesday修補169個漏洞，兩個零日漏洞遭公開並實際利用",
+    "desc": "微軟四月修補日修復大量漏洞，其中包含兩個已遭實際利用的零日漏洞（SharePoint伺服器偽造漏洞、Windows MSHTML遠端程式碼執行漏洞）。企業應立即評估並部署相關更新，以防範潛在的資料外洩與系統侵害風險，對使用微軟產品的企業與EMS供應鏈而言，這是刻不容緩的資安優先事項。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12857",
+    "tags": [
+      "零日漏洞",
+      "Microsoft",
+      "Patch Tuesday"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-05-03",
+    "expireAt": "2026-05-10",
+    "pin": true
+  },
+  {
+    "id": "news-260503-02",
+    "title": "【高】美國CISA緊急擴充KEV清單，五大漏洞威脅Windows與網路設備",
+    "desc": "美國CISA將五個漏洞加入已知被利用漏洞（KEV）清單，涵蓋Microsoft Defender、SimpleHelp及Samsung MagicINFO等，顯示這些漏洞正被攻擊者廣泛利用。企業應迅速檢視其網路設備與Windows系統，優先修補這些高風險漏洞，以避免成為國家級或APT攻擊的目標，保護企業關鍵資產及EMS產業供應鏈的安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12867",
+    "tags": [
+      "CISA KEV",
+      "漏洞",
+      "Windows"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-05-03",
+    "expireAt": "2026-05-10",
+    "pin": true
+  },
+  {
+    "id": "news-260503-03",
+    "title": "【高】關鍵基礎設施資安警訊：美國電力商遭駭，DC電源調節器成新型攻擊入口",
+    "desc": "美國電力商Itron遭駭，顯示關鍵基礎設施的資安風險已從網路層延伸至電力層與OT/ICS領域，DC電源調節器成為新型攻擊入口。EMS企業，特別是涉及能源管理或供應鏈中包含關鍵基礎設施組件者，必須重新評估OT/ICS安全防護策略，強化物理與網路層的整合防禦，以應對日益複雜的混合型攻擊，確保營運韌性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12865",
+    "tags": [
+      "關鍵基礎設施",
+      "OT資安",
+      "ICS/SCADA"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-05-03",
+    "expireAt": "2026-05-10",
+    "pin": false
+  },
+  {
+    "id": "news-260503-04",
+    "title": "【高】nginx-ui認證繞過漏洞爆發，AI整合權限繼承風險引關注",
+    "desc": "nginx-ui爆出嚴重認證繞過漏洞（CVE-2026-33032），攻擊者無需憑證即可完全接管伺服器，且已遭實際利用。此漏洞也凸顯AI整合系統性盲點：AI應用在繼承高權限時，往往未繼承同等安全防護。企業應立即檢視並修補所有Nginx相關部署，並重新評估AI應用於關鍵系統的權限管理與安全策略，避免成為內部威脅的破口。",
     "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12859",
     "tags": [
       "漏洞",
-      "Nginx",
-      "RCE"
+      "nginx",
+      "認證繞過"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-04-26",
-    "expireAt": "2026-05-03",
+    "updatedAt": "2026-05-03",
+    "expireAt": "2026-05-10",
     "pin": true
   },
   {
-    "id": "news-260426-02",
-    "title": "【高】微軟四月修補日：兩個SharePoint零日漏洞遭利用，企業面臨即時威脅",
-    "desc": "微軟四月修補日修復的169個漏洞中，包含兩個已遭公開並實際利用的零日漏洞，其中CVE-2026-32201影響SharePoint伺服器，對依賴此平台的企業構成極高風險。EMS企業應緊急優先更新所有微軟產品，特別是SharePoint，以防關鍵文件管理系統被入侵，導致資料洩露或業務中斷，保護智慧財產。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12857",
+    "id": "news-260503-05",
+    "title": "【中】資安院9月啟動漏洞獵捕，鎖定政府與供應鏈安全",
+    "desc": "資安院將於9月啟動第二屆漏洞獵捕計畫，鎖定政府機關常用軟體、網通設備、NAS及工業網通產品，旨在強化供應鏈安全並符合CRA政策考量。EMS企業應關注此活動，特別是若供應產品或服務涉及政府機關或其供應鏈，這將影響產品設計與安全合規性，並可藉此檢視自身資安防護與漏洞管理策略，提升整體供應鏈韌性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12868",
     "tags": [
-      "漏洞",
-      "零日攻擊",
-      "Microsoft"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-04-26",
-    "expireAt": "2026-05-03",
-    "pin": true
-  },
-  {
-    "id": "news-260426-03",
-    "title": "【高】AI瀏覽器擴充套件成資安新盲點，恐繞過DLP引發資料外洩風險",
-    "desc": "員工使用AI瀏覽器擴充套件可能成為企業的資安盲區。這些擴充套件常具備高權限，卻無法被現有資料外洩防護（DLP）工具偵測，容易造成機敏資料無意中外洩。EMS企業應立即評估員工使用AI工具的風險，制定嚴格的使用規範，並考慮部署更進階的端點監控解決方案，防止關鍵設計圖、客戶資料等智慧財產透過此途徑流出。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12853",
-    "tags": [
-      "AI資安",
-      "瀏覽器安全",
-      "資料外洩"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-04-26",
-    "expireAt": "2026-05-03",
-    "pin": false
-  },
-  {
-    "id": "news-260426-04",
-    "title": "【高】警報！四月資安修補潮襲來，逾50家廠商同步更新考驗企業應變能力",
-    "desc": "本月迎來大規模軟硬體修補潮，逾50家廠商同步釋出更新，涵蓋SAP、Adobe、Fortinet等關鍵系統，對企業資安團隊構成巨大挑戰。EMS企業需高度關注，排定優先順序，確保所有關鍵系統及生產設備的韌體與軟體及時更新，避免因延遲修補而暴露於大規模攻擊面，影響生產連續性與營運安全，保障供應鏈韌性。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12858",
-    "tags": [
-      "修補管理",
-      "漏洞",
-      "更新"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-04-26",
-    "expireAt": "2026-05-03",
-    "pin": false
-  },
-  {
-    "id": "news-260426-05",
-    "title": "【中】AI代理人恐成企業「未受監控後門」，威脅內部資安架構",
-    "desc": "隨著AI代理人與程式碼代理的普及，企業面臨新的資安盲點。這些AI工具可能在企業內部建立「未受監控的後門」，不易被傳統DLP或監控系統察覺，形成嚴重的內部威脅。EMS企業在導入AI技術時，必須重新審視資安架構，確保AI工具的行為受到嚴格監控與權限管理，以防範敏感設計圖、智慧財產等關鍵資料被未授權存取或外洩。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12854",
-    "tags": [
-      "AI資安",
-      "企業架構",
-      "影子IT"
+      "供應鏈安全",
+      "漏洞獵捕",
+      "資安政策"
     ],
     "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-04-26",
-    "expireAt": "2026-05-03",
+    "updatedAt": "2026-05-03",
+    "expireAt": "2026-05-10",
     "pin": false
   }
 ]
