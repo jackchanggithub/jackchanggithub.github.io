@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260503-01",
-    "title": "【高】微軟4月Patch Tuesday修補169個漏洞，兩個零日漏洞遭公開並實際利用",
-    "desc": "微軟四月修補日修復大量漏洞，其中包含兩個已遭實際利用的零日漏洞（SharePoint伺服器偽造漏洞、Windows MSHTML遠端程式碼執行漏洞）。企業應立即評估並部署相關更新，以防範潛在的資料外洩與系統侵害風險，對使用微軟產品的企業與EMS供應鏈而言，這是刻不容緩的資安優先事項。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12857",
+    "id": "news-260510-01",
+    "title": "【高】Palo Alto PAN-OS 零時差漏洞遭國家級駭客利用，CISA 令聯邦機構2日內修補",
+    "desc": "此零時差漏洞正被國家級駭客積極利用，對使用Palo Alto Networks防火牆的企業構成極高風險。EMS產業應立即評估其PAN-OS版本，並依循CISA指引於兩日內完成修補，以防範網路邊界被突破，避免關鍵生產系統或智慧財產受損。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12902",
     "tags": [
-      "零日漏洞",
-      "Microsoft",
-      "Patch Tuesday"
+      "零時差漏洞",
+      "國家級駭客",
+      "Palo Alto"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-03",
-    "expireAt": "2026-05-10",
+    "updatedAt": "2026-05-10",
+    "expireAt": "2026-05-17",
     "pin": true
   },
   {
-    "id": "news-260503-02",
-    "title": "【高】美國CISA緊急擴充KEV清單，五大漏洞威脅Windows與網路設備",
-    "desc": "美國CISA將五個漏洞加入已知被利用漏洞（KEV）清單，涵蓋Microsoft Defender、SimpleHelp及Samsung MagicINFO等，顯示這些漏洞正被攻擊者廣泛利用。企業應迅速檢視其網路設備與Windows系統，優先修補這些高風險漏洞，以避免成為國家級或APT攻擊的目標，保護企業關鍵資產及EMS產業供應鏈的安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12867",
+    "id": "news-260510-02",
+    "title": "【高】伊朗 APT 攻擊美國工控設施，CISA 倡議引導關鍵基礎設施演練網路韌性",
+    "desc": "國家級駭客鎖定工控系統，顯示威脅從網路入侵升級至實體癱瘓。EMS產業應警惕此趨勢，特別是擁有OT/ICS環境者，需借鏡CISA的「CI Fortify」倡議，提升網路孤島韌性，強化關鍵基礎設施防護，預防生產線遭外部勢力干擾或破壞。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12901",
     "tags": [
-      "CISA KEV",
-      "漏洞",
-      "Windows"
+      "國家級攻擊",
+      "APT",
+      "工控系統"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-03",
-    "expireAt": "2026-05-10",
+    "updatedAt": "2026-05-10",
+    "expireAt": "2026-05-17",
     "pin": true
   },
   {
-    "id": "news-260503-03",
-    "title": "【高】關鍵基礎設施資安警訊：美國電力商遭駭，DC電源調節器成新型攻擊入口",
-    "desc": "美國電力商Itron遭駭，顯示關鍵基礎設施的資安風險已從網路層延伸至電力層與OT/ICS領域，DC電源調節器成為新型攻擊入口。EMS企業，特別是涉及能源管理或供應鏈中包含關鍵基礎設施組件者，必須重新評估OT/ICS安全防護策略，強化物理與網路層的整合防禦，以應對日益複雜的混合型攻擊，確保營運韌性。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12865",
+    "id": "news-260510-03",
+    "title": "【高】從 AI 攻防到供應鏈風險：Google 技術長揭示台灣資安新戰場",
+    "desc": "AI技術正從根本上改變網路攻擊的規模與速度，加上供應鏈成為主要攻擊目標，對EMS產業構成雙重威脅。企業需重新評估資安策略，強化AI應用安全及供應鏈風險管理，以應對日益複雜且快速演變的新型威脅，保護核心競爭力。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12897",
     "tags": [
-      "關鍵基礎設施",
-      "OT資安",
-      "ICS/SCADA"
+      "AI資安",
+      "供應鏈攻擊",
+      "資安威脅"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-03",
-    "expireAt": "2026-05-10",
-    "pin": false
-  },
-  {
-    "id": "news-260503-04",
-    "title": "【高】nginx-ui認證繞過漏洞爆發，AI整合權限繼承風險引關注",
-    "desc": "nginx-ui爆出嚴重認證繞過漏洞（CVE-2026-33032），攻擊者無需憑證即可完全接管伺服器，且已遭實際利用。此漏洞也凸顯AI整合系統性盲點：AI應用在繼承高權限時，往往未繼承同等安全防護。企業應立即檢視並修補所有Nginx相關部署，並重新評估AI應用於關鍵系統的權限管理與安全策略，避免成為內部威脅的破口。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12859",
-    "tags": [
-      "漏洞",
-      "nginx",
-      "認證繞過"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-05-03",
-    "expireAt": "2026-05-10",
+    "updatedAt": "2026-05-10",
+    "expireAt": "2026-05-17",
     "pin": true
   },
   {
-    "id": "news-260503-05",
-    "title": "【中】資安院9月啟動漏洞獵捕，鎖定政府與供應鏈安全",
-    "desc": "資安院將於9月啟動第二屆漏洞獵捕計畫，鎖定政府機關常用軟體、網通設備、NAS及工業網通產品，旨在強化供應鏈安全並符合CRA政策考量。EMS企業應關注此活動，特別是若供應產品或服務涉及政府機關或其供應鏈，這將影響產品設計與安全合規性，並可藉此檢視自身資安防護與漏洞管理策略，提升整體供應鏈韌性。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12868",
+    "id": "news-260510-04",
+    "title": "【高】AI 機器人攻擊面現形：VLA／VLM 漏洞可操控自主系統行為",
+    "desc": "隨著EMS產業大量導入AI機器人與自主系統，其VLA/VLM漏洞被證實可被利用來惡意操控，直接威脅生產線的安全與穩定。企業必須在部署前進行嚴格安全驗證，並建立完善的機器人資安防護機制，以避免潛在的營運中斷或資料外洩風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12891",
     "tags": [
-      "供應鏈安全",
-      "漏洞獵捕",
-      "資安政策"
+      "AI機器人",
+      "自主系統",
+      "漏洞"
     ],
-    "level": "medium",
+    "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-03",
-    "expireAt": "2026-05-10",
-    "pin": false
+    "updatedAt": "2026-05-10",
+    "expireAt": "2026-05-17",
+    "pin": true
+  },
+  {
+    "id": "news-260510-05",
+    "title": "【高】報告：AI助長網路犯罪浪潮，勒索軟體受害者激增近4倍",
+    "desc": "AI技術加速了網路攻擊的複雜度與頻率，導致勒索軟體受害者激增，對全球企業構成普遍且嚴重的營運風險。EMS企業應加強數據備份、多因子驗證、員工資安意識培訓與即時威脅偵測，以有效防範勒索軟體威脅，避免巨額損失與生產停擺。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12890",
+    "tags": [
+      "AI犯罪",
+      "勒索軟體",
+      "網路威脅"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-05-10",
+    "expireAt": "2026-05-17",
+    "pin": true
   }
 ]
