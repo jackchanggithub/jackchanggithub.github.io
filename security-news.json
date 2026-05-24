@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260517-01",
-    "title": "【高】鴻海北美廠遭Nitrogen勒索軟體攻擊，凸顯製造業資安危機",
-    "desc": "此事件顯示製造業面臨嚴峻的勒索軟體威脅，尤其對於EMS產業，生產線中斷將導致巨大營運損失與客戶信任危機。企業須強化端點防護、備份策略、資安意識培訓，並制定完善的事件應變計畫，以抵禦此類針對性攻擊，確保供應鏈穩定性及業務連續運作。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12924",
+    "id": "news-260524-01",
+    "title": "【高】每月千萬下載AI資料庫ChromaDB爆最高危漏洞，RAG架構應用恐遭遠端劫持",
+    "desc": "知名AI向量資料庫ChromaDB被揭露高危RCE漏洞CVE-2026-45829。企業若使用暴露於網路的RAG架構應用，可能面臨系統遭遠端劫持、資料外洩及服務中斷風險，需立即檢查並修補以防範攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12942",
     "tags": [
-      "勒索軟體",
-      "製造業資安",
-      "供應鏈"
+      "漏洞",
+      "RCE",
+      "AI"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-17",
-    "expireAt": "2026-05-24",
+    "updatedAt": "2026-05-24",
+    "expireAt": "2026-05-31",
     "pin": true
   },
   {
-    "id": "news-260517-02",
-    "title": "【高】OpenAI證實TanStack供應鏈攻擊波及內部，開發環境安全警鐘再響",
-    "desc": "這起事件凸顯開源軟體供應鏈攻擊的潛在威脅，即使是頂尖科技公司也難倖免。對於企業及EMS產業，此類攻擊可能透過開發工具、函式庫滲透至產品，影響軟體交付與產品質量。務必加強開發流程安全、憑證管理與第三方元件檢測，避免惡意程式碼植入。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12923",
+    "id": "news-260524-02",
+    "title": "【高】美國7-Eleven證實遭ShinyHunters入侵，逾60萬筆Salesforce記錄外洩",
+    "desc": "美國7-Eleven遭ShinyHunters入侵，導致超過60萬筆加盟申請相關的Salesforce記錄外洩。企業應警惕第三方供應商（如CRM系統）的安全風險，並強化資料保護與資安稽核，防範敏感客戶資料外洩。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12943",
     "tags": [
-      "供應鏈攻擊",
-      "開發者安全",
-      "憑證"
+      "資料外洩",
+      "供應鏈",
+      "Salesforce"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-17",
-    "expireAt": "2026-05-24",
+    "updatedAt": "2026-05-24",
+    "expireAt": "2026-05-31",
     "pin": true
   },
   {
-    "id": "news-260517-03",
-    "title": "【高】台灣高鐵OT資安漏洞警示，工業控制系統安全不容輕忽",
-    "desc": "台灣高鐵事件暴露出關鍵基礎設施通訊協定的配置缺陷及OT（操作技術）資安弱點。對於EMS或任何擁有工業控制系統的企業，這類漏洞可能導致生產線停擺、設備損壞，甚至危及人員安全。企業應立即檢視OT環境的資安防護，確保協定配置正確且無已知漏洞。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12922",
+    "id": "news-260524-03",
+    "title": "【高】CISA將Langflow與趨勢科技Apex One漏洞列入KEV目錄",
+    "desc": "美國CISA已將Langflow來源驗證錯誤及趨勢科技Apex One漏洞（CVE-2025-34291）列入已知被利用漏洞目錄。企業若使用這些產品，應視為高風險，立即檢查並部署最新修補程式，以阻止潛在攻擊者利用。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12950",
     "tags": [
-      "OT資安",
-      "工業控制系統",
-      "關鍵基礎設施"
+      "漏洞",
+      "CISA KEV",
+      "趨勢科技"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-17",
-    "expireAt": "2026-05-24",
+    "updatedAt": "2026-05-24",
+    "expireAt": "2026-05-31",
     "pin": true
   },
   {
-    "id": "news-260517-04",
-    "title": "【高】身分外洩成企業普遍威脅，強化身分安全刻不容緩",
-    "desc": "高達71%的組織曾遭受身分外洩攻擊，這顯示憑證竊取、權限濫用已成為駭客入侵的主要途徑。對於企業而言，無論是員工或非人類身分（如服務帳號）管理不善都可能成為破口。應落實多因素驗證（MFA）、最小權限原則及定期審核，全面提升身分與存取管理（IAM）成熟度。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12915",
+    "id": "news-260524-04",
+    "title": "【高】Linux DirtyDecrypt提權漏洞PoC出現，部分系統恐遭root提權",
+    "desc": "Linux核心DirtyDecrypt提權漏洞的PoC已公開，可能導致啟用CONFIG_RXGK的系統被攻擊者提權至root權限。企業應立即評估其Linux伺服器風險，確認核心配置，並準備實施必要的修補措施，避免核心系統被完全控制。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12946",
     "tags": [
-      "身分竊取",
-      "憑證管理",
-      "MFA"
+      "漏洞",
+      "Linux",
+      "提權"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-17",
-    "expireAt": "2026-05-24",
+    "updatedAt": "2026-05-24",
+    "expireAt": "2026-05-31",
     "pin": false
   },
   {
-    "id": "news-260517-05",
-    "title": "【高】Mini Shai-Hulud蠕蟲攻擊 npm 套件，軟體供應鏈面臨高階偽造威脅",
-    "desc": "此惡意蠕蟲攻擊多達169個npm套件，且能偽造SLSA出處證明，嚴重威脅軟體供應鏈信任模型。對於依賴開源套件進行開發的EMS企業，這意味著交付的產品可能在不知情下帶有惡意程式碼。必須加強第三方套件的資安掃描、來源驗證及供應鏈安全流程，防範隱蔽性攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12913",
+    "id": "news-260524-05",
+    "title": "【高】OpenClaw修補四項可串聯利用安全漏洞「Claw Chain」",
+    "desc": "OpenClaw修補了四項可串聯利用的「Claw Chain」安全漏洞，攻擊者可藉此建立立足點、竊取敏感資料並植入後門。企業應密切關注所使用的開源組件，並確保及時更新，以防範複雜的鏈式攻擊威脅。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12940",
     "tags": [
-      "供應鏈攻擊",
-      "開源軟體",
-      "npm"
+      "漏洞",
+      "鏈式攻擊",
+      "開源軟體"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-17",
-    "expireAt": "2026-05-24",
-    "pin": true
+    "updatedAt": "2026-05-24",
+    "expireAt": "2026-05-31",
+    "pin": false
   }
 ]
