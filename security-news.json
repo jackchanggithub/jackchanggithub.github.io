@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260524-01",
-    "title": "【高】每月千萬下載AI資料庫ChromaDB爆最高危漏洞，RAG架構應用恐遭遠端劫持",
-    "desc": "知名AI向量資料庫ChromaDB被揭露高危RCE漏洞CVE-2026-45829。企業若使用暴露於網路的RAG架構應用，可能面臨系統遭遠端劫持、資料外洩及服務中斷風險，需立即檢查並修補以防範攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12942",
+    "id": "news-260531-01",
+    "title": "【高】資通安全責任等級分級辦法：資安專職人力及證照要求",
+    "desc": "數位發展部資通安全署發布，所有受管轄企業必須依資安責任等級配置專職資安人力並取得相關證照。這對企業合規性與資源規劃是立即且強制性的影響，特別是EMS產業需確保符合法規要求，避免罰則與信譽受損。",
+    "url": "https://moda.gov.tw/ACS/laws/faq/03/636.html",
     "tags": [
-      "漏洞",
-      "RCE",
-      "AI"
+      "資安法規",
+      "資安人力",
+      "資通安全署"
     ],
     "level": "high",
     "matchDomains": [
-      "informationsecurity.com.tw"
+      "moda.gov.tw"
     ],
-    "updatedAt": "2026-05-24",
-    "expireAt": "2026-05-31",
+    "updatedAt": "2026-05-31",
+    "expireAt": "2026-06-07",
     "pin": true
   },
   {
-    "id": "news-260524-02",
-    "title": "【高】美國7-Eleven證實遭ShinyHunters入侵，逾60萬筆Salesforce記錄外洩",
-    "desc": "美國7-Eleven遭ShinyHunters入侵，導致超過60萬筆加盟申請相關的Salesforce記錄外洩。企業應警惕第三方供應商（如CRM系統）的安全風險，並強化資料保護與資安稽核，防範敏感客戶資料外洩。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12943",
+    "id": "news-260531-02",
+    "title": "【高】Chromium 未修漏洞與 GCP API 金鑰刪除後仍可用 23 分鐘",
+    "desc": "揭露Chromium未修補漏洞與Google Cloud Platform API金鑰在刪除後仍能有效使用長達23分鐘的嚴重資安問題。企業需立即審查GCP API金鑰管理流程，並關注Chromium相關更新，防範潛在的雲端資源濫用及憑證外洩風險，確保數位資產安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12962",
     "tags": [
-      "資料外洩",
-      "供應鏈",
-      "Salesforce"
+      "Chromium漏洞",
+      "GCP",
+      "API金鑰"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-24",
-    "expireAt": "2026-05-31",
+    "updatedAt": "2026-05-31",
+    "expireAt": "2026-06-07",
     "pin": true
   },
   {
-    "id": "news-260524-03",
-    "title": "【高】CISA將Langflow與趨勢科技Apex One漏洞列入KEV目錄",
-    "desc": "美國CISA已將Langflow來源驗證錯誤及趨勢科技Apex One漏洞（CVE-2025-34291）列入已知被利用漏洞目錄。企業若使用這些產品，應視為高風險，立即檢查並部署最新修補程式，以阻止潛在攻擊者利用。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12950",
+    "id": "news-260531-03",
+    "title": "【高】Cisco 研究：多輪對話攻擊使 AI 防線成功率達 88%",
+    "desc": "Cisco研究指出，攻擊者利用多輪對話策略能使AI模型的攻擊成功率高達88%。這對正在導入AI或計畫使用AI自動化流程的企業構成顯著威脅，特別是EMS產業若將AI用於敏感資訊處理，需立即評估現有AI防禦機制，加強對此類新型態攻擊的識別與防範。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12970",
     "tags": [
-      "漏洞",
-      "CISA KEV",
-      "趨勢科技"
+      "AI安全",
+      "對話式AI",
+      "Cisco"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-24",
-    "expireAt": "2026-05-31",
-    "pin": true
-  },
-  {
-    "id": "news-260524-04",
-    "title": "【高】Linux DirtyDecrypt提權漏洞PoC出現，部分系統恐遭root提權",
-    "desc": "Linux核心DirtyDecrypt提權漏洞的PoC已公開，可能導致啟用CONFIG_RXGK的系統被攻擊者提權至root權限。企業應立即評估其Linux伺服器風險，確認核心配置，並準備實施必要的修補措施，避免核心系統被完全控制。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12946",
-    "tags": [
-      "漏洞",
-      "Linux",
-      "提權"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-05-24",
-    "expireAt": "2026-05-31",
+    "updatedAt": "2026-05-31",
+    "expireAt": "2026-06-07",
     "pin": false
   },
   {
-    "id": "news-260524-05",
-    "title": "【高】OpenClaw修補四項可串聯利用安全漏洞「Claw Chain」",
-    "desc": "OpenClaw修補了四項可串聯利用的「Claw Chain」安全漏洞，攻擊者可藉此建立立足點、竊取敏感資料並植入後門。企業應密切關注所使用的開源組件，並確保及時更新，以防範複雜的鏈式攻擊威脅。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12940",
+    "id": "news-260531-04",
+    "title": "【高】資安院實測：AI 代理工具 OpenClaw 面臨網頁注入等三大攻擊路徑全面失守",
+    "desc": "資安院實測發現，AI代理工具OpenClaw在網頁注入、偽裝技能及記憶覆蓋等攻擊情境下全面失守。這對考慮導入AI代理或自動化工具的企業是重要警訊，必須審慎評估其資安風險，避免因AI工具的漏洞導致內部系統被滲透、資料外洩或服務中斷，尤其對於製造業的生產自動化影響甚鉅。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12963",
     "tags": [
-      "漏洞",
-      "鏈式攻擊",
-      "開源軟體"
+      "AI代理",
+      "資安院",
+      "漏洞"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-05-24",
-    "expireAt": "2026-05-31",
+    "updatedAt": "2026-05-31",
+    "expireAt": "2026-06-07",
+    "pin": false
+  },
+  {
+    "id": "news-260531-05",
+    "title": "【中】GlassWorm 供應鏈攻擊基礎設施遭聯合摧毀",
+    "desc": "國際資安組織聯合摧毀GlassWorm供應鏈攻擊基礎設施，該攻擊利用區塊鏈與Google行事曆隱藏指令。雖攻擊基礎設施已被瓦解，但其攻擊手法仍值得企業警惕。EMS產業應檢視供應鏈安全政策，加強對新型隱蔽性攻擊手法的識別與防禦能力，以避免類似威脅再次發生。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12971",
+    "tags": [
+      "供應鏈攻擊",
+      "GlassWorm",
+      "威脅情報"
+    ],
+    "level": "medium",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-05-31",
+    "expireAt": "2026-06-07",
     "pin": false
   }
 ]
