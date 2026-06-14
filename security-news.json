@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260607-01",
-    "title": "【高】Citrix NetScaler 重大漏洞 CVE-2026-3055 遭大規模利用，台灣企業應立即評估曝險程度 Fortinet 確認主動攻擊持續進行，CVSS 9.3 的邊界設備漏洞威脅 VPN 與單一登入基礎架構。",
-    "desc": "Citrix NetScaler 邊界設備出現 CVSS 9.3 的重大漏洞，已遭大規模利用，嚴重威脅企業 VPN 與單一登入基礎架構。台灣企業，特別是依賴這些系統的 EMS 業者，應立即評估曝險程度並執行修補，以防範遠端存取及憑證外洩，避免成為主動攻擊的受害者。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13000",
-    "tags": [
-      "重大漏洞",
-      "邊界設備",
-      "Citrix"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-06-07",
-    "expireAt": "2026-06-14",
-    "pin": true
-  },
-  {
-    "id": "news-260607-02",
-    "title": "【高】Palo Alto PAN-OS 身份驗證繞過漏洞 CVE-2026-0257 遭實際攻擊，CISA 列入 KEV 目錄",
-    "desc": "Palo Alto Networks PAN-OS 軟體及 Prisma Access 存在身份驗證繞過漏洞，且已遭實際攻擊並被 CISA 列入已知利用漏洞目錄。此類邊界設備的漏洞對企業資安影響極大，EMS 產業若使用相關產品，必須立刻審查並更新，以防止未經授權的存取和數據洩露。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12988",
-    "tags": [
-      "重大漏洞",
-      "PaloAlto",
-      "身份驗證繞過"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-06-07",
-    "expireAt": "2026-06-14",
-    "pin": true
-  },
-  {
-    "id": "news-260607-03",
-    "title": "【高】Red Hat npm 套件遭植入後門， Mini Shai-Hulud 新變種繞過雙重驗證竊取雲端憑證",
-    "desc": "開發者常用的 npm 套件遭植入惡意後門，攻擊者利用新變種「Miasma」繞過多重驗證機制，竊取雲端憑證。這對企業開發流程構成嚴重的供應鏈風險，特別是 EMS 產業中依賴開源套件的開發團隊，應立即檢查其依賴項與憑證管理，以防範雲端環境被長期滲透。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12995",
+    "id": "news-260614-01",
+    "title": "【高】Miasma 蠕蟲攻擊微軟 73 個 GitHub 儲存庫，AI 編碼工具成新傳播向量",
+    "desc": "此蠕蟲利用 AI 編碼工具作為新傳播媒介，攻擊 GitHub 儲存庫，對企業的軟體供應鏈安全構成嚴重威脅。特別是依賴 GitHub 進行開發或使用 AI 輔助編碼的 EMS 產業，需立即檢查代碼庫，防範惡意程式碼植入導致資料外洩或系統被劫持。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13020",
     "tags": [
       "供應鏈攻擊",
-      "npm",
-      "後門"
+      "蠕蟲",
+      "GitHub"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-07",
-    "expireAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "expireAt": "2026-06-21",
     "pin": true
   },
   {
-    "id": "news-260607-04",
-    "title": "【高】OpenAI Codex 憑證遭雙管道攻擊竊取，refresh_token 永不過期釀長期滲透風險",
-    "desc": "OpenAI Codex 憑證被竊取，特別是 refresh_token 永不過期的特性，導致長期滲透風險。這對企業內部使用 AI 開發工具、程式碼生成服務的 EMS 業者來說，構成嚴重威脅。應檢查與這些服務相關的憑證安全，確保開發環境與資料安全，防止攻擊者長期駐留。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12994",
+    "id": "news-260614-02",
+    "title": "【高】觀點 - 從發現到控制：如何在 OT 環境中評估與處理高危漏洞",
+    "desc": "此文章提供七步驟框架，指導企業如何在營運技術 (OT) 環境中評估與處理高危漏洞，重點在於判斷漏洞是否「可被利用」。對於擁有關鍵基礎設施或智能製造產線的 EMS 產業，這提供了實用的風險管理指南，避免僅依賴 CVSS 分數而忽略實際威脅。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13018",
     "tags": [
-      "憑證竊取",
-      "OpenAI",
-      "AI資安"
+      "OT安全",
+      "漏洞管理",
+      "工控系統"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-07",
-    "expireAt": "2026-06-14",
-    "pin": true
-  },
-  {
-    "id": "news-260607-05",
-    "title": "【高】攻擊者利用 LLM 代理程式執行後滲透行動，CVE-2026-39987 漏洞成入侵起點",
-    "desc": "攻擊者正利用 LLM 代理程式執行後滲透行動，並以特定漏洞作為入侵起點，最終目標為竊取雲端憑證。這種新興攻擊手法代表 AI 技術本身成為攻擊工具，對企業雲端資產構成新威脅。EMS 業者需加強對 AI 代理程式的審查與監控，並優先修補相關漏洞。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=12991",
-    "tags": [
-      "LLM",
-      "AI代理程式",
-      "後滲透"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-06-07",
-    "expireAt": "2026-06-14",
+    "updatedAt": "2026-06-14",
+    "expireAt": "2026-06-21",
     "pin": false
+  },
+  {
+    "id": "news-260614-03",
+    "title": "【高】新興威脅組織 OP-512 以客製化 Web Shell 框架攻擊 IIS 伺服器，疑與中國有關",
+    "desc": "新興威脅組織 OP-512 利用客製化 Web Shell 框架攻擊 IIS 伺服器，賦予攻擊者遠端存取能力。若企業的公開服務或內部系統使用 IIS，必須立即檢查是否存在未經授權的 Web Shell，並加強伺服器監控與存取控制，以防範潛在的資料竊取或系統控制。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13017",
+    "tags": [
+      "APT",
+      "Web Shell",
+      "IIS"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-06-14",
+    "expireAt": "2026-06-21",
+    "pin": true
+  },
+  {
+    "id": "news-260614-04",
+    "title": "【高】中國 APT 組織 VerdantBamboo 部署三款惡意程式鎖定 Linux 設備，潛伏 18 個月才遭發現",
+    "desc": "中國 APT 組織 VerdantBamboo 鎖定 Linux 設備部署惡意程式，且潛伏時間長達 18 個月。對於廣泛使用 Linux 伺服器或系統的企業而言，這顯示了長期潛伏威脅的嚴重性。務必加強 Linux 環境的監控、端點偵測與回應 (EDR)，並定期進行威脅狩獵。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13015",
+    "tags": [
+      "APT",
+      "Linux",
+      "惡意程式"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-06-14",
+    "expireAt": "2026-06-21",
+    "pin": true
+  },
+  {
+    "id": "news-260614-05",
+    "title": "【高】AI 治理刻不容緩：Check Point 提五步驟路線圖，台灣企業有 24 個月建立合規基準",
+    "desc": "隨著 AI 技術深度嵌入企業營運，AI 治理與合規成為當務之急。Check Point 提出五步驟路線圖，並指出台灣企業有 24 個月建立合規基準。EMS 產業應立即啟動 AI 治理策略，評估 AI 模型的風險與隱私衝擊，確保符合未來法規要求，避免潛在的法律與商譽風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13014",
+    "tags": [
+      "AI治理",
+      "法規",
+      "合規"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-06-14",
+    "expireAt": "2026-06-21",
+    "pin": true
   }
 ]
