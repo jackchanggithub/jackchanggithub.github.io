@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260614-01",
-    "title": "【高】Miasma 蠕蟲攻擊微軟 73 個 GitHub 儲存庫，AI 編碼工具成新傳播向量",
-    "desc": "此蠕蟲利用 AI 編碼工具作為新傳播媒介，攻擊 GitHub 儲存庫，對企業的軟體供應鏈安全構成嚴重威脅。特別是依賴 GitHub 進行開發或使用 AI 輔助編碼的 EMS 產業，需立即檢查代碼庫，防範惡意程式碼植入導致資料外洩或系統被劫持。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13020",
+    "id": "news-260621-01",
+    "title": "【高】IronWorm 入侵 npm 36 套件：Rust 植入程式劫持開發者帳號，CI／CD 管道淪擴散溫床",
+    "desc": "駭客透過 IronWorm 攻擊 npm 軟體套件，劫持開發者帳號並利用 CI/CD 管道擴散惡意程式，竊取環境變數與憑證檔案。對於 EMS 企業而言，若其軟體開發或供應鏈中包含受感染的 npm 套件，將面臨嚴重的供應鏈安全風險，可能導致產品植入惡意程式，或開發環境遭到入侵，影響智慧財產及生產流程。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13013",
     "tags": [
       "供應鏈攻擊",
-      "蠕蟲",
-      "GitHub"
+      "軟體安全",
+      "CI/CD"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-14",
-    "expireAt": "2026-06-21",
+    "updatedAt": "2026-06-21",
+    "expireAt": "2026-06-28",
     "pin": true
   },
   {
-    "id": "news-260614-02",
-    "title": "【高】觀點 - 從發現到控制：如何在 OT 環境中評估與處理高危漏洞",
-    "desc": "此文章提供七步驟框架，指導企業如何在營運技術 (OT) 環境中評估與處理高危漏洞，重點在於判斷漏洞是否「可被利用」。對於擁有關鍵基礎設施或智能製造產線的 EMS 產業，這提供了實用的風險管理指南，避免僅依賴 CVSS 分數而忽略實際威脅。",
+    "id": "news-260621-02",
+    "title": "【高】Miasma 蠕蟲攻擊微軟 73 個 GitHub 儲存庫，AI 編碼工具成新傳播向量",
+    "desc": "Miasma 蠕蟲透過 AI 編碼工具作為新傳播媒介，攻擊微軟 GitHub 儲存庫，竊取敏感資料。EMS 企業普遍使用 GitHub 進行程式碼管理，並逐漸導入 AI 輔助開發。此事件凸顯了開發環境及 AI 工具的潛在資安風險，企業需警惕第三方套件與 AI 工具的安全性，防範智慧財產遭竊或開發流程受損。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13020",
+    "tags": [
+      "蠕蟲",
+      "GitHub",
+      "AI"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-06-21",
+    "expireAt": "2026-06-28",
+    "pin": true
+  },
+  {
+    "id": "news-260621-03",
+    "title": "【高】攻擊者串連三個 Cisco SD-WAN 漏洞打出完整攻擊鏈，包含新零時差漏洞",
+    "desc": "攻擊者發現並串連 Cisco Catalyst SD-WAN Manager 的三個漏洞（含新零時差 CVE-2026-20245），形成完整的攻擊鏈，可能導致遠端代碼執行或網路控制權被奪取。對於依賴 Cisco SD-WAN 構建全球或區域網路的 EMS 企業而言，這是一項極高風險的威脅，務必立即檢視並更新系統，防止關鍵網路基礎設施遭到入侵。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13012",
+    "tags": [
+      "Cisco",
+      "SD-WAN",
+      "零時差漏洞"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-06-21",
+    "expireAt": "2026-06-28",
+    "pin": true
+  },
+  {
+    "id": "news-260621-04",
+    "title": "【高】OT 環境高危漏洞評估與處理：七步驟框架協助判斷可利用性",
+    "desc": "專家提出七步驟框架，指導企業如何在 OT（營運技術）環境中評估並處理高危漏洞，重點在於判斷漏洞是否具備「可被利用」的條件，而非僅依 CVSS 分數。對於 EMS 產業，生產線與關鍵基礎設施的 OT 系統安全性至關重要。此指引可協助企業建立更務實有效的 OT 資安管理流程，降低生產中斷或設備控制權被奪的風險。",
     "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13018",
     "tags": [
       "OT安全",
       "漏洞管理",
-      "工控系統"
+      "生產線"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-14",
-    "expireAt": "2026-06-21",
+    "updatedAt": "2026-06-21",
+    "expireAt": "2026-06-28",
     "pin": false
   },
   {
-    "id": "news-260614-03",
-    "title": "【高】新興威脅組織 OP-512 以客製化 Web Shell 框架攻擊 IIS 伺服器，疑與中國有關",
-    "desc": "新興威脅組織 OP-512 利用客製化 Web Shell 框架攻擊 IIS 伺服器，賦予攻擊者遠端存取能力。若企業的公開服務或內部系統使用 IIS，必須立即檢查是否存在未經授權的 Web Shell，並加強伺服器監控與存取控制，以防範潛在的資料竊取或系統控制。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13017",
+    "id": "news-260621-05",
+    "title": "【高】親中駭客「龍織行動」鎖定台灣政府與學術機構，採用 Rust 載入器與 Azure 雲端滲透",
+    "desc": "具親中背景的「龍織行動」駭客組織，利用魚叉式網路釣魚、客製化 Rust 語言載入器及 Azure 雲端服務，滲透台灣政府與學術機構端點。儘管目前目標為政府與學術，但針對台灣的進階持續性威脅 (APT) 行動，往往會擴及關鍵產業如 EMS。企業應加強對魚叉式釣魚的防範、端點安全監控，並關注類似攻擊手法的演變。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13011",
     "tags": [
       "APT",
-      "Web Shell",
-      "IIS"
+      "國家級駭客",
+      "台灣"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-14",
-    "expireAt": "2026-06-21",
-    "pin": true
-  },
-  {
-    "id": "news-260614-04",
-    "title": "【高】中國 APT 組織 VerdantBamboo 部署三款惡意程式鎖定 Linux 設備，潛伏 18 個月才遭發現",
-    "desc": "中國 APT 組織 VerdantBamboo 鎖定 Linux 設備部署惡意程式，且潛伏時間長達 18 個月。對於廣泛使用 Linux 伺服器或系統的企業而言，這顯示了長期潛伏威脅的嚴重性。務必加強 Linux 環境的監控、端點偵測與回應 (EDR)，並定期進行威脅狩獵。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13015",
-    "tags": [
-      "APT",
-      "Linux",
-      "惡意程式"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-06-14",
-    "expireAt": "2026-06-21",
-    "pin": true
-  },
-  {
-    "id": "news-260614-05",
-    "title": "【高】AI 治理刻不容緩：Check Point 提五步驟路線圖，台灣企業有 24 個月建立合規基準",
-    "desc": "隨著 AI 技術深度嵌入企業營運，AI 治理與合規成為當務之急。Check Point 提出五步驟路線圖，並指出台灣企業有 24 個月建立合規基準。EMS 產業應立即啟動 AI 治理策略，評估 AI 模型的風險與隱私衝擊，確保符合未來法規要求，避免潛在的法律與商譽風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13014",
-    "tags": [
-      "AI治理",
-      "法規",
-      "合規"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-06-14",
-    "expireAt": "2026-06-21",
+    "updatedAt": "2026-06-21",
+    "expireAt": "2026-06-28",
     "pin": true
   }
 ]
