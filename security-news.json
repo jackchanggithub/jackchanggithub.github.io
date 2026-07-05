@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260628-01",
-    "title": "【高】資安署雙警示齊發：曬票恐洩個資、網通設備暴露成駭客跳板",
-    "desc": "資安署警告個資外洩風險與網通設備遭駭作為跳板。企業應立即檢查內部網路設備安全性，避免成為攻擊者目標，並強化員工個資保護意識，防範社交工程風險，確保供應鏈安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13034",
+    "id": "news-260705-01",
+    "title": "【高】Cisco CUCM 漏洞遭迅速武器化，企業應立即修補",
+    "desc": "Cisco CUCM 的高風險漏洞 (CVE-2026-20230) 在 PoC 公開後不足 24 小時即遭武器化，攻擊者可取得 root 權限。對於啟用 WebDialer 功能的企業，這代表系統面臨立即威脅，應假設自身已遭掃描，並立即採取修補措施。此舉能有效防範系統被入侵，避免敏感資料外洩或服務中斷。EMS 企業尤其需確保其通訊系統的安全性，以避免對生產與供應鏈造成嚴重衝擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13045",
     "tags": [
-      "資安警示",
-      "個資外洩",
-      "網通設備"
+      "高風險漏洞",
+      "Cisco",
+      "CUCM"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-28",
-    "expireAt": "2026-07-05",
+    "updatedAt": "2026-07-05",
+    "expireAt": "2026-07-12",
     "pin": true
   },
   {
-    "id": "news-260628-02",
-    "title": "【高】Miasma 蠕蟲攻擊微軟 GitHub 儲存庫，AI 編碼工具成新傳播向量",
-    "desc": "Miasma蠕蟲利用AI編碼工具感染GitHub儲存庫，對依賴開源與AI開發的企業構成嚴重威脅。EMS廠需強化軟體供應鏈安全，審查開發工具與流程，防範惡意程式透過開發環節滲透，危及智慧財產。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13020",
+    "id": "news-260705-02",
+    "title": "【高】PTC Windchill 遠端程式碼執行漏洞列入 CISA KEV，攻擊者持續利用",
+    "desc": "PTC Windchill 的遠端程式碼執行漏洞已被 CISA 列入已知被利用漏洞 (KEV) 目錄，顯示攻擊者正積極利用此弱點。對於依賴 Windchill 進行產品生命週期管理 (PLM) 的 EMS 企業而言，這構成嚴重威脅，可能導致設計藍圖、智慧財產或營運系統遭受未授權存取。企業必須立即盤點並修補受影響的系統，以防止關鍵資料外洩與供應鏈中斷風險，確保產品開發與製造流程的安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13042",
     "tags": [
-      "蠕蟲攻擊",
-      "GitHub",
-      "AI開發"
+      "高風險漏洞",
+      "PTC Windchill",
+      "RCE"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-28",
-    "expireAt": "2026-07-05",
+    "updatedAt": "2026-07-05",
+    "expireAt": "2026-07-12",
     "pin": true
   },
   {
-    "id": "news-260628-03",
-    "title": "【中】IBM、Red Hat 與 Palo Alto Networks 擴大 Project Lightwell 合作",
-    "desc": "三大資安巨頭合作旨在縮短漏洞發現到修復的時間。企業應關注此趨勢，評估現有漏洞管理流程，考慮導入更整合的虛擬修補與軟體修復方案，提升資安防護效率與韌性，降低營運中斷風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13033",
+    "id": "news-260705-03",
+    "title": "【高】中文語系 APT 組織 CL-STA-1062 部署新型後門 TinyRCT",
+    "desc": "中文語系 APT 組織 CL-STA-1062 鎖定東南亞能源與政府部門，部署新型後門 TinyRCT。雖然主要目標是特定關鍵基礎設施，但其高度組織化的攻擊手法與目標選擇，對所有企業，特別是供應鏈中的 EMS 企業，構成潛在威脅。企業應加強監控內部網路異常活動，定期更新威脅情報，並審查現有資安防禦策略，以有效應對此類高階持續性威脅的潛在入侵。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13047",
     "tags": [
-      "漏洞管理",
-      "資安修補",
-      "供應商合作"
+      "APT",
+      "後門",
+      "東南亞"
     ],
-    "level": "medium",
+    "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-28",
-    "expireAt": "2026-07-05",
-    "pin": false
+    "updatedAt": "2026-07-05",
+    "expireAt": "2026-07-12",
+    "pin": true
   },
   {
-    "id": "news-260628-04",
-    "title": "【中】AI 驅動雲端 SOC 轉型實踐：如何利用自動化劇本與 AI 調查縮短資安事件處置時間",
-    "desc": "雲端SOC結合AI與自動化劇本，能大幅提升資安事件回應速度與效率。企業應評估導入AI驅動的資安監控與自動化工具，優化現有SOC運作模式，降低告警疲勞，確保快速偵測及處置威脅，保護生產線持續運作。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13031",
+    "id": "news-260705-04",
+    "title": "【高】日本電信 KDDI 遭入侵，1,420 萬筆電子郵件帳密外洩",
+    "desc": "日本電信 KDDI 旗下系統遭入侵，導致六家 ISP 超過 1,420 萬筆電子郵件帳密外洩。此事件凸顯大型基礎設施供應商面臨的資安風險，以及一旦發生對其客戶造成的連帶影響。EMS 企業應警惕此類供應鏈風險，強化對第三方廠商的資安評估，並教育員工警惕網路釣魚攻擊。同時，實施多因素驗證機制，可有效防範因憑證外洩導致的二次入侵風險，保障企業資產安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13040",
     "tags": [
-      "AI資安",
-      "雲端SOC",
-      "自動化"
+      "資料外洩",
+      "電信業",
+      "ISP"
     ],
-    "level": "medium",
+    "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-28",
-    "expireAt": "2026-07-05",
-    "pin": false
+    "updatedAt": "2026-07-05",
+    "expireAt": "2026-07-12",
+    "pin": true
   },
   {
-    "id": "news-260628-05",
-    "title": "【中】語意防火牆與 AI 治理標準聯手，對抗工業化攻擊",
-    "desc": "面對日益工業化的網路犯罪，企業需超越傳統防禦思維。導入語意防火牆與AI治理標準，能更精準識別惡意「意圖」，有效防禦複雜攻擊。EMS廠應重新審視其資安架構，納入智慧防禦機制，保護關鍵生產系統。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13029",
+    "id": "news-260705-05",
+    "title": "【中】AI 攻防挑戰：企業風險評估速度應跟上 AI 迭代頻率",
+    "desc": "隨著企業日益依賴 AI 模型，傳統一年一次的風險評估與滲透測試頻率已無法滿足 AI 快速迭代的需求。DEVCORE 的紅隊實證揭示此資安鴻溝，特別提醒 EMS 企業在導入 AI 於研發、生產或供應鏈管理時，需調整資安策略。應建立更頻繁、自動化的 AI 模型安全評估機制，將 AI 安全納入 DevSecOps 流程，以有效管理新興風險，確保 AI 應用安全無虞。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13046",
     "tags": [
-      "AI資安",
-      "防火牆",
-      "資安架構"
+      "AI安全",
+      "風險評估",
+      "滲透測試"
     ],
     "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-06-28",
-    "expireAt": "2026-07-05",
+    "updatedAt": "2026-07-05",
+    "expireAt": "2026-07-12",
     "pin": false
   }
 ]
