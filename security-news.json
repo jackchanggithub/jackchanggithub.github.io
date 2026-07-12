@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260705-01",
-    "title": "【高】Cisco CUCM 漏洞遭迅速武器化，企業應立即修補",
-    "desc": "Cisco CUCM 的高風險漏洞 (CVE-2026-20230) 在 PoC 公開後不足 24 小時即遭武器化，攻擊者可取得 root 權限。對於啟用 WebDialer 功能的企業，這代表系統面臨立即威脅，應假設自身已遭掃描，並立即採取修補措施。此舉能有效防範系統被入侵，避免敏感資料外洩或服務中斷。EMS 企業尤其需確保其通訊系統的安全性，以避免對生產與供應鏈造成嚴重衝擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13045",
+    "id": "news-260712-01",
+    "title": "【高】幻象域名搶註：LLM 幻覺催生新型供應鏈威脅",
+    "desc": "此新型攻擊手法利用AI大型語言模型（LLM）的幻覺，搶先註冊由AI錯誤生成的「不存在」域名，藉此攔截流量並進行供應鏈攻擊。對企業而言，這代表傳統的域名監控不足以防禦新型威脅，特別是高度依賴軟體供應鏈的EMS產業，必須加強對AI生成內容的驗證機制，並警惕潛在的數據或軟體被篡改風險，以免造成產品供應鏈的信任危機。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13054",
     "tags": [
-      "高風險漏洞",
-      "Cisco",
-      "CUCM"
+      "供應鏈攻擊",
+      "AI",
+      "域名安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-05",
-    "expireAt": "2026-07-12",
+    "updatedAt": "2026-07-12",
+    "expireAt": "2026-07-19",
     "pin": true
   },
   {
-    "id": "news-260705-02",
-    "title": "【高】PTC Windchill 遠端程式碼執行漏洞列入 CISA KEV，攻擊者持續利用",
-    "desc": "PTC Windchill 的遠端程式碼執行漏洞已被 CISA 列入已知被利用漏洞 (KEV) 目錄，顯示攻擊者正積極利用此弱點。對於依賴 Windchill 進行產品生命週期管理 (PLM) 的 EMS 企業而言，這構成嚴重威脅，可能導致設計藍圖、智慧財產或營運系統遭受未授權存取。企業必須立即盤點並修補受影響的系統，以防止關鍵資料外洩與供應鏈中斷風險，確保產品開發與製造流程的安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13042",
+    "id": "news-260712-02",
+    "title": "【高】網通設備四大資安痛點揭露：Root權限與弱密碼問題嚴重",
+    "desc": "資安院揭露網通設備普遍存在Root權限遭濫用、弱密碼等四大資安痛點。這些基礎安全控制的缺失，讓攻擊者無需高超技術即可入侵。對企業與EMS產業而言，這警示了IT與OT環境中網通設備的脆弱性，可能導致生產線停擺、資料外洩甚至遭受勒索攻擊。應立即盤點所有網通設備，強制實施強密碼政策，並導入定期漏洞掃描與滲透測試，以強化資安基礎。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13063",
     "tags": [
-      "高風險漏洞",
-      "PTC Windchill",
-      "RCE"
+      "網通設備",
+      "漏洞",
+      "弱密碼"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-05",
-    "expireAt": "2026-07-12",
+    "updatedAt": "2026-07-12",
+    "expireAt": "2026-07-19",
     "pin": true
   },
   {
-    "id": "news-260705-03",
-    "title": "【高】中文語系 APT 組織 CL-STA-1062 部署新型後門 TinyRCT",
-    "desc": "中文語系 APT 組織 CL-STA-1062 鎖定東南亞能源與政府部門，部署新型後門 TinyRCT。雖然主要目標是特定關鍵基礎設施，但其高度組織化的攻擊手法與目標選擇，對所有企業，特別是供應鏈中的 EMS 企業，構成潛在威脅。企業應加強監控內部網路異常活動，定期更新威脅情報，並審查現有資安防禦策略，以有效應對此類高階持續性威脅的潛在入侵。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13047",
+    "id": "news-260712-03",
+    "title": "【高】首起AI代理全自動攻擊現蹤：JadePuffer 勒索軟體預示新威脅時代",
+    "desc": "JadePuffer 勒索軟體被指為首個利用AI代理人進行全自動攻擊的案例，透過Langflow漏洞（CVE-2025-3248）實現遠端程式碼執行。這代表攻擊者將能利用AI自動化搜尋與利用漏洞，大幅縮短攻擊準備時間。企業，特別是使用AI工具或面對大量程式碼的EMS產業，需立即盤點並強化AI相關應用的安全，並建立更快速的漏洞修補與事件應變機制，以應對此類自動化威脅。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13067",
     "tags": [
-      "APT",
-      "後門",
-      "東南亞"
+      "勒索軟體",
+      "AI攻擊",
+      "漏洞利用"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-05",
-    "expireAt": "2026-07-12",
+    "updatedAt": "2026-07-12",
+    "expireAt": "2026-07-19",
     "pin": true
   },
   {
-    "id": "news-260705-04",
-    "title": "【高】日本電信 KDDI 遭入侵，1,420 萬筆電子郵件帳密外洩",
-    "desc": "日本電信 KDDI 旗下系統遭入侵，導致六家 ISP 超過 1,420 萬筆電子郵件帳密外洩。此事件凸顯大型基礎設施供應商面臨的資安風險，以及一旦發生對其客戶造成的連帶影響。EMS 企業應警惕此類供應鏈風險，強化對第三方廠商的資安評估，並教育員工警惕網路釣魚攻擊。同時，實施多因素驗證機制，可有效防範因憑證外洩導致的二次入侵風險，保障企業資產安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13040",
+    "id": "news-260712-04",
+    "title": "【高】AI重寫資安時間表：漏洞利用時間從數百天縮短至數小時",
+    "desc": "過去漏洞從發現到遭利用有數百天緩衝期，如今在AI加速下，這個窗口已縮短至數小時。這對企業的資安防禦構成巨大挑戰，傳統的修補與應變速度已不敷使用。EMS產業需重新評估漏洞管理策略，建立即時威脅情報監控，並強化自動化修補與快速響應能力，確保系統與生產線安全，以因應這場資安攻防速度戰。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13065",
     "tags": [
-      "資料外洩",
-      "電信業",
-      "ISP"
+      "漏洞管理",
+      "威脅情報",
+      "AI"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-05",
-    "expireAt": "2026-07-12",
+    "updatedAt": "2026-07-12",
+    "expireAt": "2026-07-19",
     "pin": true
   },
   {
-    "id": "news-260705-05",
-    "title": "【中】AI 攻防挑戰：企業風險評估速度應跟上 AI 迭代頻率",
-    "desc": "隨著企業日益依賴 AI 模型，傳統一年一次的風險評估與滲透測試頻率已無法滿足 AI 快速迭代的需求。DEVCORE 的紅隊實證揭示此資安鴻溝，特別提醒 EMS 企業在導入 AI 於研發、生產或供應鏈管理時，需調整資安策略。應建立更頻繁、自動化的 AI 模型安全評估機制，將 AI 安全納入 DevSecOps 流程，以有效管理新興風險，確保 AI 應用安全無虞。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13046",
+    "id": "news-260712-05",
+    "title": "【高】代理式AI席捲企業系統：機器身分暴增對台灣資安的挑戰",
+    "desc": "隨著代理式AI（Agentic AI）在企業系統中的廣泛應用，機器身分（Machine Identity）數量正急劇增加，成為新的資安挑戰。若缺乏有效的管理與監控，這些機器身分可能成為攻擊者入侵的途徑。EMS產業在導入AI以提升自動化與效率的同時，必須同步建立完善的機器身分管理（MIM）框架，確保AI代理的安全配置與行為審計，以防範潛在的濫用或未經授權存取。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13072",
     "tags": [
-      "AI安全",
-      "風險評估",
-      "滲透測試"
+      "AI",
+      "身份管理",
+      "機器學習"
     ],
-    "level": "medium",
+    "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-05",
-    "expireAt": "2026-07-12",
-    "pin": false
+    "updatedAt": "2026-07-12",
+    "expireAt": "2026-07-19",
+    "pin": true
   }
 ]
