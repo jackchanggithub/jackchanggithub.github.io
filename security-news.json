@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260712-01",
-    "title": "【高】幻象域名搶註：LLM 幻覺催生新型供應鏈威脅",
-    "desc": "此新型攻擊手法利用AI大型語言模型（LLM）的幻覺，搶先註冊由AI錯誤生成的「不存在」域名，藉此攔截流量並進行供應鏈攻擊。對企業而言，這代表傳統的域名監控不足以防禦新型威脅，特別是高度依賴軟體供應鏈的EMS產業，必須加強對AI生成內容的驗證機制，並警惕潛在的數據或軟體被篡改風險，以免造成產品供應鏈的信任危機。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13054",
+    "id": "news-260719-01",
+    "title": "【高】SAP 7月安全性更新修補3項重大漏洞，NetWeaver ABAP現CVSS 9.9高危弱點",
+    "desc": "SAP系統是企業營運核心，本次更新修補了包含CVSS 9.9的重大漏洞，若未及時修補將導致嚴重的資料外洩、系統中斷或未經授權存取風險。企業和EMS產業應立即評估其SAP NetWeaver ABAP環境，並排定更新作業，以確保關鍵業務系統的資安韌性與合規性，避免潛在的營運損失。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13092",
     "tags": [
-      "供應鏈攻擊",
-      "AI",
-      "域名安全"
+      "漏洞修補",
+      "SAP",
+      "關鍵系統"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-12",
-    "expireAt": "2026-07-19",
+    "updatedAt": "2026-07-19",
+    "expireAt": "2026-07-26",
     "pin": true
   },
   {
-    "id": "news-260712-02",
-    "title": "【高】網通設備四大資安痛點揭露：Root權限與弱密碼問題嚴重",
-    "desc": "資安院揭露網通設備普遍存在Root權限遭濫用、弱密碼等四大資安痛點。這些基礎安全控制的缺失，讓攻擊者無需高超技術即可入侵。對企業與EMS產業而言，這警示了IT與OT環境中網通設備的脆弱性，可能導致生產線停擺、資料外洩甚至遭受勒索攻擊。應立即盤點所有網通設備，強制實施強密碼政策，並導入定期漏洞掃描與滲透測試，以強化資安基礎。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13063",
+    "id": "news-260719-02",
+    "title": "【高】Microsoft 2026 年 7 月 Patch Tuesday 修補逾 570 項漏洞，含兩項已遭利用零日漏洞",
+    "desc": "微軟7月例行更新修補了逾570項漏洞，其中包含兩項已被主動利用的零日漏洞。這些漏洞可能影響企業廣泛使用的Windows、Office等產品，導致遠端程式碼執行或資料洩露。企業應立即排定測試與部署更新，特別是針對已遭利用的零日漏洞，以防止攻擊者滲透內部網路，確保企業營運不中斷，保護敏感資料。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13085",
     "tags": [
-      "網通設備",
-      "漏洞",
-      "弱密碼"
+      "漏洞修補",
+      "Microsoft",
+      "零日漏洞"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-12",
-    "expireAt": "2026-07-19",
+    "updatedAt": "2026-07-19",
+    "expireAt": "2026-07-26",
     "pin": true
   },
   {
-    "id": "news-260712-03",
-    "title": "【高】首起AI代理全自動攻擊現蹤：JadePuffer 勒索軟體預示新威脅時代",
-    "desc": "JadePuffer 勒索軟體被指為首個利用AI代理人進行全自動攻擊的案例，透過Langflow漏洞（CVE-2025-3248）實現遠端程式碼執行。這代表攻擊者將能利用AI自動化搜尋與利用漏洞，大幅縮短攻擊準備時間。企業，特別是使用AI工具或面對大量程式碼的EMS產業，需立即盤點並強化AI相關應用的安全，並建立更快速的漏洞修補與事件應變機制，以應對此類自動化威脅。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13067",
+    "id": "news-260719-03",
+    "title": "【高】SonicWall SMA1000 兩項零日漏洞遭主動利用，美CISA 要求聯邦機構限期修補",
+    "desc": "SonicWall SMA1000設備發現兩項零日漏洞，已遭主動利用，可能影響企業的遠端存取與VPN安全。CISA要求聯邦機構限期修補，顯示其緊急性與潛在危害。對於依賴SonicWall設備進行遠端辦公或供應鏈協作的EMS企業，應立即清查受影響版本並部署官方修補程式或採取緩解措施，以防範未經授權的存取與網路滲透。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13091",
     "tags": [
-      "勒索軟體",
-      "AI攻擊",
-      "漏洞利用"
+      "零日漏洞",
+      "SonicWall",
+      "遠端存取"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-12",
-    "expireAt": "2026-07-19",
+    "updatedAt": "2026-07-19",
+    "expireAt": "2026-07-26",
     "pin": true
   },
   {
-    "id": "news-260712-04",
-    "title": "【高】AI重寫資安時間表：漏洞利用時間從數百天縮短至數小時",
-    "desc": "過去漏洞從發現到遭利用有數百天緩衝期，如今在AI加速下，這個窗口已縮短至數小時。這對企業的資安防禦構成巨大挑戰，傳統的修補與應變速度已不敷使用。EMS產業需重新評估漏洞管理策略，建立即時威脅情報監控，並強化自動化修補與快速響應能力，確保系統與生產線安全，以因應這場資安攻防速度戰。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13065",
+    "id": "news-260719-04",
+    "title": "【高】單一攻擊者借助 AI 在 72 小時內入侵 AWS 雲端環境並完成勒索",
+    "desc": "本事件揭示攻擊者透過AI輔助，在極短時間內成功入侵AWS雲端環境並執行勒索攻擊。這對廣泛使用雲端服務的企業，尤其是EMS產業的雲端供應鏈管理，構成重大警訊。企業應重新審視雲端安全配置、加強存取控制、實施多因子驗證，並強化監控與應變機制，以防範AI驅動的複雜攻擊，確保雲端資產與數據安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13084",
     "tags": [
-      "漏洞管理",
-      "威脅情報",
-      "AI"
+      "雲端安全",
+      "AWS",
+      "勒索軟體"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-12",
-    "expireAt": "2026-07-19",
+    "updatedAt": "2026-07-19",
+    "expireAt": "2026-07-26",
     "pin": true
   },
   {
-    "id": "news-260712-05",
-    "title": "【高】代理式AI席捲企業系統：機器身分暴增對台灣資安的挑戰",
-    "desc": "隨著代理式AI（Agentic AI）在企業系統中的廣泛應用，機器身分（Machine Identity）數量正急劇增加，成為新的資安挑戰。若缺乏有效的管理與監控，這些機器身分可能成為攻擊者入侵的途徑。EMS產業在導入AI以提升自動化與效率的同時，必須同步建立完善的機器身分管理（MIM）框架，確保AI代理的安全配置與行為審計，以防範潛在的濫用或未經授權存取。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13072",
+    "id": "news-260719-05",
+    "title": "【高】美國 CISA 列 Langflow 的 IDOR 漏洞入已知遭利用目錄 CVE-2026-55255",
+    "desc": "CISA將Langflow的IDOR（不安全直接物件引用）漏洞列入已知遭利用目錄，顯示此漏洞已構成即時威脅。該漏洞可能允許未經授權的資料存取，對使用Langflow或類似LLM orchestration工具的企業構成高風險。企業應立即清查其應用環境，檢查是否使用受影響版本並進行修補，以防止敏感數據外洩，維護資料完整性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13077",
     "tags": [
-      "AI",
-      "身份管理",
-      "機器學習"
+      "IDOR",
+      "CISA警告",
+      "零日漏洞"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-12",
-    "expireAt": "2026-07-19",
+    "updatedAt": "2026-07-19",
+    "expireAt": "2026-07-26",
     "pin": true
   }
 ]
