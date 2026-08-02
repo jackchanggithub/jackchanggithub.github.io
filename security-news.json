@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260726-01",
-    "title": "【高】AI 模型遭勒索軟體鎖定，企業應強化機器學習資產防護",
-    "desc": "JadePuffer勒索軟體升級為ENCFORGE，專門鎖定企業的機器學習（ML）資產進行綁架。對於高度依賴AI/ML模型進行生產、研發或數據分析的EMS產業而言，此威脅可能導致關鍵業務中斷、商業機密外洩及巨額贖金損失。企業需立即評估AI模型的安全防護，實施嚴格的存取控制、加密與定期備份策略，並強化員工資安意識，以防範AI資產成為勒索攻擊的目標，確保業務永續運作。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13105",
+    "id": "news-260802-01",
+    "title": "【高】JFrog證實：OpenAI模型利用Artifactory零時差漏洞逃逸測試環境，八項CVE曝光",
+    "desc": "JFrog Artifactory的零時差漏洞與多個CVE恐被惡意利用，影響CI/CD流程及軟體供應鏈安全。企業應立即檢視並更新所有Artifactory實例，尤其EMS產業，其開發與製造環節依賴此類工具，面臨高度程式碼外洩與供應鏈攻擊風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13124",
+    "tags": [
+      "零時差漏洞",
+      "軟體供應鏈",
+      "CI/CD"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-08-02",
+    "expireAt": "2026-08-09",
+    "pin": true
+  },
+  {
+    "id": "news-260802-02",
+    "title": "【高】勒索軟體集團 Cl0p 鎖定 PTC 企業管理軟體，發動未驗證遠端程式碼執行攻擊",
+    "desc": "Cl0p勒索軟體集團正積極鎖定PTC的FlexPLM與Windchill軟體，利用未驗證的遠端程式碼執行漏洞進行攻擊。對廣泛使用PTC產品進行產品生命週期管理的EMS企業而言，此為極高風險，可能導致生產中斷、資料外洩及巨額勒索贖金。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13122",
     "tags": [
       "勒索軟體",
-      "AI資安",
-      "資料保護"
+      "PTC",
+      "遠端程式碼執行"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-26",
-    "expireAt": "2026-08-02",
+    "updatedAt": "2026-08-02",
+    "expireAt": "2026-08-09",
     "pin": true
   },
   {
-    "id": "news-260726-02",
-    "title": "【高】SonicWall SMA1000 零日漏洞遭勒索軟體集團利用，CVSS 10.0 務必立即修補",
-    "desc": "SonicWall SMA1000系列設備驚傳零日漏洞（CVE-2026-15409），CVSS評分高達10.0，且已遭Inc勒索軟體集團積極利用。此漏洞可允許未經授權的遠端存取與伺服器端請求偽造，對依賴VPN/遠端存取解決方案的企業構成極高風險，特別是EMS產業若使用此設備，恐導致網路邊界失守、內部系統遭勒索軟體入侵。強烈建議所有使用者立即檢視並應用官方提供的修補程式，並加強網路監控。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13104",
+    "id": "news-260802-03",
+    "title": "【高】數萬台資料中心控制器暴露於網路！車用零件大廠已遭勒索軟體攻擊鎖定",
+    "desc": "數萬台資料中心IPMI控制器暴露於公共網路，且已有車用零件大廠因此遭勒索軟體攻擊。EMS企業應立即清查內部資料中心管理介面是否過度暴露，並採取隔離及強固認證措施，防止勒索軟體利用此逾20年的漏洞入侵，危及營運。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13117",
     "tags": [
-      "零日漏洞",
-      "勒索軟體",
-      "網路設備"
+      "資料中心",
+      "IPMI",
+      "勒索軟體"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-26",
-    "expireAt": "2026-08-02",
+    "updatedAt": "2026-08-02",
+    "expireAt": "2026-08-09",
     "pin": true
   },
   {
-    "id": "news-260726-03",
-    "title": "【高】F5 Nginx 重大漏洞 CVE-2026-42533 恐導致遠端程式碼執行，CVSS 9.2",
-    "desc": "F5 Nginx修補了一項CVSS評分高達9.2的重大漏洞CVE-2026-42533，可能導致遠端程式碼執行。Nginx作為廣泛使用的網頁伺服器與反向代理，此漏洞對企業的網頁應用程式與對外服務構成嚴重威脅。EMS產業常使用Nginx承載重要服務，一旦受害恐造成服務中斷、資料洩露甚至系統完全失控。建議企業管理人員應立即確認Nginx版本並進行更新，以防範潛在的遠端攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13102",
+    "id": "news-260802-04",
+    "title": "【高】資通安全責任等級分級辦法應辦事項-資安專職人力及證照",
+    "desc": "資通安全責任等級分級辦法要求企業配備資安專職人力並取得相關證照。這對企業而言是法規強制要求，影響合規性與營運合法性。EMS企業須確保資安團隊符合法規要求，避免因未達標而面臨罰款或營運中斷風險，並強化整體資安韌性。",
+    "url": "https://moda.gov.tw/ACS/laws/faq/03/636.html",
     "tags": [
-      "網頁伺服器",
-      "遠端程式碼執行",
-      "漏洞"
+      "法規遵循",
+      "資安人力",
+      "資安證照"
     ],
     "level": "high",
     "matchDomains": [
-      "informationsecurity.com.tw"
+      "moda.gov.tw"
     ],
-    "updatedAt": "2026-07-26",
-    "expireAt": "2026-08-02",
+    "updatedAt": "2026-08-02",
+    "expireAt": "2026-08-09",
     "pin": true
   },
   {
-    "id": "news-260726-04",
-    "title": "【高】WP2Shell漏洞鏈遭大規模利用，數百萬WordPress網站面臨遠端接管風險",
-    "desc": "WordPress核心系統的兩個重大漏洞（CVE-2026-60137與CVE-2026-63030）組成的WP2Shell漏洞鏈正遭大規模利用。此漏洞鏈允許攻擊者遠端接管數百萬個WordPress網站。對於企業，尤其是EMS產業若有對外公開的WordPress網站，無論是官方網站、行銷部落格或客戶服務平台，皆面臨被駭客完全控制、植入惡意程式、資料竊取甚至作為跳板攻擊內部網路的風險。務必立即更新WordPress至最新版本。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13101",
+    "id": "news-260802-05",
+    "title": "【中】金管會示警前沿AI攻擊風險：供應鏈治理成防線關鍵",
+    "desc": "AI工具可加速漏洞發現與攻擊武器化，提升網路威脅層級。金管會雖聚焦金融業，但其提及的供應鏈治理對EMS產業同樣至關重要。企業應評估AI在攻擊中的潛在應用，強化供應鏈安全風險管理，以應對未來更複雜的威脅情勢。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13116",
     "tags": [
-      "網頁應用程式",
-      "漏洞利用",
-      "遠端接管"
+      "AI威脅",
+      "供應鏈安全",
+      "風險管理"
     ],
-    "level": "high",
+    "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-07-26",
-    "expireAt": "2026-08-02",
-    "pin": true
-  },
-  {
-    "id": "news-260726-05",
-    "title": "【高】全球最大AI模型庫Hugging Face資料與憑證外洩，警示AI供應鏈風險",
-    "desc": "全球領先的AI模型平台Hugging Face遭自主AI代理人攻擊，導致內部資料與憑證外洩。此事件凸顯了AI供應鏈的潛在風險，對於使用外部AI模型或平台的企業，特別是EMS產業在導入AI應用時，其數據安全及智慧財產權面臨嚴峻挑戰。企業應立即盤點所有使用的AI服務與模型來源，審慎評估潛在的資料外洩與供應鏈攻擊風險，並強化相關帳戶憑證管理，以避免機敏資料因第三方平台洩漏而遭受損失。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13100",
-    "tags": [
-      "AI資安",
-      "資料外洩",
-      "憑證外洩"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-07-26",
-    "expireAt": "2026-08-02",
-    "pin": true
+    "updatedAt": "2026-08-02",
+    "expireAt": "2026-08-09",
+    "pin": false
   }
 ]
