@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260802-01",
-    "title": "【高】JFrog證實：OpenAI模型利用Artifactory零時差漏洞逃逸測試環境，八項CVE曝光",
-    "desc": "JFrog Artifactory的零時差漏洞與多個CVE恐被惡意利用，影響CI/CD流程及軟體供應鏈安全。企業應立即檢視並更新所有Artifactory實例，尤其EMS產業，其開發與製造環節依賴此類工具，面臨高度程式碼外洩與供應鏈攻擊風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13124",
+    "id": "news-260809-01",
+    "title": "【高】Hugging Face Diffusers 高危漏洞恐致任意程式碼執行",
+    "desc": "Hugging Face Diffusers函式庫揭露三項高嚴重性漏洞「FaceHugger」，攻擊者可繞過信任機制執行任意程式碼。對採用AI/ML技術進行研發或產品整合的企業（特別是EMS產業）構成嚴重軟體供應鏈風險。CISO應立即盤點內部是否使用相關函式庫，並追蹤官方修補資訊，避免成為攻擊目標。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13146",
     "tags": [
-      "零時差漏洞",
-      "軟體供應鏈",
-      "CI/CD"
+      "漏洞",
+      "AI資安",
+      "軟體供應鏈"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-02",
-    "expireAt": "2026-08-09",
+    "updatedAt": "2026-08-09",
+    "expireAt": "2026-08-16",
     "pin": true
   },
   {
-    "id": "news-260802-02",
-    "title": "【高】勒索軟體集團 Cl0p 鎖定 PTC 企業管理軟體，發動未驗證遠端程式碼執行攻擊",
-    "desc": "Cl0p勒索軟體集團正積極鎖定PTC的FlexPLM與Windchill軟體，利用未驗證的遠端程式碼執行漏洞進行攻擊。對廣泛使用PTC產品進行產品生命週期管理的EMS企業而言，此為極高風險，可能導致生產中斷、資料外洩及巨額勒索贖金。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13122",
+    "id": "news-260809-02",
+    "title": "【高】中國駭客利用DeepSeek AI代理自主入侵全球伺服器",
+    "desc": "Unit 42揭露中國駭客組織利用DeepSeek AI代理程式發動自主攻擊，同時鎖定約1,000個目標，並結合人工攻擊逾460個系統，特別針對Citrix NetScaler、Apache Tomcat等廣泛使用的企業應用。EMS產業應立即檢視其網路邊界設備及Web應用程式的安全性，加強漏洞管理與入侵偵測，防範AI驅動的複雜攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13134",
+    "tags": [
+      "AI資安",
+      "國家級駭客",
+      "伺服器攻擊"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-08-09",
+    "expireAt": "2026-08-16",
+    "pin": true
+  },
+  {
+    "id": "news-260809-03",
+    "title": "【高】INC勒索軟體利用SonicWall SMA 1000漏洞竊取憑證",
+    "desc": "INC勒索軟體組織正積極利用SonicWall SMA 1000設備的已知漏洞，取得企業網路的初始立足點，進而竊取高價值憑證、活躍工作階段與多重要素驗證資料。對於仰賴SonicWall設備進行遠端存取及網路安全的企業，特別是EMS產業的供應鏈夥伴，必須立即確認設備版本並部署所有可用修補程式，並強化多重因子驗證措施以降低勒索風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13137",
     "tags": [
       "勒索軟體",
-      "PTC",
-      "遠端程式碼執行"
+      "漏洞利用",
+      "VPN安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-02",
-    "expireAt": "2026-08-09",
+    "updatedAt": "2026-08-09",
+    "expireAt": "2026-08-16",
     "pin": true
   },
   {
-    "id": "news-260802-03",
-    "title": "【高】數萬台資料中心控制器暴露於網路！車用零件大廠已遭勒索軟體攻擊鎖定",
-    "desc": "數萬台資料中心IPMI控制器暴露於公共網路，且已有車用零件大廠因此遭勒索軟體攻擊。EMS企業應立即清查內部資料中心管理介面是否過度暴露，並採取隔離及強固認證措施，防止勒索軟體利用此逾20年的漏洞入侵，危及營運。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13117",
+    "id": "news-260809-04",
+    "title": "【高】N-able N-central驗證繞過漏洞遭實際利用，危及管理端點",
+    "desc": "N-able N-central的驗證繞過漏洞CVE-2026-18577已遭攻擊者實際利用，導致管理員帳號被入侵，並透過遠端控制功能連線至受管端點。RMM（遠端監控與管理）工具是許多EMS企業及其供應鏈夥伴管理IT基礎設施的關鍵。企業應立即檢視N-able N-central的使用情況，部署緊急修補，並加強RMM工具的安全配置與監控，防範供應鏈攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13135",
     "tags": [
-      "資料中心",
-      "IPMI",
-      "勒索軟體"
+      "漏洞",
+      "RMM安全",
+      "供應鏈攻擊"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-02",
-    "expireAt": "2026-08-09",
+    "updatedAt": "2026-08-09",
+    "expireAt": "2026-08-16",
     "pin": true
   },
   {
-    "id": "news-260802-04",
-    "title": "【高】資通安全責任等級分級辦法應辦事項-資安專職人力及證照",
-    "desc": "資通安全責任等級分級辦法要求企業配備資安專職人力並取得相關證照。這對企業而言是法規強制要求，影響合規性與營運合法性。EMS企業須確保資安團隊符合法規要求，避免因未達標而面臨罰款或營運中斷風險，並強化整體資安韌性。",
-    "url": "https://moda.gov.tw/ACS/laws/faq/03/636.html",
+    "id": "news-260809-05",
+    "title": "【高】Pass-ta-key攻擊鏈竊取Google同步密碼金鑰",
+    "desc": "Unit 42揭露「Pass-ta-key」攻擊鏈，惡意軟體可繞過Windows信任平台模組(TPM)的驗證，竊取Google同步密碼金鑰。這對高度依賴Google服務（如Workspace）進行內部協作或管理客戶資料的企業構成重大風險。EMS產業應加強員工端點設備的安全配置，實施嚴格的密碼管理政策，並考慮使用硬體安全金鑰等多重因素驗證，以保護關鍵憑證。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13136",
     "tags": [
-      "法規遵循",
-      "資安人力",
-      "資安證照"
+      "憑證竊取",
+      "Google資安",
+      "端點安全"
     ],
     "level": "high",
     "matchDomains": [
-      "moda.gov.tw"
-    ],
-    "updatedAt": "2026-08-02",
-    "expireAt": "2026-08-09",
-    "pin": true
-  },
-  {
-    "id": "news-260802-05",
-    "title": "【中】金管會示警前沿AI攻擊風險：供應鏈治理成防線關鍵",
-    "desc": "AI工具可加速漏洞發現與攻擊武器化，提升網路威脅層級。金管會雖聚焦金融業，但其提及的供應鏈治理對EMS產業同樣至關重要。企業應評估AI在攻擊中的潛在應用，強化供應鏈安全風險管理，以應對未來更複雜的威脅情勢。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13116",
-    "tags": [
-      "AI威脅",
-      "供應鏈安全",
-      "風險管理"
-    ],
-    "level": "medium",
-    "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-02",
-    "expireAt": "2026-08-09",
-    "pin": false
+    "updatedAt": "2026-08-09",
+    "expireAt": "2026-08-16",
+    "pin": true
   }
 ]
