@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260809-01",
-    "title": "【高】Hugging Face Diffusers 高危漏洞恐致任意程式碼執行",
-    "desc": "Hugging Face Diffusers函式庫揭露三項高嚴重性漏洞「FaceHugger」，攻擊者可繞過信任機制執行任意程式碼。對採用AI/ML技術進行研發或產品整合的企業（特別是EMS產業）構成嚴重軟體供應鏈風險。CISO應立即盤點內部是否使用相關函式庫，並追蹤官方修補資訊，避免成為攻擊目標。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13146",
+    "id": "news-260816-01",
+    "title": "【高】中國駭客鎖定台灣半導體產業：APT威脅升溫",
+    "desc": "TrendAI發布警訊，指稱三組與中國相關的駭客組織正積極鎖定台灣的半導體產業。此類針對性攻擊可能導致機敏資料外洩、智慧財產遭竊或營運中斷，對EMS企業的供應鏈安全構成嚴峻挑戰。企業應立即強化資安防禦，特別是針對APT攻擊的偵測與應變能力，並審視供應鏈夥伴的資安韌性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13169",
     "tags": [
-      "漏洞",
-      "AI資安",
-      "軟體供應鏈"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-08-09",
-    "expireAt": "2026-08-16",
-    "pin": true
-  },
-  {
-    "id": "news-260809-02",
-    "title": "【高】中國駭客利用DeepSeek AI代理自主入侵全球伺服器",
-    "desc": "Unit 42揭露中國駭客組織利用DeepSeek AI代理程式發動自主攻擊，同時鎖定約1,000個目標，並結合人工攻擊逾460個系統，特別針對Citrix NetScaler、Apache Tomcat等廣泛使用的企業應用。EMS產業應立即檢視其網路邊界設備及Web應用程式的安全性，加強漏洞管理與入侵偵測，防範AI驅動的複雜攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13134",
-    "tags": [
-      "AI資安",
+      "APT",
       "國家級駭客",
-      "伺服器攻擊"
+      "半導體"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-09",
-    "expireAt": "2026-08-16",
+    "updatedAt": "2026-08-16",
+    "expireAt": "2026-08-23",
     "pin": true
   },
   {
-    "id": "news-260809-03",
-    "title": "【高】INC勒索軟體利用SonicWall SMA 1000漏洞竊取憑證",
-    "desc": "INC勒索軟體組織正積極利用SonicWall SMA 1000設備的已知漏洞，取得企業網路的初始立足點，進而竊取高價值憑證、活躍工作階段與多重要素驗證資料。對於仰賴SonicWall設備進行遠端存取及網路安全的企業，特別是EMS產業的供應鏈夥伴，必須立即確認設備版本並部署所有可用修補程式，並強化多重因子驗證措施以降低勒索風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13137",
+    "id": "news-260816-02",
+    "title": "【高】Cisco防火牆VPN服務高風險漏洞遭利用，企業應緊急修補",
+    "desc": "Cisco防火牆VPN服務被揭露存在高風險漏洞(CVE-2026-20349)，且已遭駭客實際利用並列入CISA KEV清單。對於依賴Cisco設備進行遠端存取及網路安全防護的EMS企業而言，此漏洞構成直接且嚴重的威脅，可能導致未經授權的存取。企業應立即檢視並應用所有可用的安全更新，以避免潛在的網路入侵。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13160",
+    "tags": [
+      "Cisco",
+      "防火牆",
+      "VPN"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-08-16",
+    "expireAt": "2026-08-23",
+    "pin": true
+  },
+  {
+    "id": "news-260816-03",
+    "title": "【高】Gunra勒索軟體鎖定關鍵基礎設施，Fortinet用戶應緊急更新",
+    "desc": "美韓聯合警告Gunra勒索軟體正鎖定關鍵基礎設施，並利用Fortinet防火牆漏洞(CVE-2024-55591, CVE-2025-24472)進行攻擊。對於仰賴Fortinet設備且擁有OT環境的EMS企業，這是一項極高的風險。勒索軟體攻擊不僅導致資料遺失，更可能造成生產線停擺。企業應立即檢查Fortinet設備版本並進行緊急修補，同時強化備份與復原策略。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13159",
     "tags": [
       "勒索軟體",
-      "漏洞利用",
-      "VPN安全"
+      "Fortinet",
+      "防火牆"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-09",
-    "expireAt": "2026-08-16",
+    "updatedAt": "2026-08-16",
+    "expireAt": "2026-08-23",
     "pin": true
   },
   {
-    "id": "news-260809-04",
-    "title": "【高】N-able N-central驗證繞過漏洞遭實際利用，危及管理端點",
-    "desc": "N-able N-central的驗證繞過漏洞CVE-2026-18577已遭攻擊者實際利用，導致管理員帳號被入侵，並透過遠端控制功能連線至受管端點。RMM（遠端監控與管理）工具是許多EMS企業及其供應鏈夥伴管理IT基礎設施的關鍵。企業應立即檢視N-able N-central的使用情況，部署緊急修補，並加強RMM工具的安全配置與監控，防範供應鏈攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13135",
+    "id": "news-260816-04",
+    "title": "【高】微軟零時差漏洞遭Lazarus駭客利用，企業應立即打補丁",
+    "desc": "微軟於8月修補了大量漏洞，其中一項零時差漏洞(CVE-2026-68820)已被北韓Lazarus駭客集團實際利用。由於Windows系統在企業環境中普遍使用，此漏洞對EMS企業構成高度威脅，可能被用於初始入侵或橫向移動。企業應將微軟最新的安全更新列為優先事項，並特別關注此已遭利用的零時差漏洞，確保所有Windows系統及相關應用程式皆已打上補丁。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13158",
     "tags": [
+      "微軟",
+      "零時差",
+      "Lazarus"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-08-16",
+    "expireAt": "2026-08-23",
+    "pin": true
+  },
+  {
+    "id": "news-260816-05",
+    "title": "【高】Linux核心SCTP驚現18年權限提升漏洞，企業應速更新",
+    "desc": "Linux核心的SCTP協議被揭露存在一個長達18年的嚴重權限提升漏洞(SCTPhantom)。鑑於Linux作業系統在企業伺服器、雲端基礎設施及許多OT/ICS設備中廣泛應用，此漏洞可能讓攻擊者取得系統最高權限，對EMS企業的IT及OT環境構成極高風險。企業應立即排查所有Linux系統，並儘速應用核心團隊發布的修補程式，以防止潛在的攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13162",
+    "tags": [
+      "Linux",
       "漏洞",
-      "RMM安全",
-      "供應鏈攻擊"
+      "權限提升"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-09",
-    "expireAt": "2026-08-16",
-    "pin": true
-  },
-  {
-    "id": "news-260809-05",
-    "title": "【高】Pass-ta-key攻擊鏈竊取Google同步密碼金鑰",
-    "desc": "Unit 42揭露「Pass-ta-key」攻擊鏈，惡意軟體可繞過Windows信任平台模組(TPM)的驗證，竊取Google同步密碼金鑰。這對高度依賴Google服務（如Workspace）進行內部協作或管理客戶資料的企業構成重大風險。EMS產業應加強員工端點設備的安全配置，實施嚴格的密碼管理政策，並考慮使用硬體安全金鑰等多重因素驗證，以保護關鍵憑證。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13136",
-    "tags": [
-      "憑證竊取",
-      "Google資安",
-      "端點安全"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-08-09",
-    "expireAt": "2026-08-16",
+    "updatedAt": "2026-08-16",
+    "expireAt": "2026-08-23",
     "pin": true
   }
 ]
