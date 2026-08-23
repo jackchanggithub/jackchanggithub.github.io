@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260816-01",
-    "title": "【高】中國駭客鎖定台灣半導體產業：APT威脅升溫",
-    "desc": "TrendAI發布警訊，指稱三組與中國相關的駭客組織正積極鎖定台灣的半導體產業。此類針對性攻擊可能導致機敏資料外洩、智慧財產遭竊或營運中斷，對EMS企業的供應鏈安全構成嚴峻挑戰。企業應立即強化資安防禦，特別是針對APT攻擊的偵測與應變能力，並審視供應鏈夥伴的資安韌性。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13169",
+    "id": "news-260823-01",
+    "title": "【高】新型殭屍網路瞄準邊緣裝置 D-Link、Zyxel兩大台灣品牌漏洞占比逾三分之一",
+    "desc": "新型殭屍網路正利用D-Link、Zyxel等台灣品牌邊緣裝置漏洞，對企業構成即時威脅。EMS產業廣泛使用此類裝置，需立即清查並修補所有邊緣裝置漏洞，以防範被感染，導致DDoS攻擊、資料外洩或服務中斷，嚴重影響生產與營運連續性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13192",
+    "tags": [
+      "殭屍網路",
+      "邊緣裝置",
+      "漏洞"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-08-23",
+    "expireAt": "2026-08-30",
+    "pin": true
+  },
+  {
+    "id": "news-260823-02",
+    "title": "【高】從明文設定檔到CVE-2025-6514：MCP伺服器五大洩密路徑全解析",
+    "desc": "MCP伺服器作為AI與關鍵系統間的中介層，存在多重憑證洩密路徑及CVE-2025-6514漏洞風險。對企業而言，這可能導致AI代理存取關鍵系統的憑證被竊取，進而引發資料外洩或系統被未授權操控。EMS產業應緊急檢視MCP伺服器設定與安全狀況，並及時修補漏洞。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13193",
+    "tags": [
+      "AI安全",
+      "憑證洩密",
+      "漏洞"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-08-23",
+    "expireAt": "2026-08-30",
+    "pin": true
+  },
+  {
+    "id": "news-260823-03",
+    "title": "【高】AWS 憑證管理服務啟動電子郵件驗證退場時程，2027 年 9 月全面停止更新",
+    "desc": "採用AWS雲端服務的企業必須留意，其公開憑證的電子郵件驗證方式將於2027年9月全面停止更新。這是一項強制性的政策調整，未及時規劃遷移至替代驗證方法的EMS企業，將面臨服務中斷及資安憑證失效的風險，影響應用程式的可用性與資料傳輸安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13189",
+    "tags": [
+      "AWS",
+      "雲端安全",
+      "憑證管理"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-08-23",
+    "expireAt": "2026-08-30",
+    "pin": true
+  },
+  {
+    "id": "news-260823-04",
+    "title": "【中】中國駭客組織 Jewelbug 雙軌任務曝光 XG-Web 平台橫跨政府間諜與加密貨幣詐騙",
+    "desc": "企業應警惕中國駭客組織Jewelbug的複合式威脅，其同時進行政府間諜活動與加密貨幣詐騙。這表示企業可能成為其竊取機敏資料或進行金融詐騙的目標。EMS產業應加強對APT攻擊的防範，提升員工資安意識，並強化網路監控，保護智慧財產和資產。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13185",
     "tags": [
       "APT",
-      "國家級駭客",
-      "半導體"
+      "駭客組織",
+      "國家級攻擊"
     ],
-    "level": "high",
+    "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-16",
-    "expireAt": "2026-08-23",
-    "pin": true
+    "updatedAt": "2026-08-23",
+    "expireAt": "2026-08-30",
+    "pin": false
   },
   {
-    "id": "news-260816-02",
-    "title": "【高】Cisco防火牆VPN服務高風險漏洞遭利用，企業應緊急修補",
-    "desc": "Cisco防火牆VPN服務被揭露存在高風險漏洞(CVE-2026-20349)，且已遭駭客實際利用並列入CISA KEV清單。對於依賴Cisco設備進行遠端存取及網路安全防護的EMS企業而言，此漏洞構成直接且嚴重的威脅，可能導致未經授權的存取。企業應立即檢視並應用所有可用的安全更新，以避免潛在的網路入侵。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13160",
+    "id": "news-260823-05",
+    "title": "【中】AI專案過半卡關概念驗證階段 台灣資料治理年會籲：資料治理是落地關鍵",
+    "desc": "台灣多數AI專案止步於概念驗證，資料治理是其成功落地的關鍵。對於積極導入AI的企業與EMS產業而言，這提醒了資料品質、隱私、安全與合規的重要性。應建立完善的資料治理框架，確保AI數據的可靠性與安全性，避免專案因資料問題而失敗，並降低潛在資安風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13195",
     "tags": [
-      "Cisco",
-      "防火牆",
-      "VPN"
+      "AI治理",
+      "資料治理",
+      "AI專案"
     ],
-    "level": "high",
+    "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-16",
-    "expireAt": "2026-08-23",
-    "pin": true
-  },
-  {
-    "id": "news-260816-03",
-    "title": "【高】Gunra勒索軟體鎖定關鍵基礎設施，Fortinet用戶應緊急更新",
-    "desc": "美韓聯合警告Gunra勒索軟體正鎖定關鍵基礎設施，並利用Fortinet防火牆漏洞(CVE-2024-55591, CVE-2025-24472)進行攻擊。對於仰賴Fortinet設備且擁有OT環境的EMS企業，這是一項極高的風險。勒索軟體攻擊不僅導致資料遺失，更可能造成生產線停擺。企業應立即檢查Fortinet設備版本並進行緊急修補，同時強化備份與復原策略。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13159",
-    "tags": [
-      "勒索軟體",
-      "Fortinet",
-      "防火牆"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-08-16",
-    "expireAt": "2026-08-23",
-    "pin": true
-  },
-  {
-    "id": "news-260816-04",
-    "title": "【高】微軟零時差漏洞遭Lazarus駭客利用，企業應立即打補丁",
-    "desc": "微軟於8月修補了大量漏洞，其中一項零時差漏洞(CVE-2026-68820)已被北韓Lazarus駭客集團實際利用。由於Windows系統在企業環境中普遍使用，此漏洞對EMS企業構成高度威脅，可能被用於初始入侵或橫向移動。企業應將微軟最新的安全更新列為優先事項，並特別關注此已遭利用的零時差漏洞，確保所有Windows系統及相關應用程式皆已打上補丁。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13158",
-    "tags": [
-      "微軟",
-      "零時差",
-      "Lazarus"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-08-16",
-    "expireAt": "2026-08-23",
-    "pin": true
-  },
-  {
-    "id": "news-260816-05",
-    "title": "【高】Linux核心SCTP驚現18年權限提升漏洞，企業應速更新",
-    "desc": "Linux核心的SCTP協議被揭露存在一個長達18年的嚴重權限提升漏洞(SCTPhantom)。鑑於Linux作業系統在企業伺服器、雲端基礎設施及許多OT/ICS設備中廣泛應用，此漏洞可能讓攻擊者取得系統最高權限，對EMS企業的IT及OT環境構成極高風險。企業應立即排查所有Linux系統，並儘速應用核心團隊發布的修補程式，以防止潛在的攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13162",
-    "tags": [
-      "Linux",
-      "漏洞",
-      "權限提升"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-08-16",
-    "expireAt": "2026-08-23",
-    "pin": true
+    "updatedAt": "2026-08-23",
+    "expireAt": "2026-08-30",
+    "pin": false
   }
 ]
