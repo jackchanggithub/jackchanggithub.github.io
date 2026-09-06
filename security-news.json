@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260830-01",
-    "title": "【高】Calix 路由器爆無修補漏洞，駭客免密碼即可繞過 NAT、暴露內網設備",
-    "desc": "針對Calix路由器發現的無修補漏洞，允許駭客免密碼繞過NAT，直接暴露內部網路設備。企業，特別是依賴此類網路設備的EMS業者，面臨極高資安風險。務必立即盤點資產，評估是否使用受影響產品，並準備因應方案，避免內部系統遭受未經授權存取，導致資料外洩或生產中斷。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13209",
+    "id": "news-260906-01",
+    "title": "【高】報告：台灣資安攻擊密度居亞太之冠 每週逾4,300次攻擊，四大產業承壓",
+    "desc": "此報告揭示台灣資安威脅情勢嚴峻，尤其硬體、製造業等EMS相關產業受攻擊最頻繁。企業應審慎評估現有防禦策略，強化資安預算與資源配置，以應對高密度的網路攻擊，確保營運韌性並降低潛在損失。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13225",
     "tags": [
-      "漏洞",
-      "網路設備",
-      "NAT"
+      "威脅情報",
+      "勒索軟體",
+      "製造業"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-30",
-    "expireAt": "2026-09-06",
+    "updatedAt": "2026-09-06",
+    "expireAt": "2026-09-13",
     "pin": true
   },
   {
-    "id": "news-260830-02",
-    "title": "【高】CISA示警Gitea重大漏洞遭利用，限期3天修補凸顯自架DevOps治理缺口",
-    "desc": "美國CISA對Gitea程式碼注入重大漏洞發出緊急修補警告，該漏洞已被利用，恐允許駭客執行任意程式碼。對於使用Gitea自建DevOps環境的企業，尤其是EMS產業，此為嚴重供應鏈資安風險。須立即清查並於三天內完成修補，否則可能導致關鍵開發資源被入侵，影響產品安全性與營運流程。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13205",
+    "id": "news-260906-02",
+    "title": "【高】中國駭客組織Fire Ant入侵思科路由器，竊取憑證並癱瘓資安日誌",
+    "desc": "駭客組織入侵思科路由器並竊取憑證，癱瘓資安日誌，對企業網路安全構成重大威脅。EMS企業需立即檢查路由器配置與日誌系統，實施更嚴格的存取控制，並評估多因子驗證(MFA)以防範類似的憑證竊取攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13233",
     "tags": [
-      "漏洞",
-      "CISA",
-      "Gitea"
+      "國家級攻擊",
+      "憑證竊取",
+      "路由器安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-30",
-    "expireAt": "2026-09-06",
+    "updatedAt": "2026-09-06",
+    "expireAt": "2026-09-13",
     "pin": true
   },
   {
-    "id": "news-260830-03",
-    "title": "【高】英國電廠遭駭客入侵停機四天，PLC成ICS/OT攻擊熱點",
-    "desc": "英國電廠遭駭客入侵導致停機四天，凸顯工業控制系統(ICS)與營運技術(OT)面臨的日益嚴峻威脅。對於EMS產業而言，其產線廣泛採用PLC等OT設備，應視此事件為高度警訊。務必強化OT網路隔離、實施嚴格存取控制，並定期資安演練，以防範關鍵生產設施成為駭客目標，導致巨額損失與生產中斷。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13202",
+    "id": "news-260906-03",
+    "title": "【高】Aurora 勒索軟體集團濫用 AI 程式碼助手 Cursor Agent，同步部署鎖定 ESXi 環境的新型變種",
+    "desc": "Aurora勒索軟體利用AI工具針對ESXi虛擬化環境發動攻擊，顯示勒索軟體威脅正進化。EMS企業應立即檢視ESXi主機的資安防護，定期備份、隔離關鍵系統，並提高對AI生成惡意程式碼的警覺，以防範AI助長的深度攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13226",
     "tags": [
-      "工業控制系統",
-      "OT資安",
-      "關鍵基礎設施"
+      "勒索軟體",
+      "AI資安",
+      "ESXi"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-30",
-    "expireAt": "2026-09-06",
+    "updatedAt": "2026-09-06",
+    "expireAt": "2026-09-13",
     "pin": true
   },
   {
-    "id": "news-260830-04",
-    "title": "【高】資通安全責任等級分級辦法應辦事項：資安專職人力與證照要求",
-    "desc": "資通安全責任等級分級辦法明定企業應配置專職資安人力並要求相關證照，此為台灣企業必須遵守的法規要求。對於所有受規範企業，特別是EMS等產業，這直接影響資安組織架構與人才培育策略。企業需審視自身資安人力配置與專業能力是否符合法規標準，避免不合規風險，並確保資安防護能量達到基本要求。",
-    "url": "https://moda.gov.tw/ACS/laws/faq/03/636",
+    "id": "news-260906-04",
+    "title": "【高】Gitea開放註冊機制如何讓RCE漏洞門檻歸零",
+    "desc": "Gitea的遠端程式碼執行(RCE)漏洞門檻歸零，對使用此平台的企業構成嚴重威脅。EMS企業應立即將Gitea版本升級至1.27.1以上，若無業務需求，應禁用開放註冊機制，並加強程式碼託管平台安全配置，防堵潛在的程式碼注入攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13229",
     "tags": [
-      "法規遵循",
-      "資安人力",
-      "證照"
+      "漏洞預警",
+      "RCE",
+      "程式碼託管"
     ],
     "level": "high",
     "matchDomains": [
-      "moda.gov.tw"
+      "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-30",
-    "expireAt": "2026-09-06",
+    "updatedAt": "2026-09-06",
+    "expireAt": "2026-09-13",
     "pin": true
   },
   {
-    "id": "news-260830-05",
-    "title": "【中】ToxicPanda 2.0行動惡意程式擴張，員工手機恐成企業入侵跳板",
-    "desc": "ToxicPanda 2.0行動惡意程式新增167項遠端指令，其攻擊進化顯示員工行動裝置的資安風險日益升高。對於廣大企業及EMS產業，員工手機若受感染，不僅可能導致個資外洩，更可能被駭客利用作為繞過MFA、竊取憑證、進而滲透企業內部網路的跳板。企業應加強行動裝置管理與資安教育，降低此類威脅。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13200",
+    "id": "news-260906-05",
+    "title": "【高】報告：教育產業 85% 勒索軟體攻擊涉及身分型攻擊 惡意電子郵件是主要攻擊手法，復原成本目前平均達 226 萬美元",
+    "desc": "報告指出勒索軟體攻擊中，高達85%涉及身份型攻擊和惡意電子郵件，對各產業皆具普遍性威脅。企業應強化員工資安意識訓練，實施MFA，並部署先進的電子郵件安全閘道，以有效抵禦日益頻繁的網路釣魚與勒索軟體攻擊，降低復原成本。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13234",
     "tags": [
-      "行動資安",
-      "惡意軟體",
-      "員工裝置"
+      "勒索軟體",
+      "身分盜用",
+      "網路釣魚"
     ],
-    "level": "medium",
+    "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-08-30",
-    "expireAt": "2026-09-06",
+    "updatedAt": "2026-09-06",
+    "expireAt": "2026-09-13",
     "pin": false
   }
 ]
