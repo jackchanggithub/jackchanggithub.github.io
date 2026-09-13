@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260906-01",
-    "title": "【高】報告：台灣資安攻擊密度居亞太之冠 每週逾4,300次攻擊，四大產業承壓",
-    "desc": "此報告揭示台灣資安威脅情勢嚴峻，尤其硬體、製造業等EMS相關產業受攻擊最頻繁。企業應審慎評估現有防禦策略，強化資安預算與資源配置，以應對高密度的網路攻擊，確保營運韌性並降低潛在損失。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13225",
+    "id": "news-260913-01",
+    "title": "【高】Cisco、HPE、CrowdStrike重大漏洞示警，企業網路與端點安全拉警報",
+    "desc": "思科、HPE與CrowdStrike相繼發布高風險漏洞警示，其中包含CVSS 9.8分的遠端程式碼執行漏洞，對企業網路設備與端點安全構成即時威脅。EMS產業應立即檢視其網路基礎設施及端點防護，確認是否使用受影響產品並優先進行修補或實施緩解措施，以防範未經授權的存取與潛在的營運中斷風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13251",
     "tags": [
-      "威脅情報",
-      "勒索軟體",
-      "製造業"
+      "重大漏洞",
+      "網路安全",
+      "端點安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-06",
-    "expireAt": "2026-09-13",
+    "updatedAt": "2026-09-13",
+    "expireAt": "2026-09-20",
     "pin": true
   },
   {
-    "id": "news-260906-02",
-    "title": "【高】中國駭客組織Fire Ant入侵思科路由器，竊取憑證並癱瘓資安日誌",
-    "desc": "駭客組織入侵思科路由器並竊取憑證，癱瘓資安日誌，對企業網路安全構成重大威脅。EMS企業需立即檢查路由器配置與日誌系統，實施更嚴格的存取控制，並評估多因子驗證(MFA)以防範類似的憑證竊取攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13233",
+    "id": "news-260913-02",
+    "title": "【高】犯罪經濟威脅關鍵基礎設施，親俄駭客組織將台灣列為攻擊目標之一",
+    "desc": "資安報告指出，活躍的親俄駭客組織正將全球工業、能源與製造產業的關鍵基礎設施列為攻擊目標，其中台灣也受點名。這對EMS產業構成嚴峻的資安挑戰，企業需加強OT與IT融合安全防護，提升對複合式攻擊的偵測與應變能力，並審視地緣政治風險對營運韌性的潛在影響，以確保產線穩定運作。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13250",
     "tags": [
-      "國家級攻擊",
-      "憑證竊取",
-      "路由器安全"
+      "關鍵基礎設施",
+      "地緣政治",
+      "OT安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-06",
-    "expireAt": "2026-09-13",
+    "updatedAt": "2026-09-13",
+    "expireAt": "2026-09-20",
     "pin": true
   },
   {
-    "id": "news-260906-03",
-    "title": "【高】Aurora 勒索軟體集團濫用 AI 程式碼助手 Cursor Agent，同步部署鎖定 ESXi 環境的新型變種",
-    "desc": "Aurora勒索軟體利用AI工具針對ESXi虛擬化環境發動攻擊，顯示勒索軟體威脅正進化。EMS企業應立即檢視ESXi主機的資安防護，定期備份、隔離關鍵系統，並提高對AI生成惡意程式碼的警覺，以防範AI助長的深度攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13226",
+    "id": "news-260913-03",
+    "title": "【高】NVIDIA收購Hugging Face，台灣半導體供應鏈需強化IT與OT雙軌資安布局",
+    "desc": "隨著半導體產業鏈對軟體依賴日益加深，NVIDIA此類收購將推動技術整合，同時也放大供應鏈資安風險。台灣EMS及半導體相關企業必須加速推動IT與OT環境的雙軌資安防護，並因應如歐盟CRA、美方Carolina原則等日益嚴格的國際資安法規與標準要求，以確保合規性並維持全球競爭力，降低地緣政治風險帶來的衝擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13249",
     "tags": [
-      "勒索軟體",
-      "AI資安",
-      "ESXi"
+      "供應鏈安全",
+      "OT安全",
+      "ITOT融合"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-06",
-    "expireAt": "2026-09-13",
+    "updatedAt": "2026-09-13",
+    "expireAt": "2026-09-20",
     "pin": true
   },
   {
-    "id": "news-260906-04",
-    "title": "【高】Gitea開放註冊機制如何讓RCE漏洞門檻歸零",
-    "desc": "Gitea的遠端程式碼執行(RCE)漏洞門檻歸零，對使用此平台的企業構成嚴重威脅。EMS企業應立即將Gitea版本升級至1.27.1以上，若無業務需求，應禁用開放註冊機制，並加強程式碼託管平台安全配置，防堵潛在的程式碼注入攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13229",
+    "id": "news-260913-04",
+    "title": "【高】Dropbox、JetBrains接連身分外洩，信任鏈驗證缺口成新攻擊面",
+    "desc": "知名服務如Dropbox和JetBrains傳出用戶身分外洩事件，凸顯第三方信任鏈與身分驗證機制中的潛在弱點。企業應警惕此類供應鏈攻擊風險，重新審視對外部服務的信任策略，實施多因子驗證（MFA），並強化員工資安意識。EMS產業常與多方合作，此事件提醒需提升供應商風險管理，避免因信任鏈漏洞導致內部系統受損。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13254",
     "tags": [
-      "漏洞預警",
-      "RCE",
-      "程式碼託管"
+      "資料外洩",
+      "身分驗證",
+      "信任鏈攻擊"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-06",
-    "expireAt": "2026-09-13",
+    "updatedAt": "2026-09-13",
+    "expireAt": "2026-09-20",
     "pin": true
   },
   {
-    "id": "news-260906-05",
-    "title": "【高】報告：教育產業 85% 勒索軟體攻擊涉及身分型攻擊 惡意電子郵件是主要攻擊手法，復原成本目前平均達 226 萬美元",
-    "desc": "報告指出勒索軟體攻擊中，高達85%涉及身份型攻擊和惡意電子郵件，對各產業皆具普遍性威脅。企業應強化員工資安意識訓練，實施MFA，並部署先進的電子郵件安全閘道，以有效抵禦日益頻繁的網路釣魚與勒索軟體攻擊，降低復原成本。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13234",
+    "id": "news-260913-05",
+    "title": "【高】駭客規避偵測手法再進化：區塊鏈藏毒、可信元件植後門、隱形字元三箭齊發",
+    "desc": "駭客正採用更隱蔽的攻擊手法，如利用區塊鏈藏匿惡意程式、將後門植入合法開源元件，以及運用隱形字元發動攻擊，傳統防禦機制恐難以察覺。EMS企業應強化其威脅情資能力，深入分析軟體供應鏈風險，並導入行為分析與AI驅動的偵測技術，提升對新型態進階持續性威脅（APT）的防禦能力，確保關鍵系統與智慧製造流程的安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13258",
     "tags": [
-      "勒索軟體",
-      "身分盜用",
-      "網路釣魚"
+      "APT",
+      "供應鏈攻擊",
+      "區塊鏈資安"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-06",
-    "expireAt": "2026-09-13",
-    "pin": false
+    "updatedAt": "2026-09-13",
+    "expireAt": "2026-09-20",
+    "pin": true
   }
 ]
