@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260913-01",
-    "title": "【高】Cisco、HPE、CrowdStrike重大漏洞示警，企業網路與端點安全拉警報",
-    "desc": "思科、HPE與CrowdStrike相繼發布高風險漏洞警示，其中包含CVSS 9.8分的遠端程式碼執行漏洞，對企業網路設備與端點安全構成即時威脅。EMS產業應立即檢視其網路基礎設施及端點防護，確認是否使用受影響產品並優先進行修補或實施緩解措施，以防範未經授權的存取與潛在的營運中斷風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13251",
+    "id": "news-260920-01",
+    "title": "【高】歐盟《資安韌性法》新通報規則9月11日上路 聯網產品企業須於1日內通報資安事件",
+    "desc": "對於製造或銷售聯網產品的企業，特別是EMS產業，此法規強制要求於1日內通報資安事件，不遵守將面臨鉅額罰款。企業需立即審查產品開發流程與供應鏈，並建立快速應變通報機制，以符合新的法規要求，避免營運中斷與商譽受損。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13277",
     "tags": [
-      "重大漏洞",
-      "網路安全",
-      "端點安全"
+      "法規遵循",
+      "歐盟",
+      "聯網產品"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-13",
-    "expireAt": "2026-09-20",
+    "updatedAt": "2026-09-20",
+    "expireAt": "2026-09-27",
     "pin": true
   },
   {
-    "id": "news-260913-02",
-    "title": "【高】犯罪經濟威脅關鍵基礎設施，親俄駭客組織將台灣列為攻擊目標之一",
-    "desc": "資安報告指出，活躍的親俄駭客組織正將全球工業、能源與製造產業的關鍵基礎設施列為攻擊目標，其中台灣也受點名。這對EMS產業構成嚴峻的資安挑戰，企業需加強OT與IT融合安全防護，提升對複合式攻擊的偵測與應變能力，並審視地緣政治風險對營運韌性的潛在影響，以確保產線穩定運作。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13250",
+    "id": "news-260920-02",
+    "title": "【高】GitLab漏洞列KEV目錄！watchTowr示警恐成攻擊者進入企業開發環境跳板",
+    "desc": "GitLab的Path Traversal漏洞(CVE-2026-85706)已被列入KEV目錄，顯示其已遭實際利用，是企業開發環境的嚴重風險。EMS產業應立即檢視其GitLab版本並更新，同時加強開發流程的資安防護，防止攻擊者藉此漏洞入侵源碼管理系統，導致智慧財產外洩或供應鏈攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13271",
     "tags": [
-      "關鍵基礎設施",
-      "地緣政治",
-      "OT安全"
+      "漏洞",
+      "開發安全",
+      "KEV"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-13",
-    "expireAt": "2026-09-20",
+    "updatedAt": "2026-09-20",
+    "expireAt": "2026-09-27",
     "pin": true
   },
   {
-    "id": "news-260913-03",
-    "title": "【高】NVIDIA收購Hugging Face，台灣半導體供應鏈需強化IT與OT雙軌資安布局",
-    "desc": "隨著半導體產業鏈對軟體依賴日益加深，NVIDIA此類收購將推動技術整合，同時也放大供應鏈資安風險。台灣EMS及半導體相關企業必須加速推動IT與OT環境的雙軌資安防護，並因應如歐盟CRA、美方Carolina原則等日益嚴格的國際資安法規與標準要求，以確保合規性並維持全球競爭力，降低地緣政治風險帶來的衝擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13249",
+    "id": "news-260920-03",
+    "title": "【高】Cisco示警Secure Email Gateway零時差漏洞遭實際利用 全球逾400台暴露網路",
+    "desc": "Cisco Secure Email Gateway的零時差漏洞(CVE-2026-76461)已被發現遭實際利用，對全球超過400台暴露於網路的設備構成即時威脅。企業應立即檢查其Cisco郵件安全閘道設備是否受影響，並按照官方指引進行緊急修補或緩解，以防範郵件系統遭入侵，造成資料外洩或惡意軟體傳播。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13269",
     "tags": [
-      "供應鏈安全",
-      "OT安全",
-      "ITOT融合"
+      "零時差漏洞",
+      "郵件安全",
+      "Cisco"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-13",
-    "expireAt": "2026-09-20",
+    "updatedAt": "2026-09-20",
+    "expireAt": "2026-09-27",
     "pin": true
   },
   {
-    "id": "news-260913-04",
-    "title": "【高】Dropbox、JetBrains接連身分外洩，信任鏈驗證缺口成新攻擊面",
-    "desc": "知名服務如Dropbox和JetBrains傳出用戶身分外洩事件，凸顯第三方信任鏈與身分驗證機制中的潛在弱點。企業應警惕此類供應鏈攻擊風險，重新審視對外部服務的信任策略，實施多因子驗證（MFA），並強化員工資安意識。EMS產業常與多方合作，此事件提醒需提升供應商風險管理，避免因信任鏈漏洞導致內部系統受損。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13254",
+    "id": "news-260920-04",
+    "title": "【高】AI平台信任危機：釣魚攻擊濫用Claude官方功能，中國七實驗室爆蒸餾攻擊",
+    "desc": "AI平台已成為新型態的攻擊面，釣魚攻擊利用Claude等官方功能，結合蒸餾攻擊，正嚴重考驗企業對AI工具的信任。企業需對員工進行AI工具使用安全教育，並加強對AI生成內容的驗證機制，同時評估導入AI資安解決方案，以降低因AI誤用或濫用導致的資訊外洩與詐騙風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13274",
     "tags": [
-      "資料外洩",
-      "身分驗證",
-      "信任鏈攻擊"
+      "AI資安",
+      "釣魚攻擊",
+      "AI濫用"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-13",
-    "expireAt": "2026-09-20",
-    "pin": true
+    "updatedAt": "2026-09-20",
+    "expireAt": "2026-09-27",
+    "pin": false
   },
   {
-    "id": "news-260913-05",
-    "title": "【高】駭客規避偵測手法再進化：區塊鏈藏毒、可信元件植後門、隱形字元三箭齊發",
-    "desc": "駭客正採用更隱蔽的攻擊手法，如利用區塊鏈藏匿惡意程式、將後門植入合法開源元件，以及運用隱形字元發動攻擊，傳統防禦機制恐難以察覺。EMS企業應強化其威脅情資能力，深入分析軟體供應鏈風險，並導入行為分析與AI驅動的偵測技術，提升對新型態進階持續性威脅（APT）的防禦能力，確保關鍵系統與智慧製造流程的安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13258",
+    "id": "news-260920-05",
+    "title": "【高】AI武器化元年：PaperCut遭入侵、Claude遭濫用、百萬封詐騙信同步爆發",
+    "desc": "2026年被視為AI武器化元年，從PaperCut入侵、Claude濫用至大規模詐騙郵件，顯示AI已全面強化攻擊者的能力。企業必須重新審視資安策略，強化電子郵件驗證機制、部署進階偵測與回應系統，並提升員工資安意識，以應對AI驅動的複雜威脅，確保關鍵資產安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13266",
     "tags": [
-      "APT",
-      "供應鏈攻擊",
-      "區塊鏈資安"
+      "AI攻擊",
+      "勒索攻擊",
+      "詐騙"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-13",
-    "expireAt": "2026-09-20",
-    "pin": true
+    "updatedAt": "2026-09-20",
+    "expireAt": "2026-09-27",
+    "pin": false
   }
 ]
