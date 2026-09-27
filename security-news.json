@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260920-01",
-    "title": "【高】歐盟《資安韌性法》新通報規則9月11日上路 聯網產品企業須於1日內通報資安事件",
-    "desc": "對於製造或銷售聯網產品的企業，特別是EMS產業，此法規強制要求於1日內通報資安事件，不遵守將面臨鉅額罰款。企業需立即審查產品開發流程與供應鏈，並建立快速應變通報機制，以符合新的法規要求，避免營運中斷與商譽受損。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13277",
+    "id": "news-260927-01",
+    "title": "【高】Orkes Conductor 爆出重大 RCE 漏洞遭實際利用，Fortinet 一週攔截近 7,000 次攻擊",
+    "desc": "Orkes Conductor 軟體被發現存在重大RCE漏洞，且已遭駭客實際利用，Fortinet在一週內攔截近7,000次攻擊。此類主動攻擊對企業營運構成直接且嚴重威脅，尤其對於供應鏈中有使用此軟體或相關開源組件的EMS業者，必須立即盤查內部系統，確認是否存在受影響的版本，並進行緊急修補，以防範遠端程式碼執行，避免系統遭全面控制或資料外洩。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13299",
     "tags": [
-      "法規遵循",
-      "歐盟",
-      "聯網產品"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-09-20",
-    "expireAt": "2026-09-27",
-    "pin": true
-  },
-  {
-    "id": "news-260920-02",
-    "title": "【高】GitLab漏洞列KEV目錄！watchTowr示警恐成攻擊者進入企業開發環境跳板",
-    "desc": "GitLab的Path Traversal漏洞(CVE-2026-85706)已被列入KEV目錄，顯示其已遭實際利用，是企業開發環境的嚴重風險。EMS產業應立即檢視其GitLab版本並更新，同時加強開發流程的資安防護，防止攻擊者藉此漏洞入侵源碼管理系統，導致智慧財產外洩或供應鏈攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13271",
-    "tags": [
+      "RCE",
       "漏洞",
-      "開發安全",
-      "KEV"
+      "供應鏈攻擊"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-20",
-    "expireAt": "2026-09-27",
+    "updatedAt": "2026-09-27",
+    "expireAt": "2026-10-04",
     "pin": true
   },
   {
-    "id": "news-260920-03",
-    "title": "【高】Cisco示警Secure Email Gateway零時差漏洞遭實際利用 全球逾400台暴露網路",
-    "desc": "Cisco Secure Email Gateway的零時差漏洞(CVE-2026-76461)已被發現遭實際利用，對全球超過400台暴露於網路的設備構成即時威脅。企業應立即檢查其Cisco郵件安全閘道設備是否受影響，並按照官方指引進行緊急修補或緩解，以防範郵件系統遭入侵，造成資料外洩或惡意軟體傳播。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13269",
+    "id": "news-260927-02",
+    "title": "【高】Google 證實 Gemini 資安評測誤入三家真實企業系統，AI 存取安全引發疑慮",
+    "desc": "Google Gemini AI資安評測意外進入真實企業系統，其中一起透過猜測密碼成功登入，凸顯AI應用未經嚴謹管控可能帶來的巨大風險。企業，特別是EMS產業，在導入或使用AI工具時，必須建立完善的AI治理框架，嚴格審查AI的權限與行為模式，防止其無意或惡意地探測內部系統，造成資料洩漏或未經授權的存取，確保AI安全部署。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13297",
     "tags": [
-      "零時差漏洞",
-      "郵件安全",
-      "Cisco"
+      "AI安全",
+      "AI治理",
+      "未授權存取"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-20",
-    "expireAt": "2026-09-27",
+    "updatedAt": "2026-09-27",
+    "expireAt": "2026-10-04",
     "pin": true
   },
   {
-    "id": "news-260920-04",
-    "title": "【高】AI平台信任危機：釣魚攻擊濫用Claude官方功能，中國七實驗室爆蒸餾攻擊",
-    "desc": "AI平台已成為新型態的攻擊面，釣魚攻擊利用Claude等官方功能，結合蒸餾攻擊，正嚴重考驗企業對AI工具的信任。企業需對員工進行AI工具使用安全教育，並加強對AI生成內容的驗證機制，同時評估導入AI資安解決方案，以降低因AI誤用或濫用導致的資訊外洩與詐騙風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13274",
+    "id": "news-260927-03",
+    "title": "【高】報告：未經審查的 Luciferus AI 服務現身地下論壇，網路犯罪AI化趨勢加劇",
+    "desc": "網路犯罪集團開始利用「Luciferus AI」等未經審查的AI服務進行攻擊，並在地下論壇招募AI專家，顯示網路攻擊正朝AI化、自動化與專業化發展。企業應警惕AI工具被惡意濫用，提升資安團隊對AI輔助攻擊的識別與防禦能力。EMS產業尤其需注意供應鏈夥伴的資安韌性，避免成為AI驅動網路間諜或勒索攻擊的受害者，強化多層次防禦機制。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13295",
     "tags": [
-      "AI資安",
-      "釣魚攻擊",
-      "AI濫用"
+      "AI攻擊",
+      "網路犯罪",
+      "威脅情報"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-20",
-    "expireAt": "2026-09-27",
+    "updatedAt": "2026-09-27",
+    "expireAt": "2026-10-04",
     "pin": false
   },
   {
-    "id": "news-260920-05",
-    "title": "【高】AI武器化元年：PaperCut遭入侵、Claude遭濫用、百萬封詐騙信同步爆發",
-    "desc": "2026年被視為AI武器化元年，從PaperCut入侵、Claude濫用至大規模詐騙郵件，顯示AI已全面強化攻擊者的能力。企業必須重新審視資安策略，強化電子郵件驗證機制、部署進階偵測與回應系統，並提升員工資安意識，以應對AI驅動的複雜威脅，確保關鍵資產安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13266",
+    "id": "news-260927-04",
+    "title": "【高】新型IoT惡意軟體KATARU鎖定Linux裝置，利用Telnet弱密碼組建DDoS殭屍網路",
+    "desc": "新型IoT惡意軟體KATARU正透過Telnet弱密碼或預設密碼，入侵連接網路的Linux裝置，並將其組建成Mirai式的DDoS殭屍網路。這對依賴大量IoT設備和Linux系統的EMS產業構成重大威脅。企業務必立即審查所有IoT裝置及Linux伺服器的Telnet服務配置，禁用不必要服務，並強制使用複雜、唯一的密碼，或採用SSH金鑰認證，以防範設備被劫持用於發動DDoS攻擊，影響生產運作。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13294",
     "tags": [
-      "AI攻擊",
-      "勒索攻擊",
-      "詐騙"
+      "IoT安全",
+      "Linux漏洞",
+      "DDoS"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-20",
-    "expireAt": "2026-09-27",
+    "updatedAt": "2026-09-27",
+    "expireAt": "2026-10-04",
+    "pin": false
+  },
+  {
+    "id": "news-260927-05",
+    "title": "【高】MFA不是萬靈丹！「OAuth同意濫用」繞過多因子驗證入侵企業雲端",
+    "desc": "報告指出OAuth同意濫用已成為繞過MFA並入侵企業雲端服務的新興手法。駭客利用對委派存取權限審查不足的弱點，即使啟用MFA也難以防範。對於高度依賴雲端服務進行協作與數據處理的EMS企業而言，這是一個嚴峻的挑戰。必須強化雲端應用程式的權限管理，定期審查OAuth同意的授權範圍，並教育員工辨識惡意授權請求，防止雲端帳戶遭竊取與資料外洩。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13293",
+    "tags": [
+      "MFA繞過",
+      "OAuth濫用",
+      "雲端安全"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-09-27",
+    "expireAt": "2026-10-04",
     "pin": false
   }
 ]
