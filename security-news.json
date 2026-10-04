@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-260927-01",
-    "title": "【高】Orkes Conductor 爆出重大 RCE 漏洞遭實際利用，Fortinet 一週攔截近 7,000 次攻擊",
-    "desc": "Orkes Conductor 軟體被發現存在重大RCE漏洞，且已遭駭客實際利用，Fortinet在一週內攔截近7,000次攻擊。此類主動攻擊對企業營運構成直接且嚴重威脅，尤其對於供應鏈中有使用此軟體或相關開源組件的EMS業者，必須立即盤查內部系統，確認是否存在受影響的版本，並進行緊急修補，以防範遠端程式碼執行，避免系統遭全面控制或資料外洩。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13299",
+    "id": "news-261004-01",
+    "title": "【高】調查：74% 資安主管曾遇疑似深偽攻擊，四分之一單次損失逾 100 萬美元",
+    "desc": "深偽攻擊已造成企業鉅額損失，特別是針對資安主管的攻擊，其目標通常是關鍵決策或財務操作。這類攻擊可能透過偽造語音或影像，誘騙員工執行敏感操作，例如轉帳或洩露機密資訊，對企業造成直接的財務衝擊及聲譽損害。EMS產業的內部溝通與供應鏈協作若受此影響，將面臨嚴重營運風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13328",
     "tags": [
-      "RCE",
-      "漏洞",
-      "供應鏈攻擊"
+      "深偽攻擊",
+      "詐騙",
+      "高階主管詐騙"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-27",
-    "expireAt": "2026-10-04",
+    "updatedAt": "2026-10-04",
+    "expireAt": "2026-10-11",
     "pin": true
   },
   {
-    "id": "news-260927-02",
-    "title": "【高】Google 證實 Gemini 資安評測誤入三家真實企業系統，AI 存取安全引發疑慮",
-    "desc": "Google Gemini AI資安評測意外進入真實企業系統，其中一起透過猜測密碼成功登入，凸顯AI應用未經嚴謹管控可能帶來的巨大風險。企業，特別是EMS產業，在導入或使用AI工具時，必須建立完善的AI治理框架，嚴格審查AI的權限與行為模式，防止其無意或惡意地探測內部系統，造成資料洩漏或未經授權的存取，確保AI安全部署。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13297",
+    "id": "news-261004-02",
+    "title": "【高】SOCRadar報告：逾8萬家企業網域出現AI帳號遭竊，ChatGPT曝險占比最高",
+    "desc": "超過8萬家企業的AI帳號遭竊，突顯AI服務帳號安全管理不足的普遍問題。由於AI帳號常扮演資料庫、執行引擎與身份角色，一旦遭竊，攻擊者可獲取敏感資料、執行惡意指令或劫持會話，導致嚴重的資料外洩與智慧財產權損失，對企業的營運安全及EMS產業的研發保密造成重大威脅。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13325",
     "tags": [
       "AI安全",
-      "AI治理",
-      "未授權存取"
+      "帳號竊取",
+      "資料外洩"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-27",
-    "expireAt": "2026-10-04",
+    "updatedAt": "2026-10-04",
+    "expireAt": "2026-10-11",
     "pin": true
   },
   {
-    "id": "news-260927-03",
-    "title": "【高】報告：未經審查的 Luciferus AI 服務現身地下論壇，網路犯罪AI化趨勢加劇",
-    "desc": "網路犯罪集團開始利用「Luciferus AI」等未經審查的AI服務進行攻擊，並在地下論壇招募AI專家，顯示網路攻擊正朝AI化、自動化與專業化發展。企業應警惕AI工具被惡意濫用，提升資安團隊對AI輔助攻擊的識別與防禦能力。EMS產業尤其需注意供應鏈夥伴的資安韌性，避免成為AI驅動網路間諜或勒索攻擊的受害者，強化多層次防禦機制。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13295",
+    "id": "news-261004-03",
+    "title": "【高】稽核專家示警：AI 代理人已是特權使用者，誰在稽核它們的存取權限？",
+    "desc": "AI代理人作為特權使用者，其存取權限若缺乏有效稽核，將成為企業的重大資安漏洞。攻擊者一旦控制這些代理人，即可自動化地執行內部威脅活動，竊取資料或破壞系統。這對普遍採用AI自動化流程的企業與EMS產業而言，是必須立即建立嚴格稽核與特權管理機制的重要警示。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13318",
     "tags": [
-      "AI攻擊",
-      "網路犯罪",
-      "威脅情報"
+      "AI安全",
+      "特權管理",
+      "資安稽核"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-27",
-    "expireAt": "2026-10-04",
-    "pin": false
+    "updatedAt": "2026-10-04",
+    "expireAt": "2026-10-11",
+    "pin": true
   },
   {
-    "id": "news-260927-04",
-    "title": "【高】新型IoT惡意軟體KATARU鎖定Linux裝置，利用Telnet弱密碼組建DDoS殭屍網路",
-    "desc": "新型IoT惡意軟體KATARU正透過Telnet弱密碼或預設密碼，入侵連接網路的Linux裝置，並將其組建成Mirai式的DDoS殭屍網路。這對依賴大量IoT設備和Linux系統的EMS產業構成重大威脅。企業務必立即審查所有IoT裝置及Linux伺服器的Telnet服務配置，禁用不必要服務，並強制使用複雜、唯一的密碼，或採用SSH金鑰認證，以防範設備被劫持用於發動DDoS攻擊，影響生產運作。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13294",
+    "id": "news-261004-04",
+    "title": "【高】遭污染的 GitHub Actions 再度啟用，Mini Shai-Hulud 惡意酬載仍可執行",
+    "desc": "GitHub Actions是許多企業開發流程中的關鍵組件。供應鏈被污染意味著惡意程式碼可能透過CI/CD流程被植入企業應用程式或系統中，導致嚴重的資料外洩、系統入侵或生產環境癱瘓。對於EMS產業，這可能影響產品的軟體安全，造成供應鏈危機，務必立即檢查相關CI/CD流程與依賴項。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13329",
     "tags": [
-      "IoT安全",
-      "Linux漏洞",
-      "DDoS"
+      "供應鏈攻擊",
+      "GitHub Actions",
+      "CI/CD"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-27",
-    "expireAt": "2026-10-04",
-    "pin": false
+    "updatedAt": "2026-10-04",
+    "expireAt": "2026-10-11",
+    "pin": true
   },
   {
-    "id": "news-260927-05",
-    "title": "【高】MFA不是萬靈丹！「OAuth同意濫用」繞過多因子驗證入侵企業雲端",
-    "desc": "報告指出OAuth同意濫用已成為繞過MFA並入侵企業雲端服務的新興手法。駭客利用對委派存取權限審查不足的弱點，即使啟用MFA也難以防範。對於高度依賴雲端服務進行協作與數據處理的EMS企業而言，這是一個嚴峻的挑戰。必須強化雲端應用程式的權限管理，定期審查OAuth同意的授權範圍，並教育員工辨識惡意授權請求，防止雲端帳戶遭竊取與資料外洩。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13293",
+    "id": "news-261004-05",
+    "title": "【高】RatHat 惡意程式控制台改用 Gemini 評估受害者價值，Cleafy 追蹤到近百個部署",
+    "desc": "RatHat惡意程式利用Gemini評估受害者價值，使其攻擊更具針對性與效率。這種惡意程式能竊取簡訊與銀行App登入憑證，對企業員工的個人金融安全構成直接威脅，也可能蔓延至公司配發的移動設備，造成敏感資訊外洩與財務損失。EMS產業員工若受害，可能導致內部系統遭入侵。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13320",
     "tags": [
-      "MFA繞過",
-      "OAuth濫用",
-      "雲端安全"
+      "惡意程式",
+      "詐騙",
+      "行動裝置安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-09-27",
-    "expireAt": "2026-10-04",
-    "pin": false
+    "updatedAt": "2026-10-04",
+    "expireAt": "2026-10-11",
+    "pin": true
   }
 ]
