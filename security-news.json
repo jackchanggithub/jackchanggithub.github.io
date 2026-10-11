@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-261004-01",
-    "title": "【高】調查：74% 資安主管曾遇疑似深偽攻擊，四分之一單次損失逾 100 萬美元",
-    "desc": "深偽攻擊已造成企業鉅額損失，特別是針對資安主管的攻擊，其目標通常是關鍵決策或財務操作。這類攻擊可能透過偽造語音或影像，誘騙員工執行敏感操作，例如轉帳或洩露機密資訊，對企業造成直接的財務衝擊及聲譽損害。EMS產業的內部溝通與供應鏈協作若受此影響，將面臨嚴重營運風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13328",
+    "id": "news-261011-01",
+    "title": "【高】Fortinet 證實 FortiMail 零時差漏洞 CVE-2026-104286 遭實際利用，未經驗證即可寫入任意檔案",
+    "desc": "Fortinet FortiMail 郵件安全設備發現零時差漏洞，且已證實遭實際利用。攻擊者無需驗證即可寫入任意檔案，對企業郵件系統構成極高風險，可能導致服務中斷、資料竊取或被植入惡意程式。所有使用 FortiMail 的企業應立即檢查並修補，以防範關鍵通訊系統受損。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13342",
     "tags": [
-      "深偽攻擊",
-      "詐騙",
-      "高階主管詐騙"
+      "零時差",
+      "漏洞",
+      "Fortinet"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-04",
-    "expireAt": "2026-10-11",
+    "updatedAt": "2026-10-11",
+    "expireAt": "2026-10-18",
     "pin": true
   },
   {
-    "id": "news-261004-02",
-    "title": "【高】SOCRadar報告：逾8萬家企業網域出現AI帳號遭竊，ChatGPT曝險占比最高",
-    "desc": "超過8萬家企業的AI帳號遭竊，突顯AI服務帳號安全管理不足的普遍問題。由於AI帳號常扮演資料庫、執行引擎與身份角色，一旦遭竊，攻擊者可獲取敏感資料、執行惡意指令或劫持會話，導致嚴重的資料外洩與智慧財產權損失，對企業的營運安全及EMS產業的研發保密造成重大威脅。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13325",
+    "id": "news-261011-02",
+    "title": "【高】Atlassian 修補 8 款 Data Center 產品重大漏洞 CVE-2026-21589，免登入即可讀取指定檔案",
+    "desc": "Atlassian 多款 Data Center 產品存在重大漏洞，允許未經授權的攻擊者在無需登入的情況下讀取指定檔案。這對企業的專案管理、程式碼儲存和協作平台構成嚴重威脅，可能導致敏感資料外洩。使用 Jira、Confluence、Bitbucket Data Center 等產品的企業應立即更新以降低風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13343",
     "tags": [
-      "AI安全",
-      "帳號竊取",
-      "資料外洩"
+      "漏洞",
+      "Atlassian",
+      "Jira"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-04",
-    "expireAt": "2026-10-11",
+    "updatedAt": "2026-10-11",
+    "expireAt": "2026-10-18",
     "pin": true
   },
   {
-    "id": "news-261004-03",
-    "title": "【高】稽核專家示警：AI 代理人已是特權使用者，誰在稽核它們的存取權限？",
-    "desc": "AI代理人作為特權使用者，其存取權限若缺乏有效稽核，將成為企業的重大資安漏洞。攻擊者一旦控制這些代理人，即可自動化地執行內部威脅活動，竊取資料或破壞系統。這對普遍採用AI自動化流程的企業與EMS產業而言，是必須立即建立嚴格稽核與特權管理機制的重要警示。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13318",
+    "id": "news-261011-03",
+    "title": "【高】GitLab 示警 AI Gateway 重大漏洞：已驗證使用者可逃逸沙箱執行任意指令",
+    "desc": "GitLab AI Gateway 發現重大漏洞，允許具備基本權限的已驗證使用者逃逸沙箱並執行任意指令。這對依賴 GitLab 進行軟體開發和 AI 整合的企業構成嚴重威脅，可能導致開發環境被入侵、程式碼遭竄改或智慧財產權外洩。企業應立即檢查修補 AI Gateway，確保開發流程安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13349",
     "tags": [
-      "AI安全",
-      "特權管理",
-      "資安稽核"
+      "漏洞",
+      "GitLab",
+      "AI Gateway"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-04",
-    "expireAt": "2026-10-11",
+    "updatedAt": "2026-10-11",
+    "expireAt": "2026-10-18",
     "pin": true
   },
   {
-    "id": "news-261004-04",
-    "title": "【高】遭污染的 GitHub Actions 再度啟用，Mini Shai-Hulud 惡意酬載仍可執行",
-    "desc": "GitHub Actions是許多企業開發流程中的關鍵組件。供應鏈被污染意味著惡意程式碼可能透過CI/CD流程被植入企業應用程式或系統中，導致嚴重的資料外洩、系統入侵或生產環境癱瘓。對於EMS產業，這可能影響產品的軟體安全，造成供應鏈危機，務必立即檢查相關CI/CD流程與依賴項。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13329",
+    "id": "news-261011-04",
+    "title": "【高】Rapid7揭露Linux後門偽裝眾至資訊等亞洲郵件安全設備",
+    "desc": "Rapid7 揭露一種針對 Linux 郵件安全設備的複雜後門，尤其偽裝成眾至資訊等亞洲廠商的設備。此惡意程式以無檔案形式存在，難以被傳統偵測方法發現，顯示針對特定地區和設備的攻擊趨勢。企業應特別警惕此類滲透手法，強化網路層偵測與異常行為分析，保護關鍵郵件基礎設施。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13344",
     "tags": [
-      "供應鏈攻擊",
-      "GitHub Actions",
-      "CI/CD"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-10-04",
-    "expireAt": "2026-10-11",
-    "pin": true
-  },
-  {
-    "id": "news-261004-05",
-    "title": "【高】RatHat 惡意程式控制台改用 Gemini 評估受害者價值，Cleafy 追蹤到近百個部署",
-    "desc": "RatHat惡意程式利用Gemini評估受害者價值，使其攻擊更具針對性與效率。這種惡意程式能竊取簡訊與銀行App登入憑證，對企業員工的個人金融安全構成直接威脅，也可能蔓延至公司配發的移動設備，造成敏感資訊外洩與財務損失。EMS產業員工若受害，可能導致內部系統遭入侵。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13320",
-    "tags": [
+      "後門",
       "惡意程式",
-      "詐騙",
-      "行動裝置安全"
+      "郵件安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-04",
-    "expireAt": "2026-10-11",
+    "updatedAt": "2026-10-11",
+    "expireAt": "2026-10-18",
+    "pin": true
+  },
+  {
+    "id": "news-261011-05",
+    "title": "【高】美國醫療業者須符合最低資安標準，最新《醫療資安與韌性法案》通過",
+    "desc": "美國通過《醫療資安與韌性法案》，要求醫療業者符合最低資安標準，如多因素驗證。這不僅影響美國醫療產業，也對為其提供服務的全球 EMS 供應鏈產生深遠影響，未來客戶可能要求供應商具備相同資安標準。企業應提早審視自身資安合規性，特別是涉及敏感數據處理的部分。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13352",
+    "tags": [
+      "法規",
+      "醫療資安",
+      "合規"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-10-11",
+    "expireAt": "2026-10-18",
     "pin": true
   }
 ]
