@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-261011-01",
-    "title": "【高】Fortinet 證實 FortiMail 零時差漏洞 CVE-2026-104286 遭實際利用，未經驗證即可寫入任意檔案",
-    "desc": "Fortinet FortiMail 郵件安全設備發現零時差漏洞，且已證實遭實際利用。攻擊者無需驗證即可寫入任意檔案，對企業郵件系統構成極高風險，可能導致服務中斷、資料竊取或被植入惡意程式。所有使用 FortiMail 的企業應立即檢查並修補，以防範關鍵通訊系統受損。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13342",
+    "id": "news-261018-01",
+    "title": "【高】BeyondTrust修補零時差漏洞，疑與中國有關駭客 8 月起即鎖定攻擊",
+    "desc": "BeyondTrust作為身份和存取管理解決方案，其零時差漏洞被疑似國家級駭客利用，對企業的特權帳號和身分治理構成嚴重威脅。EMS企業若使用相關產品，需立即修補並檢查是否有遭入侵跡象，以防內部系統和敏感資料被未經授權存取。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13383",
     "tags": [
       "零時差",
       "漏洞",
-      "Fortinet"
+      "駭客攻擊"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-11",
-    "expireAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "expireAt": "2026-10-25",
     "pin": true
   },
   {
-    "id": "news-261011-02",
-    "title": "【高】Atlassian 修補 8 款 Data Center 產品重大漏洞 CVE-2026-21589，免登入即可讀取指定檔案",
-    "desc": "Atlassian 多款 Data Center 產品存在重大漏洞，允許未經授權的攻擊者在無需登入的情況下讀取指定檔案。這對企業的專案管理、程式碼儲存和協作平台構成嚴重威脅，可能導致敏感資料外洩。使用 Jira、Confluence、Bitbucket Data Center 等產品的企業應立即更新以降低風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13343",
+    "id": "news-261018-02",
+    "title": "【高】駭客濫用D-Link、Ubiquiti、SAP漏洞劫持逾百台設備，「代理劫持」轉賣頻寬",
+    "desc": "駭客利用常見網路設備（如D-Link NAS、Ubiquiti UniFi）和SAP系統的漏洞，劫持設備建立代理網路。EMS企業可能廣泛使用這些設備，務必立即清查並修補相關漏洞，以避免設備被濫用、內部頻寬遭佔用，甚至成為其他攻擊的跳板，導致資安事件。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13382",
+    "tags": [
+      "漏洞利用",
+      "網路設備",
+      "物聯網"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-10-18",
+    "expireAt": "2026-10-25",
+    "pin": true
+  },
+  {
+    "id": "news-261018-03",
+    "title": "【高】思科郵件閘道器再現遭實際利用漏洞，駭客寄信即可寫入檔案",
+    "desc": "思科電子郵件閘道器（Secure Email Gateway）出現CVSS 9.8的嚴重漏洞，攻擊者無需認證即可透過寄送郵件寫入檔案，對企業郵件系統構成極高風險。EMS企業應立即審視其Cisco SEG部署並應用最新修補程式，防止駭客藉由惡意郵件入侵內部網路。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13377",
     "tags": [
       "漏洞",
-      "Atlassian",
-      "Jira"
+      "電子郵件安全",
+      "郵件閘道器"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-11",
-    "expireAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "expireAt": "2026-10-25",
     "pin": true
   },
   {
-    "id": "news-261011-03",
-    "title": "【高】GitLab 示警 AI Gateway 重大漏洞：已驗證使用者可逃逸沙箱執行任意指令",
-    "desc": "GitLab AI Gateway 發現重大漏洞，允許具備基本權限的已驗證使用者逃逸沙箱並執行任意指令。這對依賴 GitLab 進行軟體開發和 AI 整合的企業構成嚴重威脅，可能導致開發環境被入侵、程式碼遭竄改或智慧財產權外洩。企業應立即檢查修補 AI Gateway，確保開發流程安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13349",
+    "id": "news-261018-04",
+    "title": "【高】「Ivanti Connect Secure」零時差漏洞遭實際利用，駭客串連三漏洞取得 root 權限",
+    "desc": "Ivanti Connect Secure VPN作為企業遠端存取的關鍵設施，其零時差漏洞遭實際利用，攻擊者可繞過驗證並遠端執行程式碼取得root權限。對EMS企業而言，這可能導致核心網路與機敏資料完全曝露。應立即斷網檢查、應用修補並加強監控，防範供應鏈攻擊。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13376",
     "tags": [
+      "零時差",
       "漏洞",
-      "GitLab",
-      "AI Gateway"
+      "VPN"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-11",
-    "expireAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "expireAt": "2026-10-25",
     "pin": true
   },
   {
-    "id": "news-261011-04",
-    "title": "【高】Rapid7揭露Linux後門偽裝眾至資訊等亞洲郵件安全設備",
-    "desc": "Rapid7 揭露一種針對 Linux 郵件安全設備的複雜後門，尤其偽裝成眾至資訊等亞洲廠商的設備。此惡意程式以無檔案形式存在，難以被傳統偵測方法發現，顯示針對特定地區和設備的攻擊趨勢。企業應特別警惕此類滲透手法，強化網路層偵測與異常行為分析，保護關鍵郵件基礎設施。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13344",
+    "id": "news-261018-05",
+    "title": "【高】微軟 10 月「Patch Tuesday」規模創新高，修補逾 1,400 個漏洞，其中 1 個零時差漏洞已遭實際利用",
+    "desc": "微軟發布大量更新，包含一個已被利用的零時差漏洞及多項高風險權限提升與遠端程式碼執行漏洞。EMS企業應將此視為優先級最高的修補任務，確保所有Windows系統、Office應用和相關服務皆已更新，以降低遭受已知漏洞攻擊的風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13375",
     "tags": [
-      "後門",
-      "惡意程式",
-      "郵件安全"
+      "漏洞修補",
+      "零時差",
+      "微軟"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-11",
-    "expireAt": "2026-10-18",
-    "pin": true
-  },
-  {
-    "id": "news-261011-05",
-    "title": "【高】美國醫療業者須符合最低資安標準，最新《醫療資安與韌性法案》通過",
-    "desc": "美國通過《醫療資安與韌性法案》，要求醫療業者符合最低資安標準，如多因素驗證。這不僅影響美國醫療產業，也對為其提供服務的全球 EMS 供應鏈產生深遠影響，未來客戶可能要求供應商具備相同資安標準。企業應提早審視自身資安合規性，特別是涉及敏感數據處理的部分。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13352",
-    "tags": [
-      "法規",
-      "醫療資安",
-      "合規"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-10-11",
-    "expireAt": "2026-10-18",
+    "updatedAt": "2026-10-18",
+    "expireAt": "2026-10-25",
     "pin": true
   }
 ]
