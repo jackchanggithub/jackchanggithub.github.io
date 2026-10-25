@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-261018-01",
-    "title": "【高】BeyondTrust修補零時差漏洞，疑與中國有關駭客 8 月起即鎖定攻擊",
-    "desc": "BeyondTrust作為身份和存取管理解決方案，其零時差漏洞被疑似國家級駭客利用，對企業的特權帳號和身分治理構成嚴重威脅。EMS企業若使用相關產品，需立即修補並檢查是否有遭入侵跡象，以防內部系統和敏感資料被未經授權存取。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13383",
-    "tags": [
-      "零時差",
-      "漏洞",
-      "駭客攻擊"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-10-18",
-    "expireAt": "2026-10-25",
-    "pin": true
-  },
-  {
-    "id": "news-261018-02",
-    "title": "【高】駭客濫用D-Link、Ubiquiti、SAP漏洞劫持逾百台設備，「代理劫持」轉賣頻寬",
-    "desc": "駭客利用常見網路設備（如D-Link NAS、Ubiquiti UniFi）和SAP系統的漏洞，劫持設備建立代理網路。EMS企業可能廣泛使用這些設備，務必立即清查並修補相關漏洞，以避免設備被濫用、內部頻寬遭佔用，甚至成為其他攻擊的跳板，導致資安事件。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13382",
-    "tags": [
-      "漏洞利用",
-      "網路設備",
-      "物聯網"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-10-18",
-    "expireAt": "2026-10-25",
-    "pin": true
-  },
-  {
-    "id": "news-261018-03",
-    "title": "【高】思科郵件閘道器再現遭實際利用漏洞，駭客寄信即可寫入檔案",
-    "desc": "思科電子郵件閘道器（Secure Email Gateway）出現CVSS 9.8的嚴重漏洞，攻擊者無需認證即可透過寄送郵件寫入檔案，對企業郵件系統構成極高風險。EMS企業應立即審視其Cisco SEG部署並應用最新修補程式，防止駭客藉由惡意郵件入侵內部網路。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13377",
-    "tags": [
-      "漏洞",
-      "電子郵件安全",
-      "郵件閘道器"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-10-18",
-    "expireAt": "2026-10-25",
-    "pin": true
-  },
-  {
-    "id": "news-261018-04",
-    "title": "【高】「Ivanti Connect Secure」零時差漏洞遭實際利用，駭客串連三漏洞取得 root 權限",
-    "desc": "Ivanti Connect Secure VPN作為企業遠端存取的關鍵設施，其零時差漏洞遭實際利用，攻擊者可繞過驗證並遠端執行程式碼取得root權限。對EMS企業而言，這可能導致核心網路與機敏資料完全曝露。應立即斷網檢查、應用修補並加強監控，防範供應鏈攻擊。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13376",
-    "tags": [
-      "零時差",
-      "漏洞",
-      "VPN"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-10-18",
-    "expireAt": "2026-10-25",
-    "pin": true
-  },
-  {
-    "id": "news-261018-05",
-    "title": "【高】微軟 10 月「Patch Tuesday」規模創新高，修補逾 1,400 個漏洞，其中 1 個零時差漏洞已遭實際利用",
-    "desc": "微軟發布大量更新，包含一個已被利用的零時差漏洞及多項高風險權限提升與遠端程式碼執行漏洞。EMS企業應將此視為優先級最高的修補任務，確保所有Windows系統、Office應用和相關服務皆已更新，以降低遭受已知漏洞攻擊的風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13375",
+    "id": "news-261025-01",
+    "title": "【高】Node.js 與 Go 同步釋出緊急安全更新 資安署籲公私部門儘速修補",
+    "desc": "Node.js與Go是企業廣泛用於後端服務及微服務架構的程式語言。資安署籲公私部門應立即修補，顯示存在嚴重漏洞且可能已被利用。企業務必優先清查相關應用並緊急更新，以防遠端程式執行或資料外洩，確保服務連續性及EMS生產穩定。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13408",
     "tags": [
       "漏洞修補",
-      "零時差",
-      "微軟"
+      "後端服務",
+      "緊急更新"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-18",
-    "expireAt": "2026-10-25",
+    "updatedAt": "2026-10-25",
+    "expireAt": "2026-11-01",
+    "pin": true
+  },
+  {
+    "id": "news-261025-02",
+    "title": "【高】PHP2Shell 弱點 CVSS 9.2！資安署與 Sophos 籲企業盤點並儘速修補",
+    "desc": "PHP在企業網站、內容管理系統及管理介面中極為普遍。CVSS 9.2的嚴重漏洞代表存在極高風險，攻擊者可能藉此完全控制系統。EMS產業若有使用PHP相關服務，應立即進行資產盤點與版本確認，並優先執行修補作業，避免網站遭入侵或服務中斷。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13409",
+    "tags": [
+      "PHP",
+      "弱點",
+      "CVSS"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-10-25",
+    "expireAt": "2026-11-01",
+    "pin": true
+  },
+  {
+    "id": "news-261025-03",
+    "title": "【高】「FortiSIEM」重大漏洞 CVE-2026-106173 概念驗證程式公開，未經驗證即可遠端執行程式碼",
+    "desc": "FortiSIEM作為企業資安監控的核心工具，其重大遠端程式執行（RCE）漏洞且概念驗證（PoC）程式已公開，對企業構成立即且極高的威脅。駭客可未經授權完全控制系統，導致關鍵資安日誌被篡改或清除。所有使用FortiSIEM的企業應立即修補，以防防禦體系崩潰及EMS運營數據外洩。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13402",
+    "tags": [
+      "FortiSIEM",
+      "RCE",
+      "漏洞"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-10-25",
+    "expireAt": "2026-11-01",
+    "pin": true
+  },
+  {
+    "id": "news-261025-04",
+    "title": "【高】F5 緊急發布 NGINX 非例行修補，三項重大漏洞恐讓攻擊者遠端執行程式碼",
+    "desc": "NGINX作為廣泛使用的網頁伺服器及負載平衡器，其緊急修補的三項重大遠端程式執行（RCE）漏洞，對企業服務構成直接威脅。攻擊者可藉此控制伺服器，導致資料外洩或服務中斷。EMS產業應立即盤查所有使用NGINX的系統，並優先完成修補，確保企業網站與應用服務的安全運作。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13398",
+    "tags": [
+      "NGINX",
+      "F5",
+      "RCE"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-10-25",
+    "expireAt": "2026-11-01",
+    "pin": true
+  },
+  {
+    "id": "news-261025-05",
+    "title": "【高】「Qilin」與「INC」勒索軟體利用 PAN-OS 漏洞繞過 MFA，駭客轉向虛擬化層竊取網域憑證",
+    "desc": "勒索軟體集團利用PAN-OS漏洞繞過MFA並竊取網域憑證，對企業構成毀滅性威脅。此手法顯示攻擊者能取得初始立足點並突破多因子驗證，進而控制整個企業網路。使用PAN-OS的EMS企業應立即檢查並修補，同時強化MFA防護，以防勒索攻擊導致生產線停擺與巨額損失。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13404",
+    "tags": [
+      "勒索軟體",
+      "PAN-OS",
+      "MFA繞過"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-10-25",
+    "expireAt": "2026-11-01",
     "pin": true
   }
 ]
