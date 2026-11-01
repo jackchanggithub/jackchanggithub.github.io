@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-261025-01",
-    "title": "【高】Node.js 與 Go 同步釋出緊急安全更新 資安署籲公私部門儘速修補",
-    "desc": "Node.js與Go是企業廣泛用於後端服務及微服務架構的程式語言。資安署籲公私部門應立即修補，顯示存在嚴重漏洞且可能已被利用。企業務必優先清查相關應用並緊急更新，以防遠端程式執行或資料外洩，確保服務連續性及EMS生產穩定。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13408",
+    "id": "news-261101-01",
+    "title": "【高】PHP2Shell 漏洞遭利用，Palo Alto Networks 示警 PAN-OS 管理介面風險",
+    "desc": "企業應立即檢視其 Palo Alto Networks 的 PAN-OS 設備是否存在 PHP2Shell 漏洞，此漏洞已被實際利用，可能導致管理介面暴露，進而允許攻擊者執行遠端程式碼，嚴重威脅網路邊界安全。建議遵循 Palo Alto Networks 的修補與防護指引，並檢查是否有未經授權的存取行為。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13433",
     "tags": [
-      "漏洞修補",
-      "後端服務",
-      "緊急更新"
+      "漏洞",
+      "網路安全",
+      "Palo Alto Networks"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-25",
-    "expireAt": "2026-11-01",
+    "updatedAt": "2026-11-01",
+    "expireAt": "2026-11-08",
     "pin": true
   },
   {
-    "id": "news-261025-02",
-    "title": "【高】PHP2Shell 弱點 CVSS 9.2！資安署與 Sophos 籲企業盤點並儘速修補",
-    "desc": "PHP在企業網站、內容管理系統及管理介面中極為普遍。CVSS 9.2的嚴重漏洞代表存在極高風險，攻擊者可能藉此完全控制系統。EMS產業若有使用PHP相關服務，應立即進行資產盤點與版本確認，並優先執行修補作業，避免網站遭入侵或服務中斷。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13409",
+    "id": "news-261101-02",
+    "title": "【高】「伏特颱風」利用零時差攻擊，針對 SOHO/IoT 及 Fortinet 設備",
+    "desc": "知名 APT 組織「伏特颱風」被揭露利用零時差攻擊，透過隱蔽網路「Silent Train」滲透 SOHO、IoT 設備及 Fortinet 等產品。企業須警惕此類進階持續性威脅，檢查網路中是否存在未知連線，並確保所有網路設備，特別是邊緣裝置及 IoT 設備，已更新至最新版本並強化密碼策略。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13431",
     "tags": [
-      "PHP",
-      "弱點",
-      "CVSS"
+      "APT",
+      "零時差攻擊",
+      "物聯網安全"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-25",
-    "expireAt": "2026-11-01",
+    "updatedAt": "2026-11-01",
+    "expireAt": "2026-11-08",
     "pin": true
   },
   {
-    "id": "news-261025-03",
-    "title": "【高】「FortiSIEM」重大漏洞 CVE-2026-106173 概念驗證程式公開，未經驗證即可遠端執行程式碼",
-    "desc": "FortiSIEM作為企業資安監控的核心工具，其重大遠端程式執行（RCE）漏洞且概念驗證（PoC）程式已公開，對企業構成立即且極高的威脅。駭客可未經授權完全控制系統，導致關鍵資安日誌被篡改或清除。所有使用FortiSIEM的企業應立即修補，以防防禦體系崩潰及EMS運營數據外洩。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13402",
+    "id": "news-261101-03",
+    "title": "【中】掃描器偽裝 AI 機器人搜尋憑證，企業應防範新型態釣魚攻擊",
+    "desc": "駭客利用偽裝成 32 種 AI 機器人的掃描器持續搜尋企業憑證，此活動自九月底至今未停。企業需加強員工資安意識，提防利用 AI 技術偽裝的釣魚或社交工程攻擊，並部署多因子驗證（MFA）與端點偵測回應（EDR）系統，以防禦憑證被竊取所導致的未經授權存取風險。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13432",
     "tags": [
-      "FortiSIEM",
-      "RCE",
-      "漏洞"
+      "AI安全",
+      "憑證竊取",
+      "網路攻擊"
     ],
-    "level": "high",
+    "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-25",
-    "expireAt": "2026-11-01",
-    "pin": true
+    "updatedAt": "2026-11-01",
+    "expireAt": "2026-11-08",
+    "pin": false
   },
   {
-    "id": "news-261025-04",
-    "title": "【高】F5 緊急發布 NGINX 非例行修補，三項重大漏洞恐讓攻擊者遠端執行程式碼",
-    "desc": "NGINX作為廣泛使用的網頁伺服器及負載平衡器，其緊急修補的三項重大遠端程式執行（RCE）漏洞，對企業服務構成直接威脅。攻擊者可藉此控制伺服器，導致資料外洩或服務中斷。EMS產業應立即盤查所有使用NGINX的系統，並優先完成修補，確保企業網站與應用服務的安全運作。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13398",
+    "id": "news-261101-04",
+    "title": "【高】漏洞公開後平均 3 天遭利用，勒索軟體攻擊政府機關升溫",
+    "desc": "Rapid7 報告指出，漏洞公開後平均僅 3 天即遭利用，高達 71% 的利用發生在一週內，顯見攻擊速度之快。此外，政府機關勒索軟體事件持續增加。EMS 企業必須建立高效的漏洞管理與修補機制，縮短風險暴露時間，並加強備份與復原計畫，以應對日益頻繁且迅速的資安威脅。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13424",
     "tags": [
-      "NGINX",
-      "F5",
-      "RCE"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-10-25",
-    "expireAt": "2026-11-01",
-    "pin": true
-  },
-  {
-    "id": "news-261025-05",
-    "title": "【高】「Qilin」與「INC」勒索軟體利用 PAN-OS 漏洞繞過 MFA，駭客轉向虛擬化層竊取網域憑證",
-    "desc": "勒索軟體集團利用PAN-OS漏洞繞過MFA並竊取網域憑證，對企業構成毀滅性威脅。此手法顯示攻擊者能取得初始立足點並突破多因子驗證，進而控制整個企業網路。使用PAN-OS的EMS企業應立即檢查並修補，同時強化MFA防護，以防勒索攻擊導致生產線停擺與巨額損失。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13404",
-    "tags": [
+      "漏洞管理",
       "勒索軟體",
-      "PAN-OS",
-      "MFA繞過"
+      "威脅情報"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-10-25",
-    "expireAt": "2026-11-01",
+    "updatedAt": "2026-11-01",
+    "expireAt": "2026-11-08",
     "pin": true
+  },
+  {
+    "id": "news-261101-05",
+    "title": "【中】烏克蘭示警大華監視設備遭遠端入侵，主因弱密碼與過時韌體",
+    "desc": "烏克蘭發出警告，指出大華（Dahua）監視設備透過「Easy4IP」服務遭遠端入侵，攻擊者利用可預測的序號與弱密碼，或過時韌體中的驗證繞過漏洞。企業應立即盤點並檢查所有監控系統，確保採用強密碼、定期更新韌體，並限制遠端存取，避免成為攻擊入侵企業內網的跳板。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13423",
+    "tags": [
+      "物聯網安全",
+      "弱密碼",
+      "韌體漏洞"
+    ],
+    "level": "medium",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-11-01",
+    "expireAt": "2026-11-08",
+    "pin": false
   }
 ]
