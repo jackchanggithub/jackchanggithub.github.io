@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-261101-01",
-    "title": "【高】PHP2Shell 漏洞遭利用，Palo Alto Networks 示警 PAN-OS 管理介面風險",
-    "desc": "企業應立即檢視其 Palo Alto Networks 的 PAN-OS 設備是否存在 PHP2Shell 漏洞，此漏洞已被實際利用，可能導致管理介面暴露，進而允許攻擊者執行遠端程式碼，嚴重威脅網路邊界安全。建議遵循 Palo Alto Networks 的修補與防護指引，並檢查是否有未經授權的存取行為。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13433",
+    "id": "news-261108-01",
+    "title": "【高】官方「Claude Code」擴充套件遭植入 SSH 後門，Cursor 市集上架 11 小時",
+    "desc": "針對AI開發工具的供應鏈攻擊，已證實有SSH後門植入。企業若有使用相關AI輔助程式開發工具，將面臨極高風險的內部系統入侵與資料竊取。務必立即盤點並審查所有開發環境中的擴充套件，防堵惡意程式滲透。對EMS產業而言，這可能影響產品研發與智慧財產權。此類攻擊難以察覺，需建立嚴格的軟體供應鏈安全策略。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13450",
     "tags": [
-      "漏洞",
-      "網路安全",
-      "Palo Alto Networks"
+      "供應鏈攻擊",
+      "AI工具",
+      "SSH後門"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-11-01",
-    "expireAt": "2026-11-08",
+    "updatedAt": "2026-11-08",
+    "expireAt": "2026-11-15",
     "pin": true
   },
   {
-    "id": "news-261101-02",
-    "title": "【高】「伏特颱風」利用零時差攻擊，針對 SOHO/IoT 及 Fortinet 設備",
-    "desc": "知名 APT 組織「伏特颱風」被揭露利用零時差攻擊，透過隱蔽網路「Silent Train」滲透 SOHO、IoT 設備及 Fortinet 等產品。企業須警惕此類進階持續性威脅，檢查網路中是否存在未知連線，並確保所有網路設備，特別是邊緣裝置及 IoT 設備，已更新至最新版本並強化密碼策略。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13431",
+    "id": "news-261108-02",
+    "title": "【高】GitLab 再現滿分漏洞，「CVE-2026-97229」已列入美CISA 遭利用清單",
+    "desc": "GitLab作為企業廣泛使用的程式碼協作與版本控制平台，出現滿分漏洞且已被CISA列為已知遭利用漏洞，對企業構成嚴重威脅。駭客可利用此漏洞取得系統高權限或執行任意程式碼，導致機敏程式碼外洩或開發流程受損。EMS產業應將此修補列為最高優先級，立即檢查並更新GitLab版本，以防範被惡意利用，影響產品開發與資產安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13449",
+    "tags": [
+      "GitLab",
+      "漏洞利用",
+      "CISA KEV"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-11-08",
+    "expireAt": "2026-11-15",
+    "pin": true
+  },
+  {
+    "id": "news-261108-03",
+    "title": "【高】CrowdStrike：中國駭客組織「Vapor Panda」以 AI 工具「ARTEX」攻擊逾 200 個組織",
+    "desc": "中國國家級駭客組織利用AI工具對全球逾200個組織發動攻擊，涵蓋半導體、國防、電信等關鍵領域。這顯示了AI在攻擊面上的進化與APT威脅的複雜性。企業應警惕此類進階持續性威脅，加強偵測與防禦機制，特別是針對供應鏈上下游合作夥伴的資安韌性。EMS產業作為高科技製造核心，更需提高警覺，防範國家級攻擊竊取智慧財產。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13446",
     "tags": [
       "APT",
-      "零時差攻擊",
-      "物聯網安全"
+      "國家級攻擊",
+      "AI威脅"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-11-01",
-    "expireAt": "2026-11-08",
-    "pin": true
-  },
-  {
-    "id": "news-261101-03",
-    "title": "【中】掃描器偽裝 AI 機器人搜尋憑證，企業應防範新型態釣魚攻擊",
-    "desc": "駭客利用偽裝成 32 種 AI 機器人的掃描器持續搜尋企業憑證，此活動自九月底至今未停。企業需加強員工資安意識，提防利用 AI 技術偽裝的釣魚或社交工程攻擊，並部署多因子驗證（MFA）與端點偵測回應（EDR）系統，以防禦憑證被竊取所導致的未經授權存取風險。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13432",
-    "tags": [
-      "AI安全",
-      "憑證竊取",
-      "網路攻擊"
-    ],
-    "level": "medium",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-11-01",
-    "expireAt": "2026-11-08",
+    "updatedAt": "2026-11-08",
+    "expireAt": "2026-11-15",
     "pin": false
   },
   {
-    "id": "news-261101-04",
-    "title": "【高】漏洞公開後平均 3 天遭利用，勒索軟體攻擊政府機關升溫",
-    "desc": "Rapid7 報告指出，漏洞公開後平均僅 3 天即遭利用，高達 71% 的利用發生在一週內，顯見攻擊速度之快。此外，政府機關勒索軟體事件持續增加。EMS 企業必須建立高效的漏洞管理與修補機制，縮短風險暴露時間，並加強備份與復原計畫，以應對日益頻繁且迅速的資安威脅。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13424",
+    "id": "news-261108-04",
+    "title": "【中】Cloudflare第三季攔截1820萬次網路層DDoS攻擊，短時間低流量攻擊暴增208%",
+    "desc": "全球網路層DDoS攻擊量持續攀升，短時間、低流量的攻擊手法尤其值得關注，這類攻擊更難被傳統防護機制偵測。企業若依賴網路服務運營，DDoS攻擊將直接衝擊業務連續性，造成服務中斷與財務損失。EMS產業的供應鏈協作與客戶服務常高度仰賴網路，應評估現有DDoS防護措施，並考量導入進階流量清洗服務，確保營運韌性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13448",
     "tags": [
-      "漏洞管理",
-      "勒索軟體",
-      "威脅情報"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-11-01",
-    "expireAt": "2026-11-08",
-    "pin": true
-  },
-  {
-    "id": "news-261101-05",
-    "title": "【中】烏克蘭示警大華監視設備遭遠端入侵，主因弱密碼與過時韌體",
-    "desc": "烏克蘭發出警告，指出大華（Dahua）監視設備透過「Easy4IP」服務遭遠端入侵，攻擊者利用可預測的序號與弱密碼，或過時韌體中的驗證繞過漏洞。企業應立即盤點並檢查所有監控系統，確保採用強密碼、定期更新韌體，並限制遠端存取，避免成為攻擊入侵企業內網的跳板。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13423",
-    "tags": [
-      "物聯網安全",
-      "弱密碼",
-      "韌體漏洞"
+      "DDoS攻擊",
+      "服務中斷",
+      "網路安全"
     ],
     "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-11-01",
-    "expireAt": "2026-11-08",
+    "updatedAt": "2026-11-08",
+    "expireAt": "2026-11-15",
+    "pin": false
+  },
+  {
+    "id": "news-261108-05",
+    "title": "【中】資安月報9月通報量達去年同期1.94倍，聯防情資增至9萬1,731件",
+    "desc": "台灣資安通報量顯著增加，尤其指出API缺乏身份驗證與存取控制導致資料外洩問題。這反映出企業資安弱點的普遍性與API安全防護的迫切性。對於企業而言，應立即檢視所有對外開放的API介面，強化身份驗證與授權機制，避免成為資料外洩的破口。EMS產業應特別留意供應鏈協作中API交換資料的安全性，確保客戶與供應商的機敏資料不被洩漏。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13444",
+    "tags": [
+      "API安全",
+      "資料外洩",
+      "資安通報"
+    ],
+    "level": "medium",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-11-08",
+    "expireAt": "2026-11-15",
     "pin": false
   }
 ]
