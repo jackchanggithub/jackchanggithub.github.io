@@ -1,92 +1,92 @@
 [
   {
-    "id": "news-261108-01",
-    "title": "【高】官方「Claude Code」擴充套件遭植入 SSH 後門，Cursor 市集上架 11 小時",
-    "desc": "針對AI開發工具的供應鏈攻擊，已證實有SSH後門植入。企業若有使用相關AI輔助程式開發工具，將面臨極高風險的內部系統入侵與資料竊取。務必立即盤點並審查所有開發環境中的擴充套件，防堵惡意程式滲透。對EMS產業而言，這可能影響產品研發與智慧財產權。此類攻擊難以察覺，需建立嚴格的軟體供應鏈安全策略。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13450",
-    "tags": [
-      "供應鏈攻擊",
-      "AI工具",
-      "SSH後門"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-11-08",
-    "expireAt": "2026-11-15",
-    "pin": true
-  },
-  {
-    "id": "news-261108-02",
-    "title": "【高】GitLab 再現滿分漏洞，「CVE-2026-97229」已列入美CISA 遭利用清單",
-    "desc": "GitLab作為企業廣泛使用的程式碼協作與版本控制平台，出現滿分漏洞且已被CISA列為已知遭利用漏洞，對企業構成嚴重威脅。駭客可利用此漏洞取得系統高權限或執行任意程式碼，導致機敏程式碼外洩或開發流程受損。EMS產業應將此修補列為最高優先級，立即檢查並更新GitLab版本，以防範被惡意利用，影響產品開發與資產安全。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13449",
-    "tags": [
-      "GitLab",
-      "漏洞利用",
-      "CISA KEV"
-    ],
-    "level": "high",
-    "matchDomains": [
-      "informationsecurity.com.tw"
-    ],
-    "updatedAt": "2026-11-08",
-    "expireAt": "2026-11-15",
-    "pin": true
-  },
-  {
-    "id": "news-261108-03",
-    "title": "【高】CrowdStrike：中國駭客組織「Vapor Panda」以 AI 工具「ARTEX」攻擊逾 200 個組織",
-    "desc": "中國國家級駭客組織利用AI工具對全球逾200個組織發動攻擊，涵蓋半導體、國防、電信等關鍵領域。這顯示了AI在攻擊面上的進化與APT威脅的複雜性。企業應警惕此類進階持續性威脅，加強偵測與防禦機制，特別是針對供應鏈上下游合作夥伴的資安韌性。EMS產業作為高科技製造核心，更需提高警覺，防範國家級攻擊竊取智慧財產。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13446",
+    "id": "news-261115-01",
+    "title": "【高】SilentAir駭客鎖定台灣電信用戶，攔截通話與簡訊",
+    "desc": "SilentAir駭客組織入侵亞洲電信業者，並明確鎖定台灣用戶，企圖攔截通話與簡訊。這對企業而言，不僅員工個人通訊面臨風險，更可能導致敏感商業資訊、OTP驗證碼等關鍵資料遭竊，影響企業的營運安全與客戶信任，EMS產業需警惕供應鏈通訊安全。建議企業應審視員工通訊安全政策，並評估多因子驗證的可靠性。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13484",
     "tags": [
       "APT",
-      "國家級攻擊",
-      "AI威脅"
+      "電信",
+      "台灣"
     ],
     "level": "high",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-11-08",
-    "expireAt": "2026-11-15",
-    "pin": false
+    "updatedAt": "2026-11-15",
+    "expireAt": "2026-11-22",
+    "pin": true
   },
   {
-    "id": "news-261108-04",
-    "title": "【中】Cloudflare第三季攔截1820萬次網路層DDoS攻擊，短時間低流量攻擊暴增208%",
-    "desc": "全球網路層DDoS攻擊量持續攀升，短時間、低流量的攻擊手法尤其值得關注，這類攻擊更難被傳統防護機制偵測。企業若依賴網路服務運營，DDoS攻擊將直接衝擊業務連續性，造成服務中斷與財務損失。EMS產業的供應鏈協作與客戶服務常高度仰賴網路，應評估現有DDoS防護措施，並考量導入進階流量清洗服務，確保營運韌性。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13448",
+    "id": "news-261115-02",
+    "title": "【高】數發部示警AI網攻已十餘企業受害，個資外洩須72小時內通報",
+    "desc": "台灣數發部發布警告，AI代理工具已發動網攻並導致十餘家企業受駭。此事件凸顯AI攻擊的嚴重性與速度，企業需強化防禦機制。同時，個資外洩必須在72小時內通知當事人的新規定，對企業的資安應變與法規遵循帶來重大挑戰，EMS產業應立即檢視個資保護與通報流程，並加強AI攻擊的偵測與防禦能力。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13486",
     "tags": [
-      "DDoS攻擊",
-      "服務中斷",
-      "網路安全"
+      "台灣法規",
+      "個資外洩",
+      "AI資安"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-11-15",
+    "expireAt": "2026-11-22",
+    "pin": true
+  },
+  {
+    "id": "news-261115-03",
+    "title": "【高】SonicWall SSL VPN 爆MFA繞過漏洞，美CISA列為已知遭利用",
+    "desc": "SonicWall SSL VPN 驚爆存在多因素驗證（MFA）繞過漏洞，且已被美國CISA列入已知遭利用漏洞清單，顯示此漏洞具備高度風險與現實威脅。對於依賴SSL VPN提供遠端存取與分公司連線的企業（特別是EMS產業）而言，此為立即性的重大風險，需迅速修補或採取緩解措施，以防未經授權的存取，確保遠端工作與供應鏈連接的安全。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13475",
+    "tags": [
+      "漏洞",
+      "VPN",
+      "MFA繞過"
+    ],
+    "level": "high",
+    "matchDomains": [
+      "informationsecurity.com.tw"
+    ],
+    "updatedAt": "2026-11-15",
+    "expireAt": "2026-11-22",
+    "pin": true
+  },
+  {
+    "id": "news-261115-04",
+    "title": "【中】日本Iris Plaza購物網遭駭，770萬人個資恐外洩",
+    "desc": "日本家用品大廠 Iris Ohyama 旗下購物網站的外部雲端遭未授權存取，導致多達770萬筆個人資料可能外洩。此事件凸顯雲端服務供應商（CSP）的資安管理、第三方風險以及個資加密的重要性。EMS企業若使用雲端服務或有跨國業務，應立即檢視雲端部署的安全性與供應商的資安措施，確保敏感資料得到妥善保護，避免類似事件發生。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13477",
+    "tags": [
+      "個資外洩",
+      "雲端安全",
+      "日本"
     ],
     "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-11-08",
-    "expireAt": "2026-11-15",
+    "updatedAt": "2026-11-15",
+    "expireAt": "2026-11-22",
     "pin": false
   },
   {
-    "id": "news-261108-05",
-    "title": "【中】資安月報9月通報量達去年同期1.94倍，聯防情資增至9萬1,731件",
-    "desc": "台灣資安通報量顯著增加，尤其指出API缺乏身份驗證與存取控制導致資料外洩問題。這反映出企業資安弱點的普遍性與API安全防護的迫切性。對於企業而言，應立即檢視所有對外開放的API介面，強化身份驗證與授權機制，避免成為資料外洩的破口。EMS產業應特別留意供應鏈協作中API交換資料的安全性，確保客戶與供應商的機敏資料不被洩漏。",
-    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13444",
+    "id": "news-261115-05",
+    "title": "【中】OpenAI推出GPT-6 Cyber資安模型，展現AI在漏洞挖掘的潛力",
+    "desc": "OpenAI發布其資安研究模型GPT-6 Cyber，並成功找出Firefox瀏覽器中81個高風險漏洞。這顯示AI在自動化漏洞發現與修補方面具備巨大潛力。企業應關注AI在資安領域的攻防演進，考慮導入AI輔助工具提升防禦能力，同時警惕駭客利用AI加速攻擊的趨勢，特別是應用在EMS產業的特殊軟體與系統，應密切追蹤其弱點。",
+    "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13482",
     "tags": [
-      "API安全",
-      "資料外洩",
-      "資安通報"
+      "AI資安",
+      "漏洞發現",
+      "GPT"
     ],
     "level": "medium",
     "matchDomains": [
       "informationsecurity.com.tw"
     ],
-    "updatedAt": "2026-11-08",
-    "expireAt": "2026-11-15",
+    "updatedAt": "2026-11-15",
+    "expireAt": "2026-11-22",
     "pin": false
   }
 ]
